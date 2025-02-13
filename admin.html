@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>GeoJSON Admin Panel with Map</title>
+    <title>GeoJSON Editor for Lots</title>
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
     <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
     <style>
@@ -12,9 +12,9 @@
     </style>
 </head>
 <body onload="initializeMap()">
-    <h2>costadenicos zemelapio irankis</h2>
+    <h2>GeoJSON Lot Editor</h2>
     <input type="file" id="fileInput" accept=".geojson" onchange="loadFile(event)">
-    <button onclick="downloadGeoJSON()">Download JSON File</button>
+    <button onclick="downloadGeoJSON()">Download Updated JSON</button>
     <div id="map"></div>
 
     <div id="editor" style="display:none;">
@@ -57,26 +57,6 @@
                 })
             };
             L.control.layers(baseLayers).addTo(map);
-            loadDefaultGeoJSON();
-        }
-
-        function loadDefaultGeoJSON() {
-            fetch('lots.geojson')
-                .then(response => response.json())
-                .then(data => {
-                    geojsonData = data;
-                    loadGeoJSON();
-                });
-        }
-
-        function getLotColor(status) {
-            switch (status) {
-                case "For Sale": return "green";
-                case "Sold": return "red";
-                case "Reserved": return "yellow";
-                case "Not for Sale": return "grey";
-                default: return "grey";
-            }
         }
 
         function loadFile(event) {
@@ -95,7 +75,7 @@
                     map.removeLayer(layer);
                 }
             });
-
+            
             L.geoJSON(geojsonData, {
                 style: function (feature) {
                     return { color: getLotColor(feature.properties.status), weight: 2 };
@@ -121,9 +101,18 @@
             }).addTo(map);
         }
 
+        function getLotColor(status) {
+            switch (status) {
+                case "For Sale": return "green";
+                case "Sold": return "red";
+                case "Reserved": return "yellow";
+                case "Not for Sale": return "grey";
+                default: return "grey";
+            }
+        }
+
         function saveChanges() {
             if (!selectedFeature) return;
-
             selectedFeature.properties.price = document.getElementById('lot-price').value;
             selectedFeature.properties.status = document.getElementById('lot-status').value;
             selectedFeature.properties.area_m = document.getElementById('lot-size').value;
