@@ -39,6 +39,7 @@
             </select>
         </label><br>
         <label>Description: <textarea id="lot-description"></textarea></label><br>
+        <label>Buy Link: <input type="text" id="lot-link"></label><br> <!-- Added Buy Link Field -->
         <button onclick="saveChanges()">Save Changes</button>
     </div>
 
@@ -57,6 +58,15 @@
                 })
             };
             L.control.layers(baseLayers).addTo(map);
+            
+            // 🔥 NEW: Load lots.geojson by default
+            fetch("lots.geojson")
+                .then(response => response.json())
+                .then(data => {
+                    geojsonData = data;
+                    loadGeoJSON();
+                })
+                .catch(error => console.error("Error loading default GeoJSON:", error));
         }
 
         function loadFile(event) {
@@ -70,12 +80,16 @@
         }
 
         function loadGeoJSON() {
+            if (!geojsonData) return;
+
+            // Remove existing layers before adding new ones
             map.eachLayer(layer => {
                 if (layer instanceof L.GeoJSON) {
                     map.removeLayer(layer);
                 }
             });
-            
+
+            // Draw the new lots
             L.geoJSON(geojsonData, {
                 style: function (feature) {
                     return { color: getLotColor(feature.properties.status), weight: 2 };
@@ -96,6 +110,7 @@
                         document.getElementById('lot-size').value = feature.properties.area_m || '';
                         document.getElementById('lot-category').value = feature.properties.Category || 'Single Family Homesites';
                         document.getElementById('lot-description').value = feature.properties.Description || '';
+                        document.getElementById('lot-link').value = feature.properties.buy_link || ''; // NEW: Load Buy Link
                     });
                 }
             }).addTo(map);
@@ -118,6 +133,7 @@
             selectedFeature.properties.area_m = document.getElementById('lot-size').value;
             selectedFeature.properties.Category = document.getElementById('lot-category').value;
             selectedFeature.properties.Description = document.getElementById('lot-description').value;
+            selectedFeature.properties.buy_link = document.getElementById('lot-link').value; // NEW: Save Buy Link
         }
 
         function downloadGeoJSON() {
