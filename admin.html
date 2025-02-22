@@ -136,7 +136,7 @@
                         document.getElementById('lot-size').value = feature.properties.area_m || '';
                         document.getElementById('lot-category').value = feature.properties.Category || '';
                         document.getElementById('lot-description').value = feature.properties.Description || '';
-                        document.getElementById('lot-link').value = fixLink(feature.properties.buy_link || ''); 
+                        document.getElementById('lot-link').value = feature.properties.buy_link || ''; 
                     });
                 }
             }).addTo(map);
@@ -152,33 +152,13 @@
             }
         }
 
-        function fixLink(link) {
-            // This function ensures the link has the correct protocol
-            if (link && !link.startsWith('http://') && !link.startsWith('https://')) {
-                return 'https://' + link;
-            }
-            return link;
-        }
-
-        function autoSaveAndUpload() {
-            if (!selectedFeature) return;
-            selectedFeature.properties.price = document.getElementById('lot-price').value;
-            selectedFeature.properties.status = document.getElementById('lot-status').value;
-            selectedFeature.properties.area_m = document.getElementById('lot-size').value;
-            selectedFeature.properties.Category = document.getElementById('lot-category').value;
-            selectedFeature.properties.Description = document.getElementById('lot-description').value;
-            selectedFeature.properties.buy_link = fixLink(document.getElementById('lot-link').value);
-
-            saveGeoJSONToSupabase();
-        }
-
         function downloadGeoJSON() {
             const element = document.createElement('a');
             const file = new Blob([JSON.stringify(geojsonData, null, 2)], {type: 'application/json'});
             element.href = URL.createObjectURL(file);
             element.download = 'geojsonData.geojson';
             document.body.appendChild(element);
-            element.click;
+            element.click();  // Corrected to properly call the function
             document.body.removeChild(element);
         }
 
@@ -203,14 +183,4 @@
                     statusIndicator.textContent = "✅ Upload Success";
                     statusIndicator.className = "status-indicator success";
                     setTimeout(() => statusIndicator.textContent = "", 3000); // Disappears after 3 seconds
-                } else {
-                    throw new Error('Failed to upload');
                 }
-            } catch (error) {
-                statusIndicator.textContent = "❌ Error uploading.";
-                statusIndicator.className = "status-indicator error";
-            }
-        }
-    </script>
-</body>
-</html>
