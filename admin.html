@@ -10,13 +10,13 @@
         #map { height: 60vh; width: 100%; }
         #editor { padding: 10px; }
 
-        /* 🔥 Updated: Smaller font, white background, no bold */
+        /* 🔥 Updated: Lot ID labels now have NO background, smaller font */
         .lot-label {
             font-size: 8px; /* Smaller font */
             font-weight: normal; /* No bold */
-            background: rgba(255, 255, 255, 0.9); /* White background */
-            padding: 1px 3px;
-            border-radius: 2px;
+            color: black; /* Ensure visibility on light backgrounds */
+            background: none; /* Remove background */
+            padding: 0;
         }
     </style>
 </head>
@@ -29,27 +29,26 @@
     <div id="editor" style="display:none;">
         <h3>Edit Lot</h3>
         <p><strong>Lot ID:</strong> <span id="lot-id"></span></p>
-        <label>Price: $<input type="text" id="lot-price"></label><br>
+        <label>Price: $<input type="text" id="lot-price" oninput="autoSave()"></label><br>
         <label>Status:
-            <select id="lot-status">
+            <select id="lot-status" onchange="autoSave()">
                 <option value="For Sale">For Sale</option>
                 <option value="Sold">Sold</option>
                 <option value="Reserved">Reserved</option>
                 <option value="Not for Sale">Not for Sale</option>
             </select>
         </label><br>
-        <label>Lot Size: <input type="text" id="lot-size"></label><br>
+        <label>Lot Size: <input type="text" id="lot-size" oninput="autoSave()"></label><br>
         <label>Category:
-            <select id="lot-category">
+            <select id="lot-category" onchange="autoSave()">
                 <option value="Single Family Homesites">Single Family Homesites</option>
                 <option value="Multi Family Homesites">Multi Family Homesites</option>
                 <option value="Commercial">Commercial</option>
                 <option value="Mixed Use">Mixed Use</option>
             </select>
         </label><br>
-        <label>Description: <textarea id="lot-description"></textarea></label><br>
-        <label>Buy Link: <input type="text" id="lot-link"></label><br> 
-        <button onclick="saveChanges()">Save Changes</button>
+        <label>Description: <textarea id="lot-description" oninput="autoSave()"></textarea></label><br>
+        <label>Buy Link: <input type="text" id="lot-link" oninput="autoSave()"></label><br> 
     </div>
 
     <script>
@@ -119,11 +118,11 @@
                         document.getElementById('lot-link').value = feature.properties.buy_link || ''; 
                     });
 
-                    // 🔥 New: Add Lot ID as a label on the map
+                    // 🔥 New: Add Lot ID as a label on the map (No background)
                     let label = L.divIcon({
                         className: 'lot-label',
                         html: feature.properties.plot_id,
-                        iconSize: [15, 15] 
+                        iconSize: [1, 1] 
                     });
                     L.marker(layer.getBounds().getCenter(), { icon: label }).addTo(map);
                 }
@@ -141,7 +140,8 @@
             }
         }
 
-        function saveChanges() {
+        // 🔥 New: Auto-save changes when any field is modified
+        function autoSave() {
             if (!selectedFeature) return;
             selectedFeature.properties.price = document.getElementById('lot-price').value;
             selectedFeature.properties.status = document.getElementById('lot-status').value;
