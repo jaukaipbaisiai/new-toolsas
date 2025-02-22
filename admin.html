@@ -153,13 +153,12 @@
         }
 
         async function saveGeoJSONToSupabase() {
-            const fileContent = JSON.stringify(geojsonData, null, 4);
+            const fileContent = new Blob([JSON.stringify(geojsonData, null, 4)], { type: "application/json" });
 
             const response = await fetch(`${SUPABASE_URL}/storage/v1/object/${STORAGE_BUCKET}/${STORAGE_FILE}`, {
-                method: "PUT",
+                method: "POST",
                 headers: {
                     "Authorization": `Bearer ${SUPABASE_API_KEY}`,
-                    "Content-Type": "application/json",
                     "x-upsert": "true"
                 },
                 body: fileContent
