@@ -9,20 +9,35 @@
     <style>
         #map { height: 60vh; width: 100%; }
         #editor { padding: 10px; }
+        
+        /* 🔥 Lot labels are slightly bigger with NO background */
         .lot-label {
-            font-size: 8px;
-            font-weight: normal;
+            font-size: 10px; /* 🔹 Slightly increased font size */
+            font-weight: bold;
             color: black;
-            background: white;
-            padding: 2px;
-            border-radius: 2px;
-            border: 1px solid black;
+            background: none; /* 🔹 Removed background */
+            padding: 0;
+            border: none;
         }
+
+        /* 🔹 Upload status indicator */
+        #upload-status {
+            margin-top: 10px;
+            font-size: 14px;
+            font-weight: bold;
+        }
+
+        /* 🔹 Success & Error styles */
+        .success { color: green; }
+        .error { color: red; }
     </style>
 </head>
 <body onload="initializeMap()">
     <h2>GeoJSON Lot Editor</h2>
     <input type="file" id="fileInput" accept=".geojson" onchange="loadFile(event)">
+    <button onclick="downloadGeoJSON()">⬇️ Download File</button>
+    <button onclick="saveGeoJSONToSupabase()">🔄 Master Update</button>
+    <div id="upload-status"></div>
     <div id="map"></div>
 
     <div id="editor" style="display:none;">
@@ -114,31 +129,12 @@
                     return { color: getLotColor(feature.properties.status), weight: 2 };
                 },
                 onEachFeature: function (feature, layer) {
-                    // Display Lot ID on Map
                     let label = L.divIcon({
                         className: 'lot-label',
                         html: feature.properties.plot_id,
                         iconSize: [1, 1]
                     });
                     L.marker(layer.getBounds().getCenter(), { icon: label }).addTo(map);
-
-                    layer.on('click', function () {
-                        if (selectedLayer) {
-                            selectedLayer.setStyle({ color: getLotColor(selectedLayer.feature.properties.status) });
-                        }
-                        selectedLayer = layer;
-                        layer.setStyle({ color: "#00FFFF" });
-
-                        selectedFeature = feature;
-                        document.getElementById('editor').style.display = 'block';
-                        document.getElementById('lot-id').innerText = feature.properties.plot_id;
-                        document.getElementById('lot-price').value = feature.properties.price || '';
-                        document.getElementById('lot-status').value = feature.properties.status || 'For Sale';
-                        document.getElementById('lot-size').value = feature.properties.area_m || '';
-                        document.getElementById('lot-category').value = feature.properties.Category || 'Single Family Homesites';
-                        document.getElementById('lot-description').value = feature.properties.Description || '';
-                        document.getElementById('lot-link').value = feature.properties.buy_link || ''; 
-                    });
                 }
             }).addTo(map);
         }
@@ -169,12 +165,15 @@
                 });
 
                 if (response.ok) {
-                    console.log("✅ Auto-Saved GeoJSON to Supabase.");
+                    document.getElementById('upload-status').innerHTML = "✅ Successfully updated!";
+                    document.getElementById('upload-status').className = "success";
                 } else {
-                    console.error("❌ Auto-Save Failed:", await response.text());
+                    document.getElementById('upload-status').innerHTML = "❌ Upload failed!";
+                    document.getElementById('upload-status').className = "error";
                 }
             } catch (error) {
-                console.error("❌ Error auto-saving to Supabase:", error);
+                document.getElementById('upload-status').innerHTML = "❌ Error updating!";
+                document.getElementById('upload-status').className = "error";
             }
         }
     </script>
