@@ -9,7 +9,6 @@
     <style>
         #map { height: 60vh; width: 100%; }
         #editor { padding: 10px; }
-
         .lot-label {
             font-size: 8px;
             font-weight: normal;
@@ -58,7 +57,8 @@
 
         const SUPABASE_URL = "https://poxxulxqzxwotequkwbw.supabase.co";
         const SUPABASE_API_KEY = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InBveHh1bHhxenh3b3RlcXVrd2J3Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3NDAyNTYzNjcsImV4cCI6MjA1NTgzMjM2N30.Cf6EQFNFbnHjUdFzoC84L32F0yNyyxKku8CIELwVt0E";
-        const STORAGE_PATH = "geojson-files/lots.geojson";
+        const STORAGE_BUCKET = "geojson-files";
+        const STORAGE_FILE = "lots.geojson";
 
         function initializeMap() {
             map = L.map('map').setView([11.575, -86.244], 16);
@@ -70,7 +70,7 @@
             };
             L.control.layers(baseLayers).addTo(map);
             
-            fetch(`${SUPABASE_URL}/storage/v1/object/public/${STORAGE_PATH}`)
+            fetch(`${SUPABASE_URL}/storage/v1/object/public/${STORAGE_BUCKET}/${STORAGE_FILE}`)
                 .then(response => response.json())
                 .then(data => {
                     geojsonData = data;
@@ -153,13 +153,14 @@
         }
 
         async function saveGeoJSONToSupabase() {
-            const fileContent = new Blob([JSON.stringify(geojsonData, null, 4)], { type: "application/json" });
+            const fileContent = JSON.stringify(geojsonData, null, 4);
 
-            const response = await fetch(`${SUPABASE_URL}/storage/v1/object/public/${STORAGE_PATH}`, {
+            const response = await fetch(`${SUPABASE_URL}/storage/v1/object/${STORAGE_BUCKET}/${STORAGE_FILE}`, {
                 method: "PUT",
                 headers: {
                     "Authorization": `Bearer ${SUPABASE_API_KEY}`,
-                    "Content-Type": "application/json"
+                    "Content-Type": "application/json",
+                    "x-upsert": "true"
                 },
                 body: fileContent
             });
@@ -167,6 +168,7 @@
             if (response.ok) {
                 alert("✅ GeoJSON Updated in Supabase!");
             } else {
+                console.error("❌ Failed to update GeoJSON:", await response.text());
                 alert("❌ Failed to update GeoJSON.");
             }
         }
