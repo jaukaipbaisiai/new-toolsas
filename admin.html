@@ -10,12 +10,14 @@
         #map { height: 60vh; width: 100%; }
         #editor { padding: 10px; }
         .lot-label {
-            font-size: 12px; /* Slightly larger font */
-            font-weight: 300; /* Thin font */
-            color: black;
+            font-size: 12px;
+            font-weight: 300;
             background: none;
             padding: 0;
             border: none;
+        }
+        .lot-label.no-link {
+            color: red;
         }
         .status-indicator {
             display: inline-block;
@@ -44,6 +46,7 @@
         <label>Price: $<input type="text" id="lot-price" onblur="autoSaveAndUpload()"></label><br>
         <label>Status:
             <select id="lot-status" onchange="autoSaveAndUpload()">
+                <option value="">Unset</option>
                 <option value="For Sale">For Sale</option>
                 <option value="Sold">Sold</option>
                 <option value="Reserved">Reserved</option>
@@ -53,9 +56,12 @@
         <label>Lot Size: <input type="text" id="lot-size" onblur="autoSaveAndUpload()"></label><br>
         <label>Category:
             <select id="lot-category" onchange="autoSaveAndUpload()">
-                <option value="Single Family Homesites">Single Family Homesites</option>
-                <option value="Multi Family Homesites">Multi Family Homesites</option>
-                <option value="Commercial">Commercial</option>
+                <option value="Duplex">Duplex</option>
+                <option value="Condo">Condo</option>
+                <option value="Apartments">Apartments</option>
+                <option value="Single Family Homesite">Single Family Homesite</option>
+                <option value="Multi Family Homesite">Multi Family Homesite</option>
+                <option value="Hotel Development">Hotel Development</option>
                 <option value="Mixed Use">Mixed Use</option>
             </select>
         </label><br>
@@ -127,9 +133,10 @@
                     return { color: getLotColor(feature.properties.status), weight: 2 };
                 },
                 onEachFeature: function (feature, layer) {
+                    let labelColor = (feature.properties.status === "For Sale" && !feature.properties.buy_link) ? "red" : "black";
                     let label = L.divIcon({
                         className: 'lot-label',
-                        html: feature.properties.plot_id,
+                        html: `<span style="color:${labelColor};">${feature.properties.plot_id}</span>`,
                         iconSize: [1, 1]
                     });
                     L.marker(layer.getBounds().getCenter(), { icon: label }).addTo(map);
@@ -145,9 +152,9 @@
                         document.getElementById('editor').style.display = 'block';
                         document.getElementById('lot-id').innerText = feature.properties.plot_id;
                         document.getElementById('lot-price').value = feature.properties.price || '';
-                        document.getElementById('lot-status').value = feature.properties.status || 'For Sale';
+                        document.getElementById('lot-status').value = feature.properties.status || '';
                         document.getElementById('lot-size').value = feature.properties.area_m || '';
-                        document.getElementById('lot-category').value = feature.properties.Category || 'Single Family Homesites';
+                        document.getElementById('lot-category').value = feature.properties.Category || 'Single Family Homesite';
                         document.getElementById('lot-description').value = feature.properties.Description || '';
                         document.getElementById('lot-link').value = feature.properties.buy_link || ''; 
                     });
@@ -155,42 +162,14 @@
             }).addTo(map);
         }
 
-        function autoSaveAndUpload() {
-            if (!selectedFeature) return;
-            selectedFeature.properties.price = document.getElementById('lot-price').value;
-            selectedFeature.properties.status = document.getElementById('lot-status').value;
-            selectedFeature.properties.area_m = document.getElementById('lot-size').value;
-            selectedFeature.properties.Category = document.getElementById('lot-category').value;
-            selectedFeature.properties.Description = document.getElementById('lot-description').value;
-            selectedFeature.properties.buy_link = document.getElementById('lot-link').value;
-
-            saveGeoJSONToSupabase();
-        }
-
-        async function saveGeoJSONToSupabase() {
-            const statusIndicator = document.getElementById("statusIndicator");
-            statusIndicator.textContent = "Uploading...";
-            statusIndicator.className = "status-indicator";
-
-            const fileContent = new Blob([JSON.stringify(geojsonData, null, 4)], { type: "application/json" });
-
-            try {
-                const response = await fetch(`${SUPABASE_URL}/storage/v1/object/${STORAGE_BUCKET}/${FILE_NAME}`, {
-                    method: "PUT",
-                    headers: {
-                        "Authorization": `Bearer ${SUPABASE_SERVICE_ROLE_KEY}`,
-                        "Content-Type": "application/json"
-                    },
-                    body: fileContent
-                });
-
-                statusIndicator.textContent = "✅ Upload Success";
-                statusIndicator.className = "status-indicator success";
-                setTimeout(() => statusIndicator.textContent = "", 3000); // Disappears after 3 seconds
-            } catch {
-                statusIndicator.textContent = "❌ Error uploading.";
-                statusIndicator.className = "status-indicator error";
-            }
+        function downloadGeoJSON() {
+            const blob = new Blob([JSON.stringify(geojsonData, null, 4)], { type: "application/json" });
+            const a = document.createElement("a");
+            a.href = URL.createObjectURL(blob);
+            a.download = "lots.geojson";
+            document.body.appendChild(a);
+            a.click();
+            document.body.removeChild(a);
         }
     </script>
 </body>
