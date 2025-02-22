@@ -32,7 +32,6 @@
 </head>
 <body onload="initializeMap()">
     <h2>GeoJSON Lot Editor</h2>
-    <input type="file" id="fileInput" accept=".geojson" onchange="loadFile(event)">
     <button onclick="downloadGeoJSON()">📥 Download JSON</button>
     <button onclick="saveGeoJSONToSupabase()">🚀 Master Update</button>
     <span id="statusIndicator" class="status-indicator"></span>
@@ -74,7 +73,7 @@
         let map;
 
         const SUPABASE_URL = "https://poxxulxqzxwotequkwbw.supabase.co";
-        const SUPABASE_SERVICE_ROLE_KEY = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InBveHh1bHhxenh3b3RlcXVrd2J3Iiwicm9sZSI6InNlcnZpY2Vfcm9sZSIsImlhdCI6MTc0MDI1NjM2NywiZXhwIjoyMDU1ODMyMzY3fQ.qCvdI1kkLn72ucM9aBuXttK-95vux-YRC_J2PUSI8WA"; 
+        const SUPABASE_SERVICE_ROLE_KEY = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InBveHh1bHhxenh3b3RlcXVrd2J3Iiwicm9lZSI6InNlcnZpY2Vfcm9sZSIsImlhdCI6MTc0MDI1NjM2NywiZXhwIjoyMDU1ODMyMzY3fQ.qCvdI1kkLn72ucM9aBuXttK-95vux-YRC_J2PUSI8WA"; 
         const STORAGE_BUCKET = "geojson-files";
         const FILE_NAME = "lots.geojson";
 
@@ -88,6 +87,10 @@
             };
             L.control.layers(baseLayers).addTo(map);
 
+            fetchGeoJSON();
+        }
+
+        function fetchGeoJSON() {
             fetch(`${SUPABASE_URL}/storage/v1/object/public/${STORAGE_BUCKET}/${FILE_NAME}`)
                 .then(response => response.json())
                 .then(data => {
@@ -136,7 +139,7 @@
                         document.getElementById('lot-size').value = feature.properties.area_m || '';
                         document.getElementById('lot-category').value = feature.properties.Category || '';
                         document.getElementById('lot-description').value = feature.properties.Description || '';
-                        document.getElementById('lot-link').value = feature.properties.buy_link || ''; 
+                        document.getElementById('lot-link').value = fixLink(feature.properties.buy_link || ''); 
                     });
                 }
             }).addTo(map);
@@ -152,14 +155,40 @@
             }
         }
 
+        function fixLink(link) {
+            // This function ensures the link has the correct protocol
+            if (link && !link.startsWith('http://') and !link.startsWith('https://')) {
+                return 'https://' + link;
+            }
+            return link;
+        }
+
+        function autoSaveAndUpload() {
+            if (!selectedFeature) return;
+            selectedFeature.properties.price = document.getElementById('lot-price').value;
+            selectedFeature.properties.status = document.getElementById('lot-status').value;
+            selectedFeature.properties.area_m = document.getElementById('lot-size').value;
+            selectedFeature.properties.Category = document.getElementById('lot-category').value;
+            selectedFeature.properties.Description = document.getElementById('lot-description').value;
+            selectedFeature.properties.buy_link = fixLink(document.getElementById('lot-link').value);
+
+            saveGeoJSONToSupabase();
+        }
+
         function downloadGeoJSON() {
-            const element = document.createElement('a');
-            const file = new Blob([JSON.stringify(geojsonData, null, 2)], {type: 'application/json'});
-            element.href = URL.createObjectURL(file);
-            element.download = 'geojsonData.geojson';
-            document.body.appendChild(element);
-            element.click();  // Corrected to properly call the function
-            document.body.removeChild(element);
+            fetch(`${SUPABASE_URL}/storage/v1/object/public/${STORAGE_BUCKET}/${FILE_NAME}`)
+            .then(response => response.blob())
+            .then(blob => {
+                const url = window.URL.createObjectURL(blob);
+                const a = document.createElement('a');
+                a.style.display = 'none';
+                a.href = url;
+                a.download = FILE_NAME;
+                document.body.appendChild(a);
+                a.click();
+                window.URL.revokeObjectURL(url);
+            })
+            .catch(e => alert('Error downloading the file: ' + e));
         }
 
         async function saveGeoJSONToSupabase() {
