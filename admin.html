@@ -97,26 +97,6 @@
                 .catch(error => console.error("❌ Error loading GeoJSON from Supabase:", error));
         }
 
-        function getLotColor(status) {
-            switch (status) {
-                case "For Sale": return "green";
-                case "Sold": return "red";
-                case "Reserved": return "yellow";
-                case "Not for Sale": return "grey";
-                default: return "blue"; 
-            }
-        }
-
-        function loadFile(event) {
-            const file = event.target.files[0];
-            const reader = new FileReader();
-            reader.onload = function(e) {
-                geojsonData = JSON.parse(e.target.result);
-                loadGeoJSON();
-            };
-            reader.readAsText(file);
-        }
-
         function loadGeoJSON() {
             if (!geojsonData) return;
 
@@ -156,10 +136,28 @@
                         document.getElementById('lot-size').value = feature.properties.area_m || '';
                         document.getElementById('lot-category').value = feature.properties.Category || '';
                         document.getElementById('lot-description').value = feature.properties.Description || '';
-                        document.getElementById('lot-link').value = feature.properties.buy_link || ''; 
+                        document.getElementById('lot-link').value = fixLink(feature.properties.buy_link || ''); 
                     });
                 }
             }).addTo(map);
+        }
+
+        function getLotColor(status) {
+            switch (status) {
+                case "For Sale": return "green";
+                case "Sold": return "red";
+                case "Reserved": return "yellow";
+                case "Not for Sale": return "grey";
+                default: return "blue"; 
+            }
+        }
+
+        function fixLink(link) {
+            // This function ensures the link has the correct protocol
+            if (link && !link.startsWith('http://') && !link.startsWith('https://')) {
+                return 'https://' + link;
+            }
+            return link;
         }
 
         function autoSaveAndUpload() {
@@ -169,7 +167,7 @@
             selectedFeature.properties.area_m = document.getElementById('lot-size').value;
             selectedFeature.properties.Category = document.getElementById('lot-category').value;
             selectedFeature.properties.Description = document.getElementById('lot-description').value;
-            selectedFeature.properties.buy_link = document.getElementById('lot-link').value;
+            selectedFeature.properties.buy_link = fixLink(document.getElementById('lot-link').value);
 
             saveGeoJSONToSupabase();
         }
@@ -180,7 +178,7 @@
             element.href = URL.createObjectURL(file);
             element.download = 'geojsonData.geojson';
             document.body.appendChild(element);
-            element.click();
+            element.click;
             document.body.removeChild(element);
         }
 
@@ -201,10 +199,14 @@
                     body: fileContent
                 });
 
-                statusIndicator.textContent = "✅ Upload Success";
-                statusIndicator.className = "status-indicator success";
-                setTimeout(() => statusIndicator.textContent = "", 3000); // Disappears after 3 seconds
-            } catch {
+                if (response.ok) {
+                    statusIndicator.textContent = "✅ Upload Success";
+                    statusIndicator.className = "status-indicator success";
+                    setTimeout(() => statusIndicator.textContent = "", 3000); // Disappears after 3 seconds
+                } else {
+                    throw new Error('Failed to upload');
+                }
+            } catch (error) {
                 statusIndicator.textContent = "❌ Error uploading.";
                 statusIndicator.className = "status-indicator error";
             }
