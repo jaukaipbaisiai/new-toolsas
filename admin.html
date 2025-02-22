@@ -12,7 +12,7 @@
         .lot-label {
             font-size: 12px;
             font-weight: 300;
-            color: black; /* default color, overridden in JavaScript */
+            color: black;
             background: none;
             padding: 0;
             border: none;
@@ -73,6 +73,7 @@
         let map;
 
         const SUPABASE_URL = "https://poxxulxqzxwotequkwbw.supabase.co";
+        const SUPABASE_SERVICE_ROLE_KEY = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InBveHh1bHhxenh3b3RlcXVrd2J3Iiwicm9sZSI6InNlcnZpY2Vfcm9sZSIsImlhdCI6MTc0MDI1NjM2NywiZXhwIjoyMDU1ODMyMzY3fQ.qCvdI1kkLn72ucM9aBuXttK-95vux-YRC_J2PUSI8WA"; 
         const STORAGE_BUCKET = "geojson-files";
         const FILE_NAME = "lots.geojson";
 
@@ -109,31 +110,15 @@
                     return { color: getLotColor(feature.properties.status), weight: 2 };
                 },
                 onEachFeature: function (feature, layer) {
-                    let labelColor = (feature.properties.status === "For Sale" && (!feature.properties.buy_link || feature.properties.buy_link.trim() === "")) ? "red" : "black";
                     let label = L.divIcon({
                         className: 'lot-label',
-                        html: `<span style="color: ${labelColor};">${feature.properties.plot_id}</span>`,
+                        html: feature.properties.plot_id,
                         iconSize: [1, 1]
                     });
+                    let labelColor = (feature.properties.status === "For Sale" && (!feature.properties.buy_link || feature.properties.buy_link.trim() === "")) ? "red" : "black";
+                    label.options.className = 'lot-label';
+                    label.options.html = `<span style="color: ${labelColor};">${feature.properties.plot_id}</span>`;
                     L.marker(layer.getBounds().getCenter(), { icon: label }).addTo(map);
-
-                    layer.on('click', function () {
-                        if (selectedLayer) {
-                            selectedLayer.setStyle({ color: getLotColor(selectedLayer.feature.properties.status) });
-                        }
-                        selectedLayer = layer;
-                        layer.setStyle({ color: "#00FFFF" });
-
-                        selectedFeature = feature;
-                        document.getElementById('editor').style.display = 'block';
-                        document.getElementById('lot-id').innerText = feature.properties.plot_id;
-                        document.getElementById('lot-price').value = feature.properties.price || '';
-                        document.getElementById('lot-status').value = feature.properties.status || '';
-                        document.getElementById('lot-size').value = feature.properties.area_m || '';
-                        document.getElementById('lot-category').value = feature.properties.Category || '';
-                        document.getElementById('lot-description').value = feature.properties.Description || '';
-                        document.getElementById('lot-link').value = fixLink(feature.properties.buy_link || ''); 
-                    });
                 }
             }).addTo(map);
         }
@@ -148,37 +133,55 @@
             }
         }
 
-        function fixLink(link) {
-            return link && !link.startsWith('http://') && !link.startsWith('https://') ? 'https://' + link : link;
-        }
-
-        function downloadGeoJSON() {
+        async function downloadGeoJSON() {
             const fileUrl = `${SUPABASE_URL}/storage/v1/object/public/${STORAGE_BUCKET}/${FILE_NAME}`;
-            fetch(fileUrl)
-                .then(response => response.blob())
-                .then(blob => {
-                    const url = window.URL.createObjectURL(blob);
-                    const a = document.createElement("a");
-                    a.style.display = "none";
-                    a.href = url;
-                    a.download = "lots.geojson";
-                    document.body.appendChild(a);
-                    a.click();
-                    window.URL.revokeObjectURL(url);
-                })
-                .catch(error => console.error("❌ Error downloading GeoJSON:", error));
+
+            try {
+                const response = await fetch(fileUrl);
+                if (!response.ok) throw new Error("Download failed");
+
+                const blob = await response.blob();
+                const url = window.URL.createObjectURL(blob);
+                const a = document.createElement("a");
+                a.href = url;
+                a.download = FILE_NAME;
+                document.body.appendChild(a);
+                a.click();
+                document.body.removeChild(a);
+                window.URL.revokeObjectURL(url);
+            } catch (error) {
+                console.error("Error downloading file:", error);
+                alert("❌ Error downloading file. Please try again.");
+            }
         }
 
-        function autoSaveAndUpload() {
-            if (!selectedFeature) return;
-            selectedFeature.properties.price = document.getElementById('lot-price').value;
-            selectedFeature.properties.status = document.getElementById('lot-status').value;
-            selectedFeature.properties.area_m = document.getElementById('lot-size').value;
-            selectedFeature.properties.Category = document.getElementById('lot-category').value;
-            selectedFeature.properties.Description = document.getElementById('lot-description').value;
-            selectedFeature.properties.buy_link = fixLink(document.getElementById('lot-link').value);
+        async function saveGeoJSONToSupabase() {
+            const statusIndicator = document.getElementById("statusIndicator");
+            statusIndicator.textContent = "Uploading...";
+            statusIndicator.className = "status-indicator";
 
-            saveGeoJSONToSupabase();
+            const fileContent = new Blob([JSON.stringify(geojsonData, null, 4)], { type: "application/json" });
+
+            try {
+                const response = await fetch(`${SUPABASE_URL}/storage/v1/object/${STORAGE_BUCKET}/${FILE_NAME}`, {
+                    method: "PUT",
+                    headers: {
+                        "Authorization": `Bearer ${SUPABASE_SERVICE_ROLE_KEY}`,
+                        "Content-Type": "application/json"
+                    },
+                    body: fileContent
+                });
+
+                if (response.ok) {
+                    statusIndicator.textContent = "✅ Upload Success";
+                    statusIndicator.className = "status-indicator success";
+                } else {
+                    throw new Error('Upload failed');
+                }
+            } catch (error) {
+                statusIndicator.textContent = "❌ Error uploading.";
+                statusIndicator.className = "status-indicator error";
+            }
         }
     </script>
 </body>
