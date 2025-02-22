@@ -10,14 +10,13 @@
         #map { height: 60vh; width: 100%; }
         #editor { padding: 10px; }
 
-        /* 🔥 Updated: Smaller lot ID labels with normal font */
+        /* 🔥 Updated: Smaller font, white background, no bold */
         .lot-label {
-            font-size: 9px; /* Smaller font */
+            font-size: 8px; /* Smaller font */
             font-weight: normal; /* No bold */
-            background: rgba(255, 255, 255, 0.6); /* Less intrusive white background */
-            padding: 1px 3px; /* Smaller padding */
+            background: rgba(255, 255, 255, 0.9); /* White background */
+            padding: 1px 3px;
             border-radius: 2px;
-            border: 1px solid rgba(0, 0, 0, 0.2); /* Slight border for visibility */
         }
     </style>
 </head>
@@ -120,11 +119,11 @@
                         document.getElementById('lot-link').value = feature.properties.buy_link || ''; 
                     });
 
-                    // 🔥 Updated: Add Lot ID as a smaller label on the map
+                    // 🔥 New: Add Lot ID as a label on the map
                     let label = L.divIcon({
                         className: 'lot-label',
                         html: feature.properties.plot_id,
-                        iconSize: [15, 15] // Smaller size for less obstruction
+                        iconSize: [15, 15] 
                     });
                     L.marker(layer.getBounds().getCenter(), { icon: label }).addTo(map);
                 }
@@ -132,15 +131,13 @@
         }
 
         function getLotColor(status) {
-            if (!status || status.trim() === "") {
-                return "black"; // 🔥 Updated: Make unassigned lots black
-            }
             switch (status) {
                 case "For Sale": return "green";
                 case "Sold": return "red";
                 case "Reserved": return "yellow";
                 case "Not for Sale": return "grey";
-                default: return "black"; // 🔥 Default to black for any undefined status
+                case undefined: return "blue"; // 🔥 Changed: Unassigned lots are now blue
+                default: return "blue"; // 🔥 Changed: Default color is now blue for unassigned lots
             }
         }
 
