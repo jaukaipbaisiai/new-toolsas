@@ -183,4 +183,14 @@
                     statusIndicator.textContent = "✅ Upload Success";
                     statusIndicator.className = "status-indicator success";
                     setTimeout(() => statusIndicator.textContent = "", 3000); // Disappears after 3 seconds
+                } else {
+                    throw new Error('Failed to upload');
                 }
+            } catch (error) {
+                statusIndicator.textContent = "❌ Error uploading.";
+                statusIndicator.className = "status-indicator error";
+            }
+        }
+    </script>
+</body>
+</html>
