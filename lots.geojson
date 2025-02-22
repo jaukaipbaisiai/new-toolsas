@@ -16,7 +16,7 @@
                 "Category": "Single Family Homesites",
                 "plot_id": 123,
                 "Shape_Leng": 0.00124631243,
-                "Shape_Area": 8.992e-08,
+                "Shape_Area": 8.992e-8,
                 "price": "150000",
                 "status": "For Sale",
                 "Description": "No description available",
@@ -68,7 +68,7 @@
                 "Category": "Single Family Homesites",
                 "plot_id": 124,
                 "Shape_Leng": 0.00117967545,
-                "Shape_Area": 8.227e-08,
+                "Shape_Area": 8.227e-8,
                 "price": "160000",
                 "status": "Sold",
                 "Description": "No description available"
@@ -119,7 +119,7 @@
                 "Category": "Single Family Homesites",
                 "plot_id": 141,
                 "Shape_Leng": 0.00118050802,
-                "Shape_Area": 8.24e-08,
+                "Shape_Area": 8.24e-8,
                 "price": "140000",
                 "status": "For Sale",
                 "Description": "No description available",
@@ -171,7 +171,7 @@
                 "Category": "Single Family Homesites",
                 "plot_id": 140,
                 "Shape_Leng": 0.00166196291,
-                "Shape_Area": 1.4175e-07,
+                "Shape_Area": 1.4175e-7,
                 "price": "200000",
                 "status": "Reserved",
                 "Description": "No description available"
@@ -246,11 +246,11 @@
                 "Category": "Single Family Homesites",
                 "plot_id": 29,
                 "Shape_Leng": 0.00146623744,
-                "Shape_Area": 1.2547e-07,
-                "price": "180000",
+                "Shape_Area": 1.2547e-7,
+                "price": "1.35 BTC",
                 "status": "For Sale",
                 "Description": "No description available",
-                "buy_link": "https://yourwebsite.com/buy-lot-29"
+                "buy_link": "https://gdmarchitecture.com/portfolio-item/house-11521/"
             },
             "geometry": {
                 "type": "MultiPolygon",
@@ -298,7 +298,7 @@
                 "Category": "Single Family Homesites",
                 "plot_id": 142,
                 "Shape_Leng": 0.00139013834,
-                "Shape_Area": 1.1691e-07,
+                "Shape_Area": 1.1691e-7,
                 "price": "175000",
                 "status": "For Sale",
                 "Description": "No description available",
@@ -350,7 +350,7 @@
                 "Category": "Single Family Homesites",
                 "plot_id": 65,
                 "Shape_Leng": 0.00193002813,
-                "Shape_Area": 2.4001e-07,
+                "Shape_Area": 2.4001e-7,
                 "price": "130000",
                 "status": "For Sale",
                 "Description": "No description available",
@@ -418,7 +418,7 @@
                 "Category": "Single Family Homesites",
                 "plot_id": 70,
                 "Shape_Leng": 0.00132492926,
-                "Shape_Area": 1.0358e-07,
+                "Shape_Area": 1.0358e-7,
                 "price": "190000",
                 "status": "Sold",
                 "Description": "No description available"
@@ -473,7 +473,7 @@
                 "Category": "Single Family Homesites",
                 "plot_id": 165,
                 "Shape_Leng": 0.00135254625,
-                "Shape_Area": 1.0444e-07,
+                "Shape_Area": 1.0444e-7,
                 "price": "N/A",
                 "status": "Unknown",
                 "Description": "No description available"
@@ -524,10 +524,11 @@
                 "Category": "Single Family Homesites",
                 "plot_id": 42,
                 "Shape_Leng": 0.00154091333,
-                "Shape_Area": 1.3537e-07,
-                "price": "N/A",
-                "status": "Unknown",
-                "Description": "No description available"
+                "Shape_Area": 1.3537e-7,
+                "price": "1.5 BTC",
+                "status": "For Sale",
+                "Description": "No description available",
+                "buy_link": "https://gdmarchitecture.com/portfolio-item/house-12021-2/"
             },
             "geometry": {
                 "type": "MultiPolygon",
@@ -579,7 +580,7 @@
                 "Category": "Single Family Homesites",
                 "plot_id": 143,
                 "Shape_Leng": 0.00140607917,
-                "Shape_Area": 1.0788e-07,
+                "Shape_Area": 1.0788e-7,
                 "price": "N/A",
                 "status": "Unknown",
                 "Description": "No description available"
@@ -622,7 +623,7 @@
                 "Category": "Single Family Homesites",
                 "plot_id": 164,
                 "Shape_Leng": 0.00133247345,
-                "Shape_Area": 9.569e-08,
+                "Shape_Area": 9.569e-8,
                 "price": "N/A",
                 "status": "Unknown",
                 "Description": "No description available"
@@ -673,7 +674,7 @@
                 "Category": "Single Family Homesites",
                 "plot_id": 71,
                 "Shape_Leng": 0.00137070071,
-                "Shape_Area": 1.0998e-07,
+                "Shape_Area": 1.0998e-7,
                 "price": "N/A",
                 "status": "Unknown",
                 "Description": "No description available"
@@ -724,7 +725,7 @@
                 "Category": "Single Family Homesites",
                 "plot_id": 163,
                 "Shape_Leng": 0.00129829387,
-                "Shape_Area": 9.682e-08,
+                "Shape_Area": 9.682e-8,
                 "price": "N/A",
                 "status": "Unknown",
                 "Description": "No description available"
@@ -775,7 +776,7 @@
                 "Category": "Single Family Homesites",
                 "plot_id": 64,
                 "Shape_Leng": 0.00149967869,
-                "Shape_Area": 1.3849e-07,
+                "Shape_Area": 1.3849e-7,
                 "price": "N/A",
                 "status": "Unknown",
                 "Description": "No description available"
@@ -830,7 +831,7 @@
                 "Category": "Single Family Homesites",
                 "plot_id": 114,
                 "Shape_Leng": 0.00130247724,
-                "Shape_Area": 9.674e-08,
+                "Shape_Area": 9.674e-8,
                 "price": "N/A",
                 "status": "Unknown",
                 "Description": "No description available"
@@ -877,7 +878,7 @@
                 "Category": "Single Family Homesites",
                 "plot_id": 41,
                 "Shape_Leng": 0.00140204828,
-                "Shape_Area": 1.11e-07,
+                "Shape_Area": 1.11e-7,
                 "price": "N/A",
                 "status": "Unknown",
                 "Description": "No description available"
@@ -924,7 +925,7 @@
                 "Category": "Single Family Homesites",
                 "plot_id": 69,
                 "Shape_Leng": 0.00148621928,
-                "Shape_Area": 1.3607e-07,
+                "Shape_Area": 1.3607e-7,
                 "price": "N/A",
                 "status": "Unknown",
                 "Description": "No description available"
@@ -987,7 +988,7 @@
                 "Category": "Single Family Homesites",
                 "plot_id": 162,
                 "Shape_Leng": 0.00119597332,
-                "Shape_Area": 8.744e-08,
+                "Shape_Area": 8.744e-8,
                 "price": "N/A",
                 "status": "Unknown",
                 "Description": "No description available"
@@ -1042,7 +1043,7 @@
                 "Category": "Single Family Homesites",
                 "plot_id": 161,
                 "Shape_Leng": 0.00130737925,
-                "Shape_Area": 1.1089e-07,
+                "Shape_Area": 1.1089e-7,
                 "price": "N/A",
                 "status": "Unknown",
                 "Description": "No description available"
@@ -1101,7 +1102,7 @@
                 "Category": "Single Family Homesites",
                 "plot_id": 110,
                 "Shape_Leng": 0.00129627634,
-                "Shape_Area": 9.694e-08,
+                "Shape_Area": 9.694e-8,
                 "price": "N/A",
                 "status": "Unknown",
                 "Description": "No description available"
@@ -1152,10 +1153,11 @@
                 "Category": "Single Family Homesites",
                 "plot_id": 40,
                 "Shape_Leng": 0.00143385989,
-                "Shape_Area": 1.1783e-07,
-                "price": "N/A",
-                "status": "Unknown",
-                "Description": "No description available"
+                "Shape_Area": 1.1783e-7,
+                "price": "1.4 BTC",
+                "status": "For Sale",
+                "Description": "No description available",
+                "buy_link": "https://gdmarchitecture.com/portfolio-item/house-10921/"
             },
             "geometry": {
                 "type": "MultiPolygon",
@@ -1203,7 +1205,7 @@
                 "Category": "Single Family Homesites",
                 "plot_id": 68,
                 "Shape_Leng": 0.00135960523,
-                "Shape_Area": 1.0858e-07,
+                "Shape_Area": 1.0858e-7,
                 "price": "N/A",
                 "status": "Unknown",
                 "Description": "No description available"
@@ -1254,7 +1256,7 @@
                 "Category": "Single Family Homesites",
                 "plot_id": 111,
                 "Shape_Leng": 0.00125784105,
-                "Shape_Area": 8.924e-08,
+                "Shape_Area": 8.924e-8,
                 "price": "N/A",
                 "status": "Unknown",
                 "Description": "No description available"
@@ -1305,7 +1307,7 @@
                 "Category": "Single Family Homesites",
                 "plot_id": 156,
                 "Shape_Leng": 0.00136365583,
-                "Shape_Area": 1.099e-07,
+                "Shape_Area": 1.099e-7,
                 "price": "N/A",
                 "status": "Unknown",
                 "Description": "No description available"
@@ -1356,7 +1358,7 @@
                 "Category": "Single Family Homesites",
                 "plot_id": 159,
                 "Shape_Leng": 0.00129650005,
-                "Shape_Area": 9.358e-08,
+                "Shape_Area": 9.358e-8,
                 "price": "N/A",
                 "status": "Unknown",
                 "Description": "No description available"
@@ -1419,7 +1421,7 @@
                 "Category": "Single Family Homesites",
                 "plot_id": 157,
                 "Shape_Leng": 0.00121674718,
-                "Shape_Area": 8.559e-08,
+                "Shape_Area": 8.559e-8,
                 "price": "N/A",
                 "status": "Unknown",
                 "Description": "No description available"
@@ -1470,7 +1472,7 @@
                 "Category": "Single Family Homesites",
                 "plot_id": 158,
                 "Shape_Leng": 0.00130253406,
-                "Shape_Area": 1.0393e-07,
+                "Shape_Area": 1.0393e-7,
                 "price": "N/A",
                 "status": "Unknown",
                 "Description": "No description available"
@@ -1529,7 +1531,7 @@
                 "Category": "Single Family Homesites",
                 "plot_id": 155,
                 "Shape_Leng": 0.0013818779,
-                "Shape_Area": 1.0068e-07,
+                "Shape_Area": 1.0068e-7,
                 "price": "N/A",
                 "status": "Unknown",
                 "Description": "No description available"
@@ -1572,7 +1574,7 @@
                 "Category": "Single Family Homesites",
                 "plot_id": 112,
                 "Shape_Leng": 0.00127665361,
-                "Shape_Area": 9.367e-08,
+                "Shape_Area": 9.367e-8,
                 "price": "N/A",
                 "status": "Unknown",
                 "Description": "No description available"
@@ -1623,7 +1625,7 @@
                 "Category": "Single Family Homesites",
                 "plot_id": 39,
                 "Shape_Leng": 0.00136553285,
-                "Shape_Area": 1.0724e-07,
+                "Shape_Area": 1.0724e-7,
                 "price": "N/A",
                 "status": "Unknown",
                 "Description": "No description available"
@@ -1678,7 +1680,7 @@
                 "Category": "Single Family Homesites",
                 "plot_id": 113,
                 "Shape_Leng": 0.00123208968,
-                "Shape_Area": 8.461e-08,
+                "Shape_Area": 8.461e-8,
                 "price": "N/A",
                 "status": "Unknown",
                 "Description": "No description available"
@@ -1725,7 +1727,7 @@
                 "Category": "Single Family Homesites",
                 "plot_id": 160,
                 "Shape_Leng": 0.00129820916,
-                "Shape_Area": 1.1084e-07,
+                "Shape_Area": 1.1084e-7,
                 "price": "N/A",
                 "status": "Unknown",
                 "Description": "No description available"
@@ -1784,7 +1786,7 @@
                 "Category": "Single Family Homesites",
                 "plot_id": 35,
                 "Shape_Leng": 0.00137221358,
-                "Shape_Area": 1.0478e-07,
+                "Shape_Area": 1.0478e-7,
                 "price": "N/A",
                 "status": "Unknown",
                 "Description": "No description available"
@@ -1835,10 +1837,11 @@
                 "Category": "Single Family Homesites",
                 "plot_id": 36,
                 "Shape_Leng": 0.00138676344,
-                "Shape_Area": 1.0826e-07,
+                "Shape_Area": 1.0826e-7,
                 "price": "N/A",
-                "status": "Unknown",
-                "Description": "No description available"
+                "status": "",
+                "Description": "No description available",
+                "buy_link": ""
             },
             "geometry": {
                 "type": "MultiPolygon",
@@ -1878,7 +1881,7 @@
                 "Category": "Single Family Homesites",
                 "plot_id": 144,
                 "Shape_Leng": 0.00131522417,
-                "Shape_Area": 9.567e-08,
+                "Shape_Area": 9.567e-8,
                 "price": "N/A",
                 "status": "Unknown",
                 "Description": "No description available"
@@ -1921,7 +1924,7 @@
                 "Category": "Single Family Homesites",
                 "plot_id": 37,
                 "Shape_Leng": 0.00140480801,
-                "Shape_Area": 1.1201e-07,
+                "Shape_Area": 1.1201e-7,
                 "price": "N/A",
                 "status": "Unknown",
                 "Description": "No description available"
@@ -1964,7 +1967,7 @@
                 "Category": "Single Family Homesites",
                 "plot_id": 38,
                 "Shape_Leng": 0.00134490542,
-                "Shape_Area": 1.0114e-07,
+                "Shape_Area": 1.0114e-7,
                 "price": "N/A",
                 "status": "Unknown",
                 "Description": "No description available"
@@ -2015,7 +2018,7 @@
                 "Category": "Single Family Homesites",
                 "plot_id": 145,
                 "Shape_Leng": 0.00138666834,
-                "Shape_Area": 1.1219e-07,
+                "Shape_Area": 1.1219e-7,
                 "price": "N/A",
                 "status": "Unknown",
                 "Description": "No description available"
@@ -2062,7 +2065,7 @@
                 "Category": "Single Family Homesites",
                 "plot_id": 154,
                 "Shape_Leng": 0.00148031407,
-                "Shape_Area": 1.1971e-07,
+                "Shape_Area": 1.1971e-7,
                 "price": "N/A",
                 "status": "Unknown",
                 "Description": "No description available"
@@ -2109,7 +2112,7 @@
                 "Category": "Single Family Homesites",
                 "plot_id": 149,
                 "Shape_Leng": 0.00133083569,
-                "Shape_Area": 1.0477e-07,
+                "Shape_Area": 1.0477e-7,
                 "price": "N/A",
                 "status": "Unknown",
                 "Description": "No description available"
@@ -2160,7 +2163,7 @@
                 "Category": "Single Family Homesites",
                 "plot_id": 150,
                 "Shape_Leng": 0.00129495203,
-                "Shape_Area": 9.514e-08,
+                "Shape_Area": 9.514e-8,
                 "price": "N/A",
                 "status": "Unknown",
                 "Description": "No description available"
@@ -2207,7 +2210,7 @@
                 "Category": "Single Family Homesites",
                 "plot_id": 151,
                 "Shape_Leng": 0.00139593038,
-                "Shape_Area": 1.056e-07,
+                "Shape_Area": 1.056e-7,
                 "price": "N/A",
                 "status": "Unknown",
                 "Description": "No description available"
@@ -2258,7 +2261,7 @@
                 "Category": "Single Family Homesites",
                 "plot_id": 148,
                 "Shape_Leng": 0.00131400512,
-                "Shape_Area": 9.785e-08,
+                "Shape_Area": 9.785e-8,
                 "price": "N/A",
                 "status": "Unknown",
                 "Description": "No description available"
@@ -2305,7 +2308,7 @@
                 "Category": "Single Family Homesites",
                 "plot_id": 153,
                 "Shape_Leng": 0.00139119469,
-                "Shape_Area": 1.0382e-07,
+                "Shape_Area": 1.0382e-7,
                 "price": "N/A",
                 "status": "Unknown",
                 "Description": "No description available"
@@ -2352,7 +2355,7 @@
                 "Category": "Single Family Homesites",
                 "plot_id": 152,
                 "Shape_Leng": 0.00134644168,
-                "Shape_Area": 9.709e-08,
+                "Shape_Area": 9.709e-8,
                 "price": "N/A",
                 "status": "Unknown",
                 "Description": "No description available"
@@ -2399,7 +2402,7 @@
                 "Category": "Single Family Homesites",
                 "plot_id": 147,
                 "Shape_Leng": 0.00138041895,
-                "Shape_Area": 1.1117e-07,
+                "Shape_Area": 1.1117e-7,
                 "price": "N/A",
                 "status": "Unknown",
                 "Description": "No description available"
@@ -2446,7 +2449,7 @@
                 "Category": "Single Family Homesites",
                 "plot_id": 146,
                 "Shape_Leng": 0.00137103633,
-                "Shape_Area": 1.0929e-07,
+                "Shape_Area": 1.0929e-7,
                 "price": "N/A",
                 "status": "Unknown",
                 "Description": "No description available"
@@ -2493,7 +2496,7 @@
                 "Category": "Single Family Homesites",
                 "plot_id": 2,
                 "Shape_Leng": 0.00166968837,
-                "Shape_Area": 1.3867e-07,
+                "Shape_Area": 1.3867e-7,
                 "price": "N/A",
                 "status": "Unknown",
                 "Description": "No description available"
@@ -2540,7 +2543,7 @@
                 "Category": "Single Family Homesites",
                 "plot_id": 1,
                 "Shape_Leng": 0.00158899514,
-                "Shape_Area": 1.3175e-07,
+                "Shape_Area": 1.3175e-7,
                 "price": "N/A",
                 "status": "Unknown",
                 "Description": "No description available"
@@ -2587,10 +2590,11 @@
                 "Category": "Single Family Homesites",
                 "plot_id": 0,
                 "Shape_Leng": 0.00151501911,
-                "Shape_Area": 1.3325e-07,
-                "price": "N/A",
-                "status": "Unknown",
-                "Description": "No description available"
+                "Shape_Area": 1.3325e-7,
+                "price": "1.25 BTC",
+                "status": "For Sale",
+                "Description": "No description available",
+                "buy_link": "https://gdmarchitecture.com/portfolio-item/house-12521/"
             },
             "geometry": {
                 "type": "MultiPolygon",
@@ -2642,10 +2646,11 @@
                 "Category": "Single Family Homesites",
                 "plot_id": 102,
                 "Shape_Leng": 0.00178087996,
-                "Shape_Area": 2.0426e-07,
-                "price": "N/A",
-                "status": "Unknown",
-                "Description": "No description available"
+                "Shape_Area": 2.0426e-7,
+                "price": "1.45",
+                "status": "For Sale",
+                "Description": "Ocean view Single Family buildable lot in cul-de-sac street. Perfect location for multi level spec home with     beautiful ocean and sunset views.",
+                "buy_link": ""
             },
             "geometry": {
                 "type": "MultiPolygon",
@@ -2705,10 +2710,11 @@
                 "Category": "Single Family Homesites",
                 "plot_id": 103,
                 "Shape_Leng": 0.00163518777,
-                "Shape_Area": 1.5427e-07,
-                "price": "N/A",
-                "status": "Unknown",
-                "Description": "No description available"
+                "Shape_Area": 1.5427e-7,
+                "price": "N/A1.35",
+                "status": "For Sale",
+                "Description": "Ocean view Single Family buildable lot in cul-de-sac street. Perfect location for multi level spec home with     beautiful ocean and sunset views.",
+                "buy_link": ""
             },
             "geometry": {
                 "type": "MultiPolygon",
@@ -2752,10 +2758,11 @@
                 "Category": "Single Family Homesites",
                 "plot_id": 104,
                 "Shape_Leng": 0.00161286426,
-                "Shape_Area": 1.6526e-07,
-                "price": "N/A",
-                "status": "Unknown",
-                "Description": "No description available"
+                "Shape_Area": 1.6526e-7,
+                "price": "1.3",
+                "status": "For Sale",
+                "Description": "Ocean view Single Family buildable lot in cul-de-sac street. Perfect location for multi level spec home with     beautiful ocean and sunset views.",
+                "buy_link": ""
             },
             "geometry": {
                 "type": "MultiPolygon",
@@ -2811,10 +2818,11 @@
                 "Category": "Single Family Homesites",
                 "plot_id": 105,
                 "Shape_Leng": 0.00151083427,
-                "Shape_Area": 1.4128e-07,
-                "price": "N/A",
-                "status": "Unknown",
-                "Description": "No description available"
+                "Shape_Area": 1.4128e-7,
+                "price": "1.3",
+                "status": "For Sale",
+                "Description": "Ocean view Single Family buildable lot in cul-de-sac street. Perfect location for multi level spec home with     beautiful ocean and sunset views.",
+                "buy_link": ""
             },
             "geometry": {
                 "type": "MultiPolygon",
@@ -2854,10 +2862,11 @@
                 "Category": "Single Family Homesites",
                 "plot_id": 106,
                 "Shape_Leng": 0.00159185022,
-                "Shape_Area": 1.6398e-07,
-                "price": "N/A",
-                "status": "Unknown",
-                "Description": "No description available"
+                "Shape_Area": 1.6398e-7,
+                "price": "1.3",
+                "status": "For Sale",
+                "Description": "Ocean view Single Family buildable lot in cul-de-sac street. Perfect location for multi level spec home with     beautiful ocean and sunset views.",
+                "buy_link": ""
             },
             "geometry": {
                 "type": "MultiPolygon",
@@ -2905,14 +2914,15 @@
             "type": "Feature",
             "properties": {
                 "OBJECTID": 57,
-                "area_m": "19,230 m²",
-                "Category": "Hardscape",
+                "area_m": "",
+                "Category": "",
                 "plot_id": 259,
                 "Shape_Leng": 0.00554199444,
-                "Shape_Area": 1.73915e-06,
-                "price": "N/A",
-                "status": "Unknown",
-                "Description": "No description available"
+                "Shape_Area": 0.00000173915,
+                "price": "",
+                "status": "Not for Sale",
+                "Description": "",
+                "buy_link": ""
             },
             "geometry": {
                 "type": "MultiPolygon",
@@ -3004,10 +3014,11 @@
                 "Category": "Single Family Homesites",
                 "plot_id": 237,
                 "Shape_Leng": 0.00295505715,
-                "Shape_Area": 5.4435e-07,
-                "price": "N/A",
-                "status": "Unknown",
-                "Description": "No description available"
+                "Shape_Area": 5.4435e-7,
+                "price": "",
+                "status": "Not for Sale",
+                "Description": "",
+                "buy_link": ""
             },
             "geometry": {
                 "type": "MultiPolygon",
@@ -3063,10 +3074,11 @@
                 "Category": "Single Family Homesites",
                 "plot_id": 238,
                 "Shape_Leng": 0.00287988947,
-                "Shape_Area": 5.1339e-07,
-                "price": "N/A",
-                "status": "Unknown",
-                "Description": "No description available"
+                "Shape_Area": 5.1339e-7,
+                "price": "",
+                "status": "Not for Sale",
+                "Description": "",
+                "buy_link": ""
             },
             "geometry": {
                 "type": "MultiPolygon",
@@ -3130,10 +3142,11 @@
                 "Category": "Single Family Homesites",
                 "plot_id": 240,
                 "Shape_Leng": 0.00294775848,
-                "Shape_Area": 5.2719e-07,
-                "price": "N/A",
-                "status": "Unknown",
-                "Description": "No description available"
+                "Shape_Area": 5.2719e-7,
+                "price": "",
+                "status": "Not for Sale",
+                "Description": "",
+                "buy_link": ""
             },
             "geometry": {
                 "type": "MultiPolygon",
@@ -3217,10 +3230,11 @@
                 "Category": "Single Family Homesites",
                 "plot_id": 239,
                 "Shape_Leng": 0.00290514704,
-                "Shape_Area": 5.319e-07,
-                "price": "N/A",
-                "status": "Unknown",
-                "Description": "No description available"
+                "Shape_Area": 5.319e-7,
+                "price": "",
+                "status": "Not for Sale",
+                "Description": "",
+                "buy_link": ""
             },
             "geometry": {
                 "type": "MultiPolygon",
@@ -3280,10 +3294,11 @@
                 "Category": "Single Family Homesites",
                 "plot_id": 241,
                 "Shape_Leng": 0.00299036188,
-                "Shape_Area": 5.3797e-07,
-                "price": "N/A",
-                "status": "Unknown",
-                "Description": "No description available"
+                "Shape_Area": 5.3797e-7,
+                "price": "",
+                "status": "Not for Sale",
+                "Description": "",
+                "buy_link": ""
             },
             "geometry": {
                 "type": "MultiPolygon",
@@ -3343,10 +3358,11 @@
                 "Category": "Single Family Homesites",
                 "plot_id": 242,
                 "Shape_Leng": 0.00297382022,
-                "Shape_Area": 5.3701e-07,
-                "price": "N/A",
-                "status": "Unknown",
-                "Description": "No description available"
+                "Shape_Area": 5.3701e-7,
+                "price": "",
+                "status": "Not for Sale",
+                "Description": "",
+                "buy_link": ""
             },
             "geometry": {
                 "type": "MultiPolygon",
@@ -3426,10 +3442,11 @@
                 "Category": "Single Family Homesites",
                 "plot_id": 243,
                 "Shape_Leng": 0.00293924701,
-                "Shape_Area": 5.2929e-07,
-                "price": "N/A",
-                "status": "Unknown",
-                "Description": "No description available"
+                "Shape_Area": 5.2929e-7,
+                "price": "",
+                "status": "Not for Sale",
+                "Description": "",
+                "buy_link": ""
             },
             "geometry": {
                 "type": "MultiPolygon",
@@ -3509,10 +3526,11 @@
                 "Category": "Single Family Homesites",
                 "plot_id": 244,
                 "Shape_Leng": 0.00284394684,
-                "Shape_Area": 4.9114e-07,
-                "price": "N/A",
-                "status": "Unknown",
-                "Description": "No description available"
+                "Shape_Area": 4.9114e-7,
+                "price": "",
+                "status": "Not for Sale",
+                "Description": "",
+                "buy_link": ""
             },
             "geometry": {
                 "type": "MultiPolygon",
@@ -3608,10 +3626,11 @@
                 "Category": "Single Family Homesites",
                 "plot_id": 245,
                 "Shape_Leng": 0.0033866823,
-                "Shape_Area": 5.8394e-07,
-                "price": "N/A",
-                "status": "Unknown",
-                "Description": "No description available"
+                "Shape_Area": 5.8394e-7,
+                "price": "",
+                "status": "Not for Sale",
+                "Description": "",
+                "buy_link": ""
             },
             "geometry": {
                 "type": "MultiPolygon",
@@ -3683,10 +3702,11 @@
                 "Category": "Single Family Homesites",
                 "plot_id": 246,
                 "Shape_Leng": 0.00299538038,
-                "Shape_Area": 5.8656e-07,
-                "price": "N/A",
-                "status": "Unknown",
-                "Description": "No description available"
+                "Shape_Area": 5.8656e-7,
+                "price": "",
+                "status": "Not for Sale",
+                "Description": "",
+                "buy_link": ""
             },
             "geometry": {
                 "type": "MultiPolygon",
@@ -3746,10 +3766,11 @@
                 "Category": "Single Family Homesites",
                 "plot_id": 251,
                 "Shape_Leng": 0.0030627331,
-                "Shape_Area": 5.929e-07,
-                "price": "N/A",
-                "status": "Unknown",
-                "Description": "No description available"
+                "Shape_Area": 5.929e-7,
+                "price": "",
+                "status": "Not for Sale",
+                "Description": "",
+                "buy_link": ""
             },
             "geometry": {
                 "type": "MultiPolygon",
@@ -3838,13 +3859,14 @@
             "properties": {
                 "OBJECTID": 69,
                 "area_m": "4,866 m²",
-                "Category": "Condos",
+                "Category": "",
                 "plot_id": 195,
                 "Shape_Leng": 0.0031257865,
-                "Shape_Area": 4.2654e-07,
-                "price": "N/A",
-                "status": "Unknown",
-                "Description": "No description available"
+                "Shape_Area": 4.2654e-7,
+                "price": "",
+                "status": "Not for Sale",
+                "Description": "",
+                "buy_link": ""
             },
             "geometry": {
                 "type": "MultiPolygon",
@@ -3944,10 +3966,11 @@
                 "Category": "Single Family Homesites",
                 "plot_id": 224,
                 "Shape_Leng": 0.00199241559,
-                "Shape_Area": 2.3018e-07,
-                "price": "N/A",
-                "status": "Unknown",
-                "Description": "No description available"
+                "Shape_Area": 2.3018e-7,
+                "price": "",
+                "status": "Not for Sale",
+                "Description": "",
+                "buy_link": ""
             },
             "geometry": {
                 "type": "MultiPolygon",
@@ -3995,10 +4018,11 @@
                 "Category": "Single Family Homesites",
                 "plot_id": 247,
                 "Shape_Leng": 0.00327077588,
-                "Shape_Area": 6.1407e-07,
-                "price": "N/A",
-                "status": "Unknown",
-                "Description": "No description available"
+                "Shape_Area": 6.1407e-7,
+                "price": "",
+                "status": "Not for Sale",
+                "Description": "",
+                "buy_link": ""
             },
             "geometry": {
                 "type": "MultiPolygon",
@@ -4111,13 +4135,14 @@
             "properties": {
                 "OBJECTID": 72,
                 "area_m": "6,118 m²",
-                "Category": "Condos",
+                "Category": "",
                 "plot_id": 194,
                 "Shape_Leng": 0.00317922414,
-                "Shape_Area": 5.4852e-07,
-                "price": "N/A",
-                "status": "Unknown",
-                "Description": "No description available"
+                "Shape_Area": 5.4852e-7,
+                "price": "",
+                "status": "Not for Sale",
+                "Description": "",
+                "buy_link": ""
             },
             "geometry": {
                 "type": "MultiPolygon",
@@ -4165,10 +4190,11 @@
                 "Category": "Single Family Homesites",
                 "plot_id": 223,
                 "Shape_Leng": 0.00214317642,
-                "Shape_Area": 2.2093e-07,
-                "price": "N/A",
-                "status": "Unknown",
-                "Description": "No description available"
+                "Shape_Area": 2.2093e-7,
+                "price": "",
+                "status": "Not for Sale",
+                "Description": "",
+                "buy_link": ""
             },
             "geometry": {
                 "type": "MultiPolygon",
@@ -4224,10 +4250,11 @@
                 "Category": "Single Family Homesites",
                 "plot_id": 248,
                 "Shape_Leng": 0.00327068709,
-                "Shape_Area": 6.135e-07,
-                "price": "N/A",
-                "status": "Unknown",
-                "Description": "No description available"
+                "Shape_Area": 6.135e-7,
+                "price": "",
+                "status": "Not for Sale",
+                "Description": "",
+                "buy_link": ""
             },
             "geometry": {
                 "type": "MultiPolygon",
@@ -4319,10 +4346,11 @@
                 "Category": "Single Family Homesites",
                 "plot_id": 222,
                 "Shape_Leng": 0.00225123161,
-                "Shape_Area": 2.4529e-07,
-                "price": "N/A",
-                "status": "Unknown",
-                "Description": "No description available"
+                "Shape_Area": 2.4529e-7,
+                "price": "",
+                "status": "Not for Sale",
+                "Description": "",
+                "buy_link": ""
             },
             "geometry": {
                 "type": "MultiPolygon",
@@ -4363,13 +4391,14 @@
             "properties": {
                 "OBJECTID": 76,
                 "area_m": "6,934 m²",
-                "Category": "Condos",
+                "Category": "",
                 "plot_id": 192,
                 "Shape_Leng": 0.00306443823,
-                "Shape_Area": 5.9266e-07,
-                "price": "N/A",
-                "status": "Unknown",
-                "Description": "No description available"
+                "Shape_Area": 5.9266e-7,
+                "price": "",
+                "status": "Not for Sale",
+                "Description": "",
+                "buy_link": ""
             },
             "geometry": {
                 "type": "MultiPolygon",
@@ -4445,10 +4474,11 @@
                 "Category": "Single Family Homesites",
                 "plot_id": 221,
                 "Shape_Leng": 0.00213471148,
-                "Shape_Area": 2.5126e-07,
-                "price": "N/A",
-                "status": "Unknown",
-                "Description": "No description available"
+                "Shape_Area": 2.5126e-7,
+                "price": "",
+                "status": "Not for Sale",
+                "Description": "",
+                "buy_link": ""
             },
             "geometry": {
                 "type": "MultiPolygon",
@@ -4500,10 +4530,11 @@
                 "Category": "Single Family Homesites",
                 "plot_id": 250,
                 "Shape_Leng": 0.00288147441,
-                "Shape_Area": 5.2805e-07,
-                "price": "N/A",
-                "status": "Unknown",
-                "Description": "No description available"
+                "Shape_Area": 5.2805e-7,
+                "price": "",
+                "status": "Not for Sale",
+                "Description": "",
+                "buy_link": ""
             },
             "geometry": {
                 "type": "MultiPolygon",
@@ -4556,13 +4587,14 @@
             "properties": {
                 "OBJECTID": 79,
                 "area_m": "4,611 m²",
-                "Category": "Condos",
+                "Category": "",
                 "plot_id": 193,
                 "Shape_Leng": 0.00260265149,
-                "Shape_Area": 3.912e-07,
-                "price": "N/A",
-                "status": "Unknown",
-                "Description": "No description available"
+                "Shape_Area": 3.912e-7,
+                "price": "",
+                "status": "Not for Sale",
+                "Description": "",
+                "buy_link": ""
             },
             "geometry": {
                 "type": "MultiPolygon",
@@ -4638,10 +4670,11 @@
                 "Category": "Single Family Homesites",
                 "plot_id": 211,
                 "Shape_Leng": 0.00187150823,
-                "Shape_Area": 2.2117e-07,
-                "price": "N/A",
-                "status": "Unknown",
-                "Description": "No description available"
+                "Shape_Area": 2.2117e-7,
+                "price": "",
+                "status": "Not for Sale",
+                "Description": "",
+                "buy_link": ""
             },
             "geometry": {
                 "type": "MultiPolygon",
@@ -4693,10 +4726,11 @@
                 "Category": "Single Family Homesites",
                 "plot_id": 210,
                 "Shape_Leng": 0.00192606452,
-                "Shape_Area": 2.1483e-07,
-                "price": "N/A",
-                "status": "Unknown",
-                "Description": "No description available"
+                "Shape_Area": 2.1483e-7,
+                "price": "",
+                "status": "Not for Sale",
+                "Description": "",
+                "buy_link": ""
             },
             "geometry": {
                 "type": "MultiPolygon",
@@ -4748,10 +4782,11 @@
                 "Category": "Single Family Homesites",
                 "plot_id": 209,
                 "Shape_Leng": 0.00201133715,
-                "Shape_Area": 2.3247e-07,
-                "price": "N/A",
-                "status": "Unknown",
-                "Description": "No description available"
+                "Shape_Area": 2.3247e-7,
+                "price": "",
+                "status": "Not for Sale",
+                "Description": "",
+                "buy_link": ""
             },
             "geometry": {
                 "type": "MultiPolygon",
@@ -4791,10 +4826,11 @@
                 "Category": "Single Family Homesites",
                 "plot_id": 220,
                 "Shape_Leng": 0.00225307076,
-                "Shape_Area": 2.7869e-07,
-                "price": "N/A",
-                "status": "Unknown",
-                "Description": "No description available"
+                "Shape_Area": 2.7869e-7,
+                "price": "",
+                "status": "Not for Sale",
+                "Description": "",
+                "buy_link": ""
             },
             "geometry": {
                 "type": "MultiPolygon",
@@ -4862,10 +4898,11 @@
                 "Category": "Single Family Homesites",
                 "plot_id": 212,
                 "Shape_Leng": 0.00190904149,
-                "Shape_Area": 2.2177e-07,
-                "price": "N/A",
-                "status": "Unknown",
-                "Description": "No description available"
+                "Shape_Area": 2.2177e-7,
+                "price": "",
+                "status": "Not for Sale",
+                "Description": "",
+                "buy_link": ""
             },
             "geometry": {
                 "type": "MultiPolygon",
@@ -4913,10 +4950,11 @@
                 "Category": "Single Family Homesites",
                 "plot_id": 249,
                 "Shape_Leng": 0.00314371573,
-                "Shape_Area": 5.8353e-07,
-                "price": "N/A",
-                "status": "Unknown",
-                "Description": "No description available"
+                "Shape_Area": 5.8353e-7,
+                "price": "",
+                "status": "Not for Sale",
+                "Description": "",
+                "buy_link": ""
             },
             "geometry": {
                 "type": "MultiPolygon",
@@ -5020,10 +5058,11 @@
                 "Category": "Single Family Homesites",
                 "plot_id": 208,
                 "Shape_Leng": 0.00208233788,
-                "Shape_Area": 2.4855e-07,
-                "price": "N/A",
-                "status": "Unknown",
-                "Description": "No description available"
+                "Shape_Area": 2.4855e-7,
+                "price": "",
+                "status": "Not for Sale",
+                "Description": "",
+                "buy_link": ""
             },
             "geometry": {
                 "type": "MultiPolygon",
@@ -5063,10 +5102,11 @@
                 "Category": "Single Family Homesites",
                 "plot_id": 207,
                 "Shape_Leng": 0.00191255175,
-                "Shape_Area": 2.1349e-07,
-                "price": "N/A",
-                "status": "Unknown",
-                "Description": "No description available"
+                "Shape_Area": 2.1349e-7,
+                "price": "",
+                "status": "Not for Sale",
+                "Description": "",
+                "buy_link": ""
             },
             "geometry": {
                 "type": "MultiPolygon",
@@ -5114,10 +5154,11 @@
                 "Category": "Single Family Homesites",
                 "plot_id": 213,
                 "Shape_Leng": 0.00191282119,
-                "Shape_Area": 2.1951e-07,
-                "price": "N/A",
-                "status": "Unknown",
-                "Description": "No description available"
+                "Shape_Area": 2.1951e-7,
+                "price": "",
+                "status": "Not for Sale",
+                "Description": "",
+                "buy_link": ""
             },
             "geometry": {
                 "type": "MultiPolygon",
@@ -5201,10 +5242,11 @@
                 "Category": "Single Family Homesites",
                 "plot_id": 219,
                 "Shape_Leng": 0.00211308358,
-                "Shape_Area": 2.8181e-07,
-                "price": "N/A",
-                "status": "Unknown",
-                "Description": "No description available"
+                "Shape_Area": 2.8181e-7,
+                "price": "",
+                "status": "Not for Sale",
+                "Description": "",
+                "buy_link": ""
             },
             "geometry": {
                 "type": "MultiPolygon",
@@ -5260,10 +5302,11 @@
                 "Category": "Single Family Homesites",
                 "plot_id": 214,
                 "Shape_Leng": 0.00227018754,
-                "Shape_Area": 2.8472e-07,
-                "price": "N/A",
-                "status": "Unknown",
-                "Description": "No description available"
+                "Shape_Area": 2.8472e-7,
+                "price": "",
+                "status": "Not for Sale",
+                "Description": "",
+                "buy_link": ""
             },
             "geometry": {
                 "type": "MultiPolygon",
@@ -5319,10 +5362,11 @@
                 "Category": "Single Family Homesites",
                 "plot_id": 253,
                 "Shape_Leng": 0.00191521473,
-                "Shape_Area": 2.3511e-07,
-                "price": "N/A",
-                "status": "Unknown",
-                "Description": "No description available"
+                "Shape_Area": 2.3511e-7,
+                "price": "",
+                "status": "Not for Sale",
+                "Description": "",
+                "buy_link": ""
             },
             "geometry": {
                 "type": "MultiPolygon",
@@ -5374,10 +5418,11 @@
                 "Category": "Single Family Homesites",
                 "plot_id": 206,
                 "Shape_Leng": 0.00179548367,
-                "Shape_Area": 1.9914e-07,
-                "price": "N/A",
-                "status": "Unknown",
-                "Description": "No description available"
+                "Shape_Area": 1.9914e-7,
+                "price": "",
+                "status": "Not for Sale",
+                "Description": "",
+                "buy_link": ""
             },
             "geometry": {
                 "type": "MultiPolygon",
@@ -5437,10 +5482,11 @@
                 "Category": "Single Family Homesites",
                 "plot_id": 256,
                 "Shape_Leng": 0.00197041995,
-                "Shape_Area": 2.5329e-07,
-                "price": "N/A",
-                "status": "Unknown",
-                "Description": "No description available"
+                "Shape_Area": 2.5329e-7,
+                "price": "",
+                "status": "Not for Sale",
+                "Description": "",
+                "buy_link": ""
             },
             "geometry": {
                 "type": "MultiPolygon",
@@ -5496,10 +5542,11 @@
                 "Category": "Single Family Homesites",
                 "plot_id": 257,
                 "Shape_Leng": 0.00186799502,
-                "Shape_Area": 2.1046e-07,
-                "price": "N/A",
-                "status": "Unknown",
-                "Description": "No description available"
+                "Shape_Area": 2.1046e-7,
+                "price": "",
+                "status": "Not for Sale",
+                "Description": "",
+                "buy_link": ""
             },
             "geometry": {
                 "type": "MultiPolygon",
@@ -5555,10 +5602,11 @@
                 "Category": "Single Family Homesites",
                 "plot_id": 205,
                 "Shape_Leng": 0.00163702147,
-                "Shape_Area": 1.6263e-07,
-                "price": "N/A",
-                "status": "Unknown",
-                "Description": "No description available"
+                "Shape_Area": 1.6263e-7,
+                "price": "",
+                "status": "Not for Sale",
+                "Description": "",
+                "buy_link": ""
             },
             "geometry": {
                 "type": "MultiPolygon",
@@ -5610,10 +5658,11 @@
                 "Category": "Single Family Homesites",
                 "plot_id": 215,
                 "Shape_Leng": 0.00205136544,
-                "Shape_Area": 2.4156e-07,
-                "price": "N/A",
-                "status": "Unknown",
-                "Description": "No description available"
+                "Shape_Area": 2.4156e-7,
+                "price": "",
+                "status": "Not for Sale",
+                "Description": "",
+                "buy_link": ""
             },
             "geometry": {
                 "type": "MultiPolygon",
@@ -5669,10 +5718,11 @@
                 "Category": "Single Family Homesites",
                 "plot_id": 204,
                 "Shape_Leng": 0.00165076595,
-                "Shape_Area": 1.6563e-07,
-                "price": "N/A",
-                "status": "Unknown",
-                "Description": "No description available"
+                "Shape_Area": 1.6563e-7,
+                "price": "",
+                "status": "Not for Sale",
+                "Description": "",
+                "buy_link": ""
             },
             "geometry": {
                 "type": "MultiPolygon",
@@ -5712,10 +5762,11 @@
                 "Category": "Single Family Homesites",
                 "plot_id": 201,
                 "Shape_Leng": 0.00168456458,
-                "Shape_Area": 1.7458e-07,
-                "price": "N/A",
-                "status": "Unknown",
-                "Description": "No description available"
+                "Shape_Area": 1.7458e-7,
+                "price": "",
+                "status": "Not for Sale",
+                "Description": "",
+                "buy_link": ""
             },
             "geometry": {
                 "type": "MultiPolygon",
@@ -5771,10 +5822,11 @@
                 "Category": "Single Family Homesites",
                 "plot_id": 202,
                 "Shape_Leng": 0.00171354603,
-                "Shape_Area": 1.8103e-07,
-                "price": "N/A",
-                "status": "Unknown",
-                "Description": "No description available"
+                "Shape_Area": 1.8103e-7,
+                "price": "",
+                "status": "Not for Sale",
+                "Description": "",
+                "buy_link": ""
             },
             "geometry": {
                 "type": "MultiPolygon",
@@ -5830,10 +5882,11 @@
                 "Category": "Single Family Homesites",
                 "plot_id": 218,
                 "Shape_Leng": 0.00193635788,
-                "Shape_Area": 2.2253e-07,
-                "price": "N/A",
-                "status": "Unknown",
-                "Description": "No description available"
+                "Shape_Area": 2.2253e-7,
+                "price": "",
+                "status": "Not for Sale",
+                "Description": "",
+                "buy_link": ""
             },
             "geometry": {
                 "type": "MultiPolygon",
@@ -5885,10 +5938,11 @@
                 "Category": "Single Family Homesites",
                 "plot_id": 200,
                 "Shape_Leng": 0.00200276412,
-                "Shape_Area": 2.4971e-07,
-                "price": "N/A",
-                "status": "Unknown",
-                "Description": "No description available"
+                "Shape_Area": 2.4971e-7,
+                "price": "",
+                "status": "Not for Sale",
+                "Description": "",
+                "buy_link": ""
             },
             "geometry": {
                 "type": "MultiPolygon",
@@ -5944,10 +5998,11 @@
                 "Category": "Single Family Homesites",
                 "plot_id": 203,
                 "Shape_Leng": 0.00172462458,
-                "Shape_Area": 1.7485e-07,
-                "price": "N/A",
-                "status": "Unknown",
-                "Description": "No description available"
+                "Shape_Area": 1.7485e-7,
+                "price": "",
+                "status": "Not for Sale",
+                "Description": "",
+                "buy_link": ""
             },
             "geometry": {
                 "type": "MultiPolygon",
@@ -6007,10 +6062,11 @@
                 "Category": "Single Family Homesites",
                 "plot_id": 217,
                 "Shape_Leng": 0.00184116412,
-                "Shape_Area": 1.9398e-07,
-                "price": "N/A",
-                "status": "Unknown",
-                "Description": "No description available"
+                "Shape_Area": 1.9398e-7,
+                "price": "",
+                "status": "Not for Sale",
+                "Description": "",
+                "buy_link": ""
             },
             "geometry": {
                 "type": "MultiPolygon",
@@ -6050,10 +6106,11 @@
                 "Category": "Single Family Homesites",
                 "plot_id": 216,
                 "Shape_Leng": 0.00194206664,
-                "Shape_Area": 2.3682e-07,
-                "price": "N/A",
-                "status": "Unknown",
-                "Description": "No description available"
+                "Shape_Area": 2.3682e-7,
+                "price": "",
+                "status": "Not for Sale",
+                "Description": "",
+                "buy_link": ""
             },
             "geometry": {
                 "type": "MultiPolygon",
@@ -6105,10 +6162,11 @@
                 "Category": "Single Family Homesites",
                 "plot_id": 199,
                 "Shape_Leng": 0.00188856928,
-                "Shape_Area": 2.2302e-07,
-                "price": "N/A",
-                "status": "Unknown",
-                "Description": "No description available"
+                "Shape_Area": 2.2302e-7,
+                "price": "",
+                "status": "Not for Sale",
+                "Description": "",
+                "buy_link": ""
             },
             "geometry": {
                 "type": "MultiPolygon",
@@ -6177,13 +6235,14 @@
             "properties": {
                 "OBJECTID": 106,
                 "area_m": "4,363 m²",
-                "Category": "Condos",
+                "Category": "",
                 "plot_id": 190,
                 "Shape_Leng": 0.00245785496,
-                "Shape_Area": 3.6986e-07,
-                "price": "N/A",
-                "status": "Unknown",
-                "Description": "No description available"
+                "Shape_Area": 3.6986e-7,
+                "price": "",
+                "status": "Not for Sale",
+                "Description": "",
+                "buy_link": ""
             },
             "geometry": {
                 "type": "MultiPolygon",
@@ -6252,13 +6311,14 @@
             "properties": {
                 "OBJECTID": 107,
                 "area_m": "4,246 m²",
-                "Category": "Condos",
+                "Category": "",
                 "plot_id": 191,
                 "Shape_Leng": 0.00240814212,
-                "Shape_Area": 3.6009e-07,
-                "price": "N/A",
-                "status": "Unknown",
-                "Description": "No description available"
+                "Shape_Area": 3.6009e-7,
+                "price": "",
+                "status": "Not for Sale",
+                "Description": "",
+                "buy_link": ""
             },
             "geometry": {
                 "type": "MultiPolygon",
@@ -6338,10 +6398,11 @@
                 "Category": "Single Family Homesites",
                 "plot_id": 198,
                 "Shape_Leng": 0.00165930102,
-                "Shape_Area": 1.6846e-07,
-                "price": "N/A",
-                "status": "Unknown",
-                "Description": "No description available"
+                "Shape_Area": 1.6846e-7,
+                "price": "",
+                "status": "Not for Sale",
+                "Description": "",
+                "buy_link": ""
             },
             "geometry": {
                 "type": "MultiPolygon",
@@ -6402,13 +6463,14 @@
             "properties": {
                 "OBJECTID": 109,
                 "area_m": "5,624 m²",
-                "Category": "Condos",
+                "Category": "",
                 "plot_id": 189,
                 "Shape_Leng": 0.00277404737,
-                "Shape_Area": 5.0613e-07,
-                "price": "N/A",
-                "status": "Unknown",
-                "Description": "No description available"
+                "Shape_Area": 5.0613e-7,
+                "price": "",
+                "status": "Not for Sale",
+                "Description": "",
+                "buy_link": ""
             },
             "geometry": {
                 "type": "MultiPolygon",
@@ -6472,10 +6534,11 @@
                 "Category": "Single Family Homesites",
                 "plot_id": 197,
                 "Shape_Leng": 0.00168381577,
-                "Shape_Area": 1.6795e-07,
-                "price": "N/A",
-                "status": "Unknown",
-                "Description": "No description available"
+                "Shape_Area": 1.6795e-7,
+                "price": "",
+                "status": "Not for Sale",
+                "Description": "",
+                "buy_link": ""
             },
             "geometry": {
                 "type": "MultiPolygon",
@@ -6519,10 +6582,11 @@
                 "Category": "Single Family Homesites",
                 "plot_id": 196,
                 "Shape_Leng": 0.00199913159,
-                "Shape_Area": 2.3116e-07,
-                "price": "N/A",
-                "status": "Unknown",
-                "Description": "No description available"
+                "Shape_Area": 2.3116e-7,
+                "price": "",
+                "status": "Not for Sale",
+                "Description": "",
+                "buy_link": ""
             },
             "geometry": {
                 "type": "MultiPolygon",
@@ -6570,10 +6634,11 @@
                 "Category": "Single Family Homesites",
                 "plot_id": 173,
                 "Shape_Leng": 0.00177633997,
-                "Shape_Area": 1.8791e-07,
-                "price": "N/A",
-                "status": "Unknown",
-                "Description": "No description available"
+                "Shape_Area": 1.8791e-7,
+                "price": "",
+                "status": "Not for Sale",
+                "Description": "",
+                "buy_link": ""
             },
             "geometry": {
                 "type": "MultiPolygon",
@@ -6621,10 +6686,11 @@
                 "Category": "Single Family Homesites",
                 "plot_id": 172,
                 "Shape_Leng": 0.00176846157,
-                "Shape_Area": 1.8314e-07,
-                "price": "N/A",
-                "status": "Unknown",
-                "Description": "No description available"
+                "Shape_Area": 1.8314e-7,
+                "price": "",
+                "status": "Not for Sale",
+                "Description": "",
+                "buy_link": ""
             },
             "geometry": {
                 "type": "MultiPolygon",
@@ -6676,10 +6742,11 @@
                 "Category": "Single Family Homesites",
                 "plot_id": 179,
                 "Shape_Leng": 0.00184165598,
-                "Shape_Area": 2.1034e-07,
-                "price": "N/A",
-                "status": "Unknown",
-                "Description": "No description available"
+                "Shape_Area": 2.1034e-7,
+                "price": "",
+                "status": "Not for Sale",
+                "Description": "",
+                "buy_link": ""
             },
             "geometry": {
                 "type": "MultiPolygon",
@@ -6747,7 +6814,7 @@
                 "Category": "Single Family Homesites",
                 "plot_id": 18,
                 "Shape_Leng": 0.00155650381,
-                "Shape_Area": 1.4322e-07,
+                "Shape_Area": 1.4322e-7,
                 "price": "N/A",
                 "status": "Unknown",
                 "Description": "No description available"
@@ -6794,7 +6861,7 @@
                 "Category": "Single Family Homesites",
                 "plot_id": 19,
                 "Shape_Leng": 0.00156007816,
-                "Shape_Area": 1.294e-07,
+                "Shape_Area": 1.294e-7,
                 "price": "N/A",
                 "status": "Unknown",
                 "Description": "No description available"
@@ -6837,7 +6904,7 @@
                 "Category": "Single Family Homesites",
                 "plot_id": 17,
                 "Shape_Leng": 0.00152295342,
-                "Shape_Area": 1.4032e-07,
+                "Shape_Area": 1.4032e-7,
                 "price": "N/A",
                 "status": "Unknown",
                 "Description": "No description available"
@@ -6888,7 +6955,7 @@
                 "Category": "Single Family Homesites",
                 "plot_id": 60,
                 "Shape_Leng": 0.00149770388,
-                "Shape_Area": 1.1897e-07,
+                "Shape_Area": 1.1897e-7,
                 "price": "N/A",
                 "status": "Unknown",
                 "Description": "No description available"
@@ -6931,7 +6998,7 @@
                 "Category": "Single Family Homesites",
                 "plot_id": 50,
                 "Shape_Leng": 0.00141109537,
-                "Shape_Area": 1.0722e-07,
+                "Shape_Area": 1.0722e-7,
                 "price": "N/A",
                 "status": "Unknown",
                 "Description": "No description available"
@@ -6978,7 +7045,7 @@
                 "Category": "Single Family Homesites",
                 "plot_id": 59,
                 "Shape_Leng": 0.00142787668,
-                "Shape_Area": 1.0738e-07,
+                "Shape_Area": 1.0738e-7,
                 "price": "N/A",
                 "status": "Unknown",
                 "Description": "No description available"
@@ -7021,7 +7088,7 @@
                 "Category": "Single Family Homesites",
                 "plot_id": 16,
                 "Shape_Leng": 0.00150443006,
-                "Shape_Area": 1.3683e-07,
+                "Shape_Area": 1.3683e-7,
                 "price": "N/A",
                 "status": "Unknown",
                 "Description": "No description available"
@@ -7072,7 +7139,7 @@
                 "Category": "Single Family Homesites",
                 "plot_id": 51,
                 "Shape_Leng": 0.0014551973,
-                "Shape_Area": 1.1401e-07,
+                "Shape_Area": 1.1401e-7,
                 "price": "N/A",
                 "status": "Unknown",
                 "Description": "No description available"
@@ -7119,7 +7186,7 @@
                 "Category": "Single Family Homesites",
                 "plot_id": 20,
                 "Shape_Leng": 0.00166245209,
-                "Shape_Area": 1.5071e-07,
+                "Shape_Area": 1.5071e-7,
                 "price": "N/A",
                 "status": "Unknown",
                 "Description": "No description available"
@@ -7166,7 +7233,7 @@
                 "Category": "Single Family Homesites",
                 "plot_id": 49,
                 "Shape_Leng": 0.00142993523,
-                "Shape_Area": 1.0913e-07,
+                "Shape_Area": 1.0913e-7,
                 "price": "N/A",
                 "status": "Unknown",
                 "Description": "No description available"
@@ -7209,7 +7276,7 @@
                 "Category": "Single Family Homesites",
                 "plot_id": 15,
                 "Shape_Leng": 0.00154093207,
-                "Shape_Area": 1.4372e-07,
+                "Shape_Area": 1.4372e-7,
                 "price": "N/A",
                 "status": "Unknown",
                 "Description": "No description available"
@@ -7260,7 +7327,7 @@
                 "Category": "Single Family Homesites",
                 "plot_id": 58,
                 "Shape_Leng": 0.00146556599,
-                "Shape_Area": 1.2572e-07,
+                "Shape_Area": 1.2572e-7,
                 "price": "N/A",
                 "status": "Unknown",
                 "Description": "No description available"
@@ -7311,7 +7378,7 @@
                 "Category": "Single Family Homesites",
                 "plot_id": 61,
                 "Shape_Leng": 0.0014843111,
-                "Shape_Area": 1.1994e-07,
+                "Shape_Area": 1.1994e-7,
                 "price": "N/A",
                 "status": "Unknown",
                 "Description": "No description available"
@@ -7354,7 +7421,7 @@
                 "Category": "Single Family Homesites",
                 "plot_id": 52,
                 "Shape_Leng": 0.00166372519,
-                "Shape_Area": 1.4513e-07,
+                "Shape_Area": 1.4513e-7,
                 "price": "N/A",
                 "status": "Unknown",
                 "Description": "No description available"
@@ -7409,7 +7476,7 @@
                 "Category": "Single Family Homesites",
                 "plot_id": 14,
                 "Shape_Leng": 0.00152062349,
-                "Shape_Area": 1.3664e-07,
+                "Shape_Area": 1.3664e-7,
                 "price": "N/A",
                 "status": "Unknown",
                 "Description": "No description available"
@@ -7460,7 +7527,7 @@
                 "Category": "Single Family Homesites",
                 "plot_id": 22,
                 "Shape_Leng": 0.00179440275,
-                "Shape_Area": 1.8016e-07,
+                "Shape_Area": 1.8016e-7,
                 "price": "N/A",
                 "status": "Unknown",
                 "Description": "No description available"
@@ -7515,7 +7582,7 @@
                 "Category": "Single Family Homesites",
                 "plot_id": 21,
                 "Shape_Leng": 0.0015968206,
-                "Shape_Area": 1.2988e-07,
+                "Shape_Area": 1.2988e-7,
                 "price": "N/A",
                 "status": "Unknown",
                 "Description": "No description available"
@@ -7558,7 +7625,7 @@
                 "Category": "Single Family Homesites",
                 "plot_id": 48,
                 "Shape_Leng": 0.00141803203,
-                "Shape_Area": 1.1691e-07,
+                "Shape_Area": 1.1691e-7,
                 "price": "N/A",
                 "status": "Unknown",
                 "Description": "No description available"
@@ -7605,7 +7672,7 @@
                 "Category": "Single Family Homesites",
                 "plot_id": 23,
                 "Shape_Leng": 0.00155592154,
-                "Shape_Area": 1.4041e-07,
+                "Shape_Area": 1.4041e-7,
                 "price": "N/A",
                 "status": "Unknown",
                 "Description": "No description available"
@@ -7664,7 +7731,7 @@
                 "Category": "Single Family Homesites",
                 "plot_id": 62,
                 "Shape_Leng": 0.00167213822,
-                "Shape_Area": 1.5898e-07,
+                "Shape_Area": 1.5898e-7,
                 "price": "N/A",
                 "status": "Unknown",
                 "Description": "No description available"
@@ -7727,7 +7794,7 @@
                 "Category": "Single Family Homesites",
                 "plot_id": 57,
                 "Shape_Leng": 0.00134322954,
-                "Shape_Area": 1.1211e-07,
+                "Shape_Area": 1.1211e-7,
                 "price": "N/A",
                 "status": "Unknown",
                 "Description": "No description available"
@@ -7778,7 +7845,7 @@
                 "Category": "Single Family Homesites",
                 "plot_id": 24,
                 "Shape_Leng": 0.00147232013,
-                "Shape_Area": 1.2799e-07,
+                "Shape_Area": 1.2799e-7,
                 "price": "N/A",
                 "status": "Unknown",
                 "Description": "No description available"
@@ -7833,7 +7900,7 @@
                 "Category": "Single Family Homesites",
                 "plot_id": 53,
                 "Shape_Leng": 0.0014628207,
-                "Shape_Area": 1.1142e-07,
+                "Shape_Area": 1.1142e-7,
                 "price": "N/A",
                 "status": "Unknown",
                 "Description": "No description available"
@@ -7888,7 +7955,7 @@
                 "Category": "Single Family Homesites",
                 "plot_id": 13,
                 "Shape_Leng": 0.0015876945,
-                "Shape_Area": 1.4759e-07,
+                "Shape_Area": 1.4759e-7,
                 "price": "N/A",
                 "status": "Unknown",
                 "Description": "No description available"
@@ -7943,7 +8010,7 @@
                 "Category": "Single Family Homesites",
                 "plot_id": 63,
                 "Shape_Leng": 0.00141186964,
-                "Shape_Area": 1.0977e-07,
+                "Shape_Area": 1.0977e-7,
                 "price": "N/A",
                 "status": "Unknown",
                 "Description": "No description available"
@@ -7990,7 +8057,7 @@
                 "Category": "Single Family Homesites",
                 "plot_id": 47,
                 "Shape_Leng": 0.00144575623,
-                "Shape_Area": 1.2484e-07,
+                "Shape_Area": 1.2484e-7,
                 "price": "N/A",
                 "status": "Unknown",
                 "Description": "No description available"
@@ -8041,7 +8108,7 @@
                 "Category": "Single Family Homesites",
                 "plot_id": 54,
                 "Shape_Leng": 0.00141871715,
-                "Shape_Area": 1.1693e-07,
+                "Shape_Area": 1.1693e-7,
                 "price": "N/A",
                 "status": "Unknown",
                 "Description": "No description available"
@@ -8092,7 +8159,7 @@
                 "Category": "Single Family Homesites",
                 "plot_id": 55,
                 "Shape_Leng": 0.00139632838,
-                "Shape_Area": 1.1887e-07,
+                "Shape_Area": 1.1887e-7,
                 "price": "N/A",
                 "status": "Unknown",
                 "Description": "No description available"
@@ -8147,7 +8214,7 @@
                 "Category": "Single Family Homesites",
                 "plot_id": 133,
                 "Shape_Leng": 0.0014515999,
-                "Shape_Area": 1.1348e-07,
+                "Shape_Area": 1.1348e-7,
                 "price": "N/A",
                 "status": "Unknown",
                 "Description": "No description available"
@@ -8190,7 +8257,7 @@
                 "Category": "Single Family Homesites",
                 "plot_id": 132,
                 "Shape_Leng": 0.00157871877,
-                "Shape_Area": 1.3329e-07,
+                "Shape_Area": 1.3329e-7,
                 "price": "N/A",
                 "status": "Unknown",
                 "Description": "No description available"
@@ -8237,7 +8304,7 @@
                 "Category": "Single Family Homesites",
                 "plot_id": 25,
                 "Shape_Leng": 0.00148814729,
-                "Shape_Area": 1.3008e-07,
+                "Shape_Area": 1.3008e-7,
                 "price": "N/A",
                 "status": "Unknown",
                 "Description": "No description available"
@@ -8288,7 +8355,7 @@
                 "Category": "Single Family Homesites",
                 "plot_id": 56,
                 "Shape_Leng": 0.0015311632,
-                "Shape_Area": 1.3806e-07,
+                "Shape_Area": 1.3806e-7,
                 "price": "N/A",
                 "status": "Unknown",
                 "Description": "No description available"
@@ -8351,7 +8418,7 @@
                 "Category": "Single Family Homesites",
                 "plot_id": 12,
                 "Shape_Leng": 0.00154579861,
-                "Shape_Area": 1.3911e-07,
+                "Shape_Area": 1.3911e-7,
                 "price": "N/A",
                 "status": "Unknown",
                 "Description": "No description available"
@@ -8402,7 +8469,7 @@
                 "Category": "Single Family Homesites",
                 "plot_id": 46,
                 "Shape_Leng": 0.00141548454,
-                "Shape_Area": 1.1889e-07,
+                "Shape_Area": 1.1889e-7,
                 "price": "N/A",
                 "status": "Unknown",
                 "Description": "No description available"
@@ -8453,7 +8520,7 @@
                 "Category": "Single Family Homesites",
                 "plot_id": 134,
                 "Shape_Leng": 0.00125763539,
-                "Shape_Area": 8.484e-08,
+                "Shape_Area": 8.484e-8,
                 "price": "N/A",
                 "status": "Unknown",
                 "Description": "No description available"
@@ -8496,10 +8563,11 @@
                 "Category": "Single Family Homesites",
                 "plot_id": 26,
                 "Shape_Leng": 0.00149494113,
-                "Shape_Area": 1.2966e-07,
-                "price": "N/A",
-                "status": "Unknown",
-                "Description": "No description available"
+                "Shape_Area": 1.2966e-7,
+                "price": "1.25 BTC",
+                "status": "For Sale",
+                "Description": "No description available",
+                "buy_link": "https://gdmarchitecture.com/portfolio-item/house-13821/"
             },
             "geometry": {
                 "type": "MultiPolygon",
@@ -8547,7 +8615,7 @@
                 "Category": "Single Family Homesites",
                 "plot_id": 119,
                 "Shape_Leng": 0.0014117639,
-                "Shape_Area": 1.0819e-07,
+                "Shape_Area": 1.0819e-7,
                 "price": "N/A",
                 "status": "Unknown",
                 "Description": "No description available"
@@ -8594,7 +8662,7 @@
                 "Category": "Single Family Homesites",
                 "plot_id": 120,
                 "Shape_Leng": 0.00132618665,
-                "Shape_Area": 9.59e-08,
+                "Shape_Area": 9.59e-8,
                 "price": "N/A",
                 "status": "Unknown",
                 "Description": "No description available"
@@ -8637,7 +8705,7 @@
                 "Category": "Single Family Homesites",
                 "plot_id": 131,
                 "Shape_Leng": 0.00179154997,
-                "Shape_Area": 1.5641e-07,
+                "Shape_Area": 1.5641e-7,
                 "price": "N/A",
                 "status": "Unknown",
                 "Description": "No description available"
@@ -8696,7 +8764,7 @@
                 "Category": "Single Family Homesites",
                 "plot_id": 45,
                 "Shape_Leng": 0.00139799284,
-                "Shape_Area": 1.1573e-07,
+                "Shape_Area": 1.1573e-7,
                 "price": "N/A",
                 "status": "Unknown",
                 "Description": "No description available"
@@ -8747,7 +8815,7 @@
                 "Category": "Single Family Homesites",
                 "plot_id": 130,
                 "Shape_Leng": 0.00150227357,
-                "Shape_Area": 1.2782e-07,
+                "Shape_Area": 1.2782e-7,
                 "price": "N/A",
                 "status": "Unknown",
                 "Description": "No description available"
@@ -8798,7 +8866,7 @@
                 "Category": "Single Family Homesites",
                 "plot_id": 129,
                 "Shape_Leng": 0.00148869486,
-                "Shape_Area": 1.2781e-07,
+                "Shape_Area": 1.2781e-7,
                 "price": "N/A",
                 "status": "Unknown",
                 "Description": "No description available"
@@ -8845,10 +8913,11 @@
                 "Category": "Single Family Homesites",
                 "plot_id": 11,
                 "Shape_Leng": 0.00146801685,
-                "Shape_Area": 1.2766e-07,
+                "Shape_Area": 1.2766e-7,
                 "price": "N/A",
-                "status": "Unknown",
-                "Description": "No description available"
+                "status": "",
+                "Description": "No description available",
+                "buy_link": ""
             },
             "geometry": {
                 "type": "MultiPolygon",
@@ -8896,7 +8965,7 @@
                 "Category": "Single Family Homesites",
                 "plot_id": 118,
                 "Shape_Leng": 0.00144921326,
-                "Shape_Area": 1.1275e-07,
+                "Shape_Area": 1.1275e-7,
                 "price": "N/A",
                 "status": "Unknown",
                 "Description": "No description available"
@@ -8943,7 +9012,7 @@
                 "Category": "Single Family Homesites",
                 "plot_id": 128,
                 "Shape_Leng": 0.0015171607,
-                "Shape_Area": 1.3383e-07,
+                "Shape_Area": 1.3383e-7,
                 "price": "N/A",
                 "status": "Unknown",
                 "Description": "No description available"
@@ -8990,7 +9059,7 @@
                 "Category": "Single Family Homesites",
                 "plot_id": 44,
                 "Shape_Leng": 0.00141620852,
-                "Shape_Area": 1.1961e-07,
+                "Shape_Area": 1.1961e-7,
                 "price": "N/A",
                 "status": "Unknown",
                 "Description": "No description available"
@@ -9041,7 +9110,7 @@
                 "Category": "Single Family Homesites",
                 "plot_id": 121,
                 "Shape_Leng": 0.00128731205,
-                "Shape_Area": 9.63e-08,
+                "Shape_Area": 9.63e-8,
                 "price": "N/A",
                 "status": "Unknown",
                 "Description": "No description available"
@@ -9088,10 +9157,11 @@
                 "Category": "Single Family Homesites",
                 "plot_id": 43,
                 "Shape_Leng": 0.0017258755,
-                "Shape_Area": 1.3825e-07,
+                "Shape_Area": 1.3825e-7,
                 "price": "N/A",
-                "status": "Unknown",
-                "Description": "No description available"
+                "status": "",
+                "Description": "No description available",
+                "buy_link": ""
             },
             "geometry": {
                 "type": "MultiPolygon",
@@ -9147,7 +9217,7 @@
                 "Category": "Single Family Homesites",
                 "plot_id": 72,
                 "Shape_Leng": 0.00131011971,
-                "Shape_Area": 9.924e-08,
+                "Shape_Area": 9.924e-8,
                 "price": "N/A",
                 "status": "Unknown",
                 "Description": "No description available"
@@ -9206,7 +9276,7 @@
                 "Category": "Single Family Homesites",
                 "plot_id": 27,
                 "Shape_Leng": 0.00151437231,
-                "Shape_Area": 1.3468e-07,
+                "Shape_Area": 1.3468e-7,
                 "price": "N/A",
                 "status": "Unknown",
                 "Description": "No description available"
@@ -9257,7 +9327,7 @@
                 "Category": "Single Family Homesites",
                 "plot_id": 135,
                 "Shape_Leng": 0.0014585496,
-                "Shape_Area": 1.223e-07,
+                "Shape_Area": 1.223e-7,
                 "price": "N/A",
                 "status": "Unknown",
                 "Description": "No description available"
@@ -9304,7 +9374,7 @@
                 "Category": "Single Family Homesites",
                 "plot_id": 73,
                 "Shape_Leng": 0.00134008252,
-                "Shape_Area": 1.0432e-07,
+                "Shape_Area": 1.0432e-7,
                 "price": "N/A",
                 "status": "Unknown",
                 "Description": "No description available"
@@ -9351,7 +9421,7 @@
                 "Category": "Single Family Homesites",
                 "plot_id": 122,
                 "Shape_Leng": 0.00116606954,
-                "Shape_Area": 7.844e-08,
+                "Shape_Area": 7.844e-8,
                 "price": "N/A",
                 "status": "Unknown",
                 "Description": "No description available"
@@ -9402,7 +9472,7 @@
                 "Category": "Single Family Homesites",
                 "plot_id": 10,
                 "Shape_Leng": 0.00155728806,
-                "Shape_Area": 1.2285e-07,
+                "Shape_Area": 1.2285e-7,
                 "price": "N/A",
                 "status": "Unknown",
                 "Description": "No description available"
@@ -9453,7 +9523,7 @@
                 "Category": "Single Family Homesites",
                 "plot_id": 117,
                 "Shape_Leng": 0.00141349074,
-                "Shape_Area": 1.0693e-07,
+                "Shape_Area": 1.0693e-7,
                 "price": "N/A",
                 "status": "Unknown",
                 "Description": "No description available"
@@ -9500,7 +9570,7 @@
                 "Category": "Single Family Homesites",
                 "plot_id": 67,
                 "Shape_Leng": 0.00133838995,
-                "Shape_Area": 9.708e-08,
+                "Shape_Area": 9.708e-8,
                 "price": "N/A",
                 "status": "Unknown",
                 "Description": "No description available"
@@ -9551,7 +9621,7 @@
                 "Category": "Single Family Homesites",
                 "plot_id": 28,
                 "Shape_Leng": 0.00146133546,
-                "Shape_Area": 1.2372e-07,
+                "Shape_Area": 1.2372e-7,
                 "price": "N/A",
                 "status": "Unknown",
                 "Description": "No description available"
@@ -9602,7 +9672,7 @@
                 "Category": "Single Family Homesites",
                 "plot_id": 74,
                 "Shape_Leng": 0.00128632976,
-                "Shape_Area": 9.518e-08,
+                "Shape_Area": 9.518e-8,
                 "price": "N/A",
                 "status": "Unknown",
                 "Description": "No description available"
@@ -9653,7 +9723,7 @@
                 "Category": "Single Family Homesites",
                 "plot_id": 136,
                 "Shape_Leng": 0.00148616787,
-                "Shape_Area": 1.2807e-07,
+                "Shape_Area": 1.2807e-7,
                 "price": "N/A",
                 "status": "Unknown",
                 "Description": "No description available"
@@ -9700,7 +9770,7 @@
                 "Category": "Single Family Homesites",
                 "plot_id": 9,
                 "Shape_Leng": 0.0015974944,
-                "Shape_Area": 1.3579e-07,
+                "Shape_Area": 1.3579e-7,
                 "price": "N/A",
                 "status": "Unknown",
                 "Description": "No description available"
@@ -9751,7 +9821,7 @@
                 "Category": "Single Family Homesites",
                 "plot_id": 125,
                 "Shape_Leng": 0.00147272102,
-                "Shape_Area": 1.2528e-07,
+                "Shape_Area": 1.2528e-7,
                 "price": "N/A",
                 "status": "Unknown",
                 "Description": "No description available"
@@ -9798,7 +9868,7 @@
                 "Category": "Single Family Homesites",
                 "plot_id": 138,
                 "Shape_Leng": 0.0013008495,
-                "Shape_Area": 1.0185e-07,
+                "Shape_Area": 1.0185e-7,
                 "price": "N/A",
                 "status": "Unknown",
                 "Description": "No description available"
@@ -9853,7 +9923,7 @@
                 "Category": "Single Family Homesites",
                 "plot_id": 127,
                 "Shape_Leng": 0.00175594345,
-                "Shape_Area": 1.6301e-07,
+                "Shape_Area": 1.6301e-7,
                 "price": "N/A",
                 "status": "Unknown",
                 "Description": "No description available"
@@ -9908,7 +9978,7 @@
                 "Category": "Single Family Homesites",
                 "plot_id": 75,
                 "Shape_Leng": 0.00129117451,
-                "Shape_Area": 9.689e-08,
+                "Shape_Area": 9.689e-8,
                 "price": "N/A",
                 "status": "Unknown",
                 "Description": "No description available"
@@ -9959,7 +10029,7 @@
                 "Category": "Single Family Homesites",
                 "plot_id": 76,
                 "Shape_Leng": 0.00130065879,
-                "Shape_Area": 9.704e-08,
+                "Shape_Area": 9.704e-8,
                 "price": "N/A",
                 "status": "Unknown",
                 "Description": "No description available"
@@ -10006,7 +10076,7 @@
                 "Category": "Single Family Homesites",
                 "plot_id": 139,
                 "Shape_Leng": 0.00165995819,
-                "Shape_Area": 1.6302e-07,
+                "Shape_Area": 1.6302e-7,
                 "price": "N/A",
                 "status": "Unknown",
                 "Description": "No description available"
@@ -10077,7 +10147,7 @@
                 "Category": "Single Family Homesites",
                 "plot_id": 66,
                 "Shape_Leng": 0.0017399522,
-                "Shape_Area": 1.4621e-07,
+                "Shape_Area": 1.4621e-7,
                 "price": "N/A",
                 "status": "Unknown",
                 "Description": "No description available"
@@ -10144,7 +10214,7 @@
                 "Category": "Single Family Homesites",
                 "plot_id": 116,
                 "Shape_Leng": 0.00148624576,
-                "Shape_Area": 1.1663e-07,
+                "Shape_Area": 1.1663e-7,
                 "price": "N/A",
                 "status": "Unknown",
                 "Description": "No description available"
@@ -10195,7 +10265,7 @@
                 "Category": "Single Family Homesites",
                 "plot_id": 126,
                 "Shape_Leng": 0.0015796371,
-                "Shape_Area": 1.4072e-07,
+                "Shape_Area": 1.4072e-7,
                 "price": "N/A",
                 "status": "Unknown",
                 "Description": "No description available"
@@ -10246,7 +10316,7 @@
                 "Category": "Single Family Homesites",
                 "plot_id": 137,
                 "Shape_Leng": 0.00149117217,
-                "Shape_Area": 1.3092e-07,
+                "Shape_Area": 1.3092e-7,
                 "price": "N/A",
                 "status": "Unknown",
                 "Description": "No description available"
@@ -10297,7 +10367,7 @@
                 "Category": "Single Family Homesites",
                 "plot_id": 8,
                 "Shape_Leng": 0.00150295459,
-                "Shape_Area": 1.2894e-07,
+                "Shape_Area": 1.2894e-7,
                 "price": "N/A",
                 "status": "Unknown",
                 "Description": "No description available"
@@ -10348,7 +10418,7 @@
                 "Category": "Single Family Homesites",
                 "plot_id": 115,
                 "Shape_Leng": 0.00149577389,
-                "Shape_Area": 1.4257e-07,
+                "Shape_Area": 1.4257e-7,
                 "price": "N/A",
                 "status": "Unknown",
                 "Description": "No description available"
@@ -10411,7 +10481,7 @@
                 "Category": "Single Family Homesites",
                 "plot_id": 7,
                 "Shape_Leng": 0.00142219404,
-                "Shape_Area": 1.1928e-07,
+                "Shape_Area": 1.1928e-7,
                 "price": "N/A",
                 "status": "Unknown",
                 "Description": "No description available"
@@ -10462,10 +10532,11 @@
                 "Category": "Single Family Homesites",
                 "plot_id": 30,
                 "Shape_Leng": 0.00138644983,
-                "Shape_Area": 1.0812e-07,
-                "price": "N/A",
-                "status": "Unknown",
-                "Description": "No description available"
+                "Shape_Area": 1.0812e-7,
+                "price": "1.25 BTC",
+                "status": "For Sale",
+                "Description": "No description available",
+                "buy_link": "https://gdmarchitecture.com/portfolio-item/house-12121/"
             },
             "geometry": {
                 "type": "MultiPolygon",
@@ -10513,7 +10584,7 @@
                 "Category": "Single Family Homesites",
                 "plot_id": 31,
                 "Shape_Leng": 0.00137025443,
-                "Shape_Area": 1.0281e-07,
+                "Shape_Area": 1.0281e-7,
                 "price": "N/A",
                 "status": "Unknown",
                 "Description": "No description available"
@@ -10564,7 +10635,7 @@
                 "Category": "Single Family Homesites",
                 "plot_id": 32,
                 "Shape_Leng": 0.00127403696,
-                "Shape_Area": 7.586e-08,
+                "Shape_Area": 7.586e-8,
                 "price": "N/A",
                 "status": "Unknown",
                 "Description": "No description available"
@@ -10611,10 +10682,11 @@
                 "Category": "Single Family Homesites",
                 "plot_id": 6,
                 "Shape_Leng": 0.00156011933,
-                "Shape_Area": 1.4265e-07,
-                "price": "N/A",
-                "status": "Unknown",
-                "Description": "No description available"
+                "Shape_Area": 1.4265e-7,
+                "price": "6.1 BTC",
+                "status": "For Sale",
+                "Description": "No description available",
+                "buy_link": "https://gdmarchitecture.com/portfolio-item/house-12021-2/"
             },
             "geometry": {
                 "type": "MultiPolygon",
@@ -10666,7 +10738,7 @@
                 "Category": "Single Family Homesites",
                 "plot_id": 33,
                 "Shape_Leng": 0.00143035478,
-                "Shape_Area": 1.1573e-07,
+                "Shape_Area": 1.1573e-7,
                 "price": "N/A",
                 "status": "Unknown",
                 "Description": "No description available"
@@ -10721,7 +10793,7 @@
                 "Category": "Single Family Homesites",
                 "plot_id": 5,
                 "Shape_Leng": 0.00170218788,
-                "Shape_Area": 1.4661e-07,
+                "Shape_Area": 1.4661e-7,
                 "price": "N/A",
                 "status": "Unknown",
                 "Description": "No description available"
@@ -10776,7 +10848,7 @@
                 "Category": "Single Family Homesites",
                 "plot_id": 34,
                 "Shape_Leng": 0.00137986697,
-                "Shape_Area": 1.0603e-07,
+                "Shape_Area": 1.0603e-7,
                 "price": "N/A",
                 "status": "Unknown",
                 "Description": "No description available"
@@ -10835,7 +10907,7 @@
                 "Category": "Single Family Homesites",
                 "plot_id": 4,
                 "Shape_Leng": 0.00177438684,
-                "Shape_Area": 1.6074e-07,
+                "Shape_Area": 1.6074e-7,
                 "price": "N/A",
                 "status": "Unknown",
                 "Description": "No description available"
@@ -10886,7 +10958,7 @@
                 "Category": "Single Family Homesites",
                 "plot_id": 3,
                 "Shape_Leng": 0.00156961583,
-                "Shape_Area": 1.2516e-07,
+                "Shape_Area": 1.2516e-7,
                 "price": "N/A",
                 "status": "Unknown",
                 "Description": "No description available"
@@ -10937,10 +11009,11 @@
                 "Category": "Single Family Homesites",
                 "plot_id": 100,
                 "Shape_Leng": 0.00166725464,
-                "Shape_Area": 1.6813e-07,
-                "price": "N/A",
-                "status": "Unknown",
-                "Description": "No description available"
+                "Shape_Area": 1.6813e-7,
+                "price": "1.3",
+                "status": "For Sale",
+                "Description": "Ocean view Single Family buildable lot in cul-de-sac street. Perfect location for multi level spec home with     beautiful ocean views.",
+                "buy_link": ""
             },
             "geometry": {
                 "type": "MultiPolygon",
@@ -10992,10 +11065,11 @@
                 "Category": "Single Family Homesites",
                 "plot_id": 101,
                 "Shape_Leng": 0.00172574074,
-                "Shape_Area": 1.9857e-07,
-                "price": "N/A",
-                "status": "Unknown",
-                "Description": "No description available"
+                "Shape_Area": 1.9857e-7,
+                "price": "1.35",
+                "status": "For Sale",
+                "Description": "Ocean view Single Family buildable lot in cul-de-sac street. Perfect location for multi level spec home with     beautiful ocean views.",
+                "buy_link": "https://gdmarchitecture.com/portfolio-item/eleonon-house/"
             },
             "geometry": {
                 "type": "MultiPolygon",
@@ -11059,10 +11133,11 @@
                 "Category": "Single Family Homesites",
                 "plot_id": 99,
                 "Shape_Leng": 0.00155754273,
-                "Shape_Area": 1.5111e-07,
-                "price": "N/A",
-                "status": "Unknown",
-                "Description": "No description available"
+                "Shape_Area": 1.5111e-7,
+                "price": "1.35",
+                "status": "For Sale",
+                "Description": "Ocean view Single Family buildable lot in cul-de-sac street. Perfect location for multi level spec home with     beautiful ocean views.",
+                "buy_link": ""
             },
             "geometry": {
                 "type": "MultiPolygon",
@@ -11118,10 +11193,11 @@
                 "Category": "Single Family Homesites",
                 "plot_id": 91,
                 "Shape_Leng": 0.00168858484,
-                "Shape_Area": 1.7916e-07,
-                "price": "N/A",
-                "status": "Unknown",
-                "Description": "No description available"
+                "Shape_Area": 1.7916e-7,
+                "price": "1.3",
+                "status": "For Sale",
+                "Description": "Ocean view Single Family buildable lot in cul-de-sac street. Perfect location for multi level spec home with     beautiful ocean and sunset views.",
+                "buy_link": ""
             },
             "geometry": {
                 "type": "MultiPolygon",
@@ -11177,10 +11253,11 @@
                 "Category": "Single Family Homesites",
                 "plot_id": 90,
                 "Shape_Leng": 0.00165528997,
-                "Shape_Area": 1.7219e-07,
-                "price": "N/A",
-                "status": "Unknown",
-                "Description": "No description available"
+                "Shape_Area": 1.7219e-7,
+                "price": "1.3",
+                "status": "For Sale",
+                "Description": "Ocean view Single Family buildable lot in cul-de-sac street. Perfect location for multi level spec home with     beautiful ocean ",
+                "buy_link": "https://gdmarchitecture.com/portfolio-item/house-2218/"
             },
             "geometry": {
                 "type": "MultiPolygon",
@@ -11240,10 +11317,11 @@
                 "Category": "Single Family Homesites",
                 "plot_id": 92,
                 "Shape_Leng": 0.00167378562,
-                "Shape_Area": 1.7901e-07,
-                "price": "N/A",
-                "status": "Unknown",
-                "Description": "No description available"
+                "Shape_Area": 1.7901e-7,
+                "price": "1.3",
+                "status": "For Sale",
+                "Description": "Ocean view Single Family buildable lot in cul-de-sac street. Perfect location for multi level spec home with     beautiful ocean and sunset views.",
+                "buy_link": ""
             },
             "geometry": {
                 "type": "MultiPolygon",
@@ -11307,7 +11385,7 @@
                 "Category": "Single Family Homesites",
                 "plot_id": 77,
                 "Shape_Leng": 0.00149806898,
-                "Shape_Area": 1.3568e-07,
+                "Shape_Area": 1.3568e-7,
                 "price": "N/A",
                 "status": "Unknown",
                 "Description": "No description available"
@@ -11354,7 +11432,7 @@
                 "Category": "Single Family Homesites",
                 "plot_id": 89,
                 "Shape_Leng": 0.00138983063,
-                "Shape_Area": 1.2216e-07,
+                "Shape_Area": 1.2216e-7,
                 "price": "N/A",
                 "status": "Unknown",
                 "Description": "No description available"
@@ -11405,10 +11483,11 @@
                 "Category": "Single Family Homesites",
                 "plot_id": 93,
                 "Shape_Leng": 0.00163958267,
-                "Shape_Area": 1.6041e-07,
-                "price": "N/A",
-                "status": "Unknown",
-                "Description": "No description available"
+                "Shape_Area": 1.6041e-7,
+                "price": "1.3 BTC",
+                "status": "For Sale",
+                "Description": "Ocean view Single Family buildable lot in cul-de-sac street. Perfect location for multi level spec home with     beautiful ocean and sunset views.",
+                "buy_link": "https://gdmarchitecture.com/portfolio-item/cliff-house/"
             },
             "geometry": {
                 "type": "MultiPolygon",
@@ -11460,7 +11539,7 @@
                 "Category": "Single Family Homesites",
                 "plot_id": 78,
                 "Shape_Leng": 0.00140644433,
-                "Shape_Area": 1.2165e-07,
+                "Shape_Area": 1.2165e-7,
                 "price": "N/A",
                 "status": "Unknown",
                 "Description": "No description available"
@@ -11511,7 +11590,7 @@
                 "Category": "Single Family Homesites",
                 "plot_id": 88,
                 "Shape_Leng": 0.00139035397,
-                "Shape_Area": 1.2152e-07,
+                "Shape_Area": 1.2152e-7,
                 "price": "N/A",
                 "status": "Unknown",
                 "Description": "No description available"
@@ -11562,10 +11641,11 @@
                 "Category": "Single Family Homesites",
                 "plot_id": 79,
                 "Shape_Leng": 0.00136212233,
-                "Shape_Area": 1.1367e-07,
-                "price": "N/A",
-                "status": "Unknown",
-                "Description": "No description available"
+                "Shape_Area": 1.1367e-7,
+                "price": "1.15 BTC",
+                "status": "For Sale",
+                "Description": "Partial views",
+                "buy_link": "https://gdmarchitecture.com/portfolio-item/house-9820/"
             },
             "geometry": {
                 "type": "MultiPolygon",
@@ -11613,10 +11693,11 @@
                 "Category": "Single Family Homesites",
                 "plot_id": 94,
                 "Shape_Leng": 0.00166176206,
-                "Shape_Area": 1.7062e-07,
-                "price": "N/A",
-                "status": "Unknown",
-                "Description": "No description available"
+                "Shape_Area": 1.7062e-7,
+                "price": "1.3",
+                "status": "For Sale",
+                "Description": "Ocean view Single Family buildable lot in cul-de-sac street. Perfect location for multi level spec home with     beautiful ocean and sunset views.",
+                "buy_link": ""
             },
             "geometry": {
                 "type": "MultiPolygon",
@@ -11656,7 +11737,7 @@
                 "Category": "Single Family Homesites",
                 "plot_id": 87,
                 "Shape_Leng": 0.00139844201,
-                "Shape_Area": 1.2303e-07,
+                "Shape_Area": 1.2303e-7,
                 "price": "N/A",
                 "status": "Unknown",
                 "Description": "No description available"
@@ -11707,7 +11788,7 @@
                 "Category": "Single Family Homesites",
                 "plot_id": 80,
                 "Shape_Leng": 0.00140172069,
-                "Shape_Area": 1.2074e-07,
+                "Shape_Area": 1.2074e-7,
                 "price": "N/A",
                 "status": "Unknown",
                 "Description": "No description available"
@@ -11758,10 +11839,11 @@
                 "Category": "Single Family Homesites",
                 "plot_id": 95,
                 "Shape_Leng": 0.0016462479,
-                "Shape_Area": 1.72e-07,
-                "price": "N/A",
-                "status": "Unknown",
-                "Description": "No description available"
+                "Shape_Area": 1.72e-7,
+                "price": "1.3 BTC",
+                "status": "For Sale",
+                "Description": "Ocean view Single Family buildable lot in cul-de-sac street. Perfect location for multi level spec home with     beautiful ocean and sunset views.",
+                "buy_link": "https://gdmarchitecture.com/portfolio-item/mansion-6417/"
             },
             "geometry": {
                 "type": "MultiPolygon",
@@ -11817,7 +11899,7 @@
                 "Category": "Single Family Homesites",
                 "plot_id": 86,
                 "Shape_Leng": 0.0014520494,
-                "Shape_Area": 1.3746e-07,
+                "Shape_Area": 1.3746e-7,
                 "price": "N/A",
                 "status": "Unknown",
                 "Description": "No description available"
@@ -11876,7 +11958,7 @@
                 "Category": "Single Family Homesites",
                 "plot_id": 81,
                 "Shape_Leng": 0.00139243252,
-                "Shape_Area": 1.1906e-07,
+                "Shape_Area": 1.1906e-7,
                 "price": "N/A",
                 "status": "Unknown",
                 "Description": "No description available"
@@ -11927,10 +12009,11 @@
                 "Category": "Single Family Homesites",
                 "plot_id": 96,
                 "Shape_Leng": 0.00158154615,
-                "Shape_Area": 1.5344e-07,
-                "price": "N/A",
-                "status": "Unknown",
-                "Description": "No description available"
+                "Shape_Area": 1.5344e-7,
+                "price": "1.3",
+                "status": "For Sale",
+                "Description": "Ocean view Single Family buildable lot in cul-de-sac street. Perfect location for multi level spec home with     beautiful ocean and sunset views.",
+                "buy_link": ""
             },
             "geometry": {
                 "type": "MultiPolygon",
@@ -11982,10 +12065,11 @@
                 "Category": "Single Family Homesites",
                 "plot_id": 85,
                 "Shape_Leng": 0.00168836076,
-                "Shape_Area": 1.4677e-07,
-                "price": "N/A",
-                "status": "Unknown",
-                "Description": "No description available"
+                "Shape_Area": 1.4677e-7,
+                "price": "1.11 BTC",
+                "status": "For Sale",
+                "Description": "No description available",
+                "buy_link": "https://gdmarchitecture.com/portfolio-item/house-12021/"
             },
             "geometry": {
                 "type": "MultiPolygon",
@@ -12045,10 +12129,11 @@
                 "Category": "Single Family Homesites",
                 "plot_id": 107,
                 "Shape_Leng": 0.00162283548,
-                "Shape_Area": 1.5276e-07,
-                "price": "N/A",
-                "status": "Unknown",
-                "Description": "No description available"
+                "Shape_Area": 1.5276e-7,
+                "price": "1.35",
+                "status": "For Sale",
+                "Description": "Ocean view Single Family buildable lot in cul-de-sac street. Perfect location for multi level spec home with     beautiful ocean and sunset views.",
+                "buy_link": ""
             },
             "geometry": {
                 "type": "MultiPolygon",
@@ -12104,10 +12189,11 @@
                 "Category": "Single Family Homesites",
                 "plot_id": 82,
                 "Shape_Leng": 0.00137859354,
-                "Shape_Area": 1.1656e-07,
-                "price": "N/A",
-                "status": "Unknown",
-                "Description": "No description available"
+                "Shape_Area": 1.1656e-7,
+                "price": "1.15 BTC",
+                "status": "For Sale",
+                "Description": "No description available",
+                "buy_link": "https://gdmarchitecture.com/portfolio-item/house-11120/"
             },
             "geometry": {
                 "type": "MultiPolygon",
@@ -12155,10 +12241,11 @@
                 "Category": "Single Family Homesites",
                 "plot_id": 97,
                 "Shape_Leng": 0.00158949919,
-                "Shape_Area": 1.5867e-07,
-                "price": "N/A",
-                "status": "Unknown",
-                "Description": "No description available"
+                "Shape_Area": 1.5867e-7,
+                "price": "1.3",
+                "status": "For Sale",
+                "Description": "Ocean view Single Family buildable lot in cul-de-sac street. Perfect location for multi level spec home with     beautiful ocean and sunset views.",
+                "buy_link": "https://gdmarchitecture.com/portfolio-item/pedoulas-house/"
             },
             "geometry": {
                 "type": "MultiPolygon",
@@ -12210,7 +12297,7 @@
                 "Category": "Single Family Homesites",
                 "plot_id": 84,
                 "Shape_Leng": 0.00139574599,
-                "Shape_Area": 1.2222e-07,
+                "Shape_Area": 1.2222e-7,
                 "price": "N/A",
                 "status": "Unknown",
                 "Description": "No description available"
@@ -12257,7 +12344,7 @@
                 "Category": "Single Family Homesites",
                 "plot_id": 83,
                 "Shape_Leng": 0.00136334785,
-                "Shape_Area": 1.1693e-07,
+                "Shape_Area": 1.1693e-7,
                 "price": "N/A",
                 "status": "Unknown",
                 "Description": "No description available"
@@ -12308,10 +12395,11 @@
                 "Category": "Single Family Homesites",
                 "plot_id": 108,
                 "Shape_Leng": 0.00165247618,
-                "Shape_Area": 1.8327e-07,
-                "price": "N/A",
-                "status": "Unknown",
-                "Description": "No description available"
+                "Shape_Area": 1.8327e-7,
+                "price": "1.45",
+                "status": "For Sale",
+                "Description": "Ocean view Single Family buildable lot in cul-de-sac street. Perfect location for multi level spec home with     beautiful ocean and sunset views.",
+                "buy_link": ""
             },
             "geometry": {
                 "type": "MultiPolygon",
@@ -12371,7 +12459,7 @@
                 "Category": "Single Family Homesites",
                 "plot_id": 258,
                 "Shape_Leng": 0.00141924594,
-                "Shape_Area": 1.2359e-07,
+                "Shape_Area": 1.2359e-7,
                 "price": "N/A",
                 "status": "Unknown",
                 "Description": "No description available"
@@ -12418,10 +12506,11 @@
                 "Category": "Single Family Homesites",
                 "plot_id": 98,
                 "Shape_Leng": 0.00150386822,
-                "Shape_Area": 1.4984e-07,
-                "price": "N/A",
-                "status": "Unknown",
-                "Description": "No description available"
+                "Shape_Area": 1.4984e-7,
+                "price": "1.35",
+                "status": "For Sale",
+                "Description": "Ocean view Single Family buildable lot in cul-de-sac street. Perfect location for multi level spec home with     beautiful ocean and sunset views.",
+                "buy_link": ""
             },
             "geometry": {
                 "type": "MultiPolygon",
@@ -12481,10 +12570,11 @@
                 "Category": "Single Family Homesites",
                 "plot_id": 109,
                 "Shape_Leng": 0.0015557324,
-                "Shape_Area": 1.4862e-07,
-                "price": "N/A",
-                "status": "Unknown",
-                "Description": "No description available"
+                "Shape_Area": 1.4862e-7,
+                "price": "1.4",
+                "status": "For Sale",
+                "Description": "Ocean view Single Family buildable lot in cul-de-sac street. Perfect location for multi level spec home with     beautiful ocean and sunset views. last house on the street. ",
+                "buy_link": ""
             },
             "geometry": {
                 "type": "MultiPolygon",
@@ -12528,10 +12618,11 @@
                 "Category": "Single Family Homesites",
                 "plot_id": 225,
                 "Shape_Leng": 0.00206670084,
-                "Shape_Area": 2.5617e-07,
-                "price": "N/A",
-                "status": "Unknown",
-                "Description": "No description available"
+                "Shape_Area": 2.5617e-7,
+                "price": "",
+                "status": "Not for Sale",
+                "Description": "",
+                "buy_link": ""
             },
             "geometry": {
                 "type": "MultiPolygon",
@@ -12575,10 +12666,11 @@
                 "Category": "Single Family Homesites",
                 "plot_id": 226,
                 "Shape_Leng": 0.00220943451,
-                "Shape_Area": 3.0875e-07,
-                "price": "N/A",
-                "status": "Unknown",
-                "Description": "No description available"
+                "Shape_Area": 3.0875e-7,
+                "price": "",
+                "status": "Not for Sale",
+                "Description": "",
+                "buy_link": ""
             },
             "geometry": {
                 "type": "MultiPolygon",
@@ -12630,10 +12722,11 @@
                 "Category": "Single Family Homesites",
                 "plot_id": 227,
                 "Shape_Leng": 0.00198628108,
-                "Shape_Area": 2.1713e-07,
-                "price": "N/A",
-                "status": "Unknown",
-                "Description": "No description available"
+                "Shape_Area": 2.1713e-7,
+                "price": "",
+                "status": "Not for Sale",
+                "Description": "",
+                "buy_link": ""
             },
             "geometry": {
                 "type": "MultiPolygon",
@@ -12681,10 +12774,11 @@
                 "Category": "Single Family Homesites",
                 "plot_id": 228,
                 "Shape_Leng": 0.00216214255,
-                "Shape_Area": 2.4438e-07,
-                "price": "N/A",
-                "status": "Unknown",
-                "Description": "No description available"
+                "Shape_Area": 2.4438e-7,
+                "price": "",
+                "status": "Not for Sale",
+                "Description": "",
+                "buy_link": ""
             },
             "geometry": {
                 "type": "MultiPolygon",
@@ -12736,10 +12830,11 @@
                 "Category": "Single Family Homesites",
                 "plot_id": 229,
                 "Shape_Leng": 0.00173689215,
-                "Shape_Area": 1.9024e-07,
-                "price": "N/A",
-                "status": "Unknown",
-                "Description": "No description available"
+                "Shape_Area": 1.9024e-7,
+                "price": "",
+                "status": "Not for Sale",
+                "Description": "",
+                "buy_link": ""
             },
             "geometry": {
                 "type": "MultiPolygon",
@@ -12807,10 +12902,11 @@
                 "Category": "Single Family Homesites",
                 "plot_id": 230,
                 "Shape_Leng": 0.00169912609,
-                "Shape_Area": 1.7242e-07,
-                "price": "N/A",
-                "status": "Unknown",
-                "Description": "No description available"
+                "Shape_Area": 1.7242e-7,
+                "price": "",
+                "status": "Not for Sale",
+                "Description": "",
+                "buy_link": ""
             },
             "geometry": {
                 "type": "MultiPolygon",
@@ -12862,10 +12958,11 @@
                 "Category": "Single Family Homesites",
                 "plot_id": 231,
                 "Shape_Leng": 0.00170675802,
-                "Shape_Area": 1.5976e-07,
-                "price": "N/A",
-                "status": "Unknown",
-                "Description": "No description available"
+                "Shape_Area": 1.5976e-7,
+                "price": "",
+                "status": "Not for Sale",
+                "Description": "",
+                "buy_link": ""
             },
             "geometry": {
                 "type": "MultiPolygon",
@@ -12909,10 +13006,11 @@
                 "Category": "Single Family Homesites",
                 "plot_id": 232,
                 "Shape_Leng": 0.00193392423,
-                "Shape_Area": 1.9816e-07,
-                "price": "N/A",
-                "status": "Unknown",
-                "Description": "No description available"
+                "Shape_Area": 1.9816e-7,
+                "price": "",
+                "status": "Not for Sale",
+                "Description": "",
+                "buy_link": ""
             },
             "geometry": {
                 "type": "MultiPolygon",
@@ -12952,10 +13050,11 @@
                 "Category": "Single Family Homesites",
                 "plot_id": 233,
                 "Shape_Leng": 0.00193432649,
-                "Shape_Area": 1.999e-07,
-                "price": "N/A",
-                "status": "Unknown",
-                "Description": "No description available"
+                "Shape_Area": 1.999e-7,
+                "price": "",
+                "status": "Not for Sale",
+                "Description": "",
+                "buy_link": ""
             },
             "geometry": {
                 "type": "MultiPolygon",
@@ -13007,10 +13106,11 @@
                 "Category": "Single Family Homesites",
                 "plot_id": 234,
                 "Shape_Leng": 0.00155880726,
-                "Shape_Area": 1.3092e-07,
-                "price": "N/A",
-                "status": "Unknown",
-                "Description": "No description available"
+                "Shape_Area": 1.3092e-7,
+                "price": "",
+                "status": "Not for Sale",
+                "Description": "",
+                "buy_link": ""
             },
             "geometry": {
                 "type": "MultiPolygon",
@@ -13058,10 +13158,11 @@
                 "Category": "Single Family Homesites",
                 "plot_id": 235,
                 "Shape_Leng": 0.00196416763,
-                "Shape_Area": 2.41e-07,
-                "price": "N/A",
-                "status": "Unknown",
-                "Description": "No description available"
+                "Shape_Area": 2.41e-7,
+                "price": "",
+                "status": "Not for Sale",
+                "Description": "",
+                "buy_link": ""
             },
             "geometry": {
                 "type": "MultiPolygon",
@@ -13129,10 +13230,11 @@
                 "Category": "Single Family Homesites",
                 "plot_id": 254,
                 "Shape_Leng": 0.00184170049,
-                "Shape_Area": 1.5732e-07,
-                "price": "N/A",
-                "status": "Unknown",
-                "Description": "No description available"
+                "Shape_Area": 1.5732e-7,
+                "price": "",
+                "status": "Not for Sale",
+                "Description": "",
+                "buy_link": ""
             },
             "geometry": {
                 "type": "MultiPolygon",
@@ -13188,10 +13290,11 @@
                 "Category": "Single Family Homesites",
                 "plot_id": 236,
                 "Shape_Leng": 0.0019600434,
-                "Shape_Area": 2.4069e-07,
-                "price": "N/A",
-                "status": "Unknown",
-                "Description": "No description available"
+                "Shape_Area": 2.4069e-7,
+                "price": "",
+                "status": "Not for Sale",
+                "Description": "",
+                "buy_link": ""
             },
             "geometry": {
                 "type": "MultiPolygon",
@@ -13247,10 +13350,11 @@
                 "Category": "Single Family Homesites",
                 "plot_id": 171,
                 "Shape_Leng": 0.0016924749,
-                "Shape_Area": 1.6736e-07,
-                "price": "N/A",
-                "status": "Unknown",
-                "Description": "No description available"
+                "Shape_Area": 1.6736e-7,
+                "price": "",
+                "status": "Not for Sale",
+                "Description": "",
+                "buy_link": ""
             },
             "geometry": {
                 "type": "MultiPolygon",
@@ -13302,10 +13406,11 @@
                 "Category": "Single Family Homesites",
                 "plot_id": 178,
                 "Shape_Leng": 0.00181368366,
-                "Shape_Area": 2.0382e-07,
-                "price": "N/A",
-                "status": "Unknown",
-                "Description": "No description available"
+                "Shape_Area": 2.0382e-7,
+                "price": "",
+                "status": "Not for Sale",
+                "Description": "",
+                "buy_link": ""
             },
             "geometry": {
                 "type": "MultiPolygon",
@@ -13381,10 +13486,11 @@
                 "Category": "Single Family Homesites",
                 "plot_id": 180,
                 "Shape_Leng": 0.00178728262,
-                "Shape_Area": 1.9651e-07,
-                "price": "N/A",
-                "status": "Unknown",
-                "Description": "No description available"
+                "Shape_Area": 1.9651e-7,
+                "price": "",
+                "status": "Not for Sale",
+                "Description": "",
+                "buy_link": ""
             },
             "geometry": {
                 "type": "MultiPolygon",
@@ -13448,10 +13554,11 @@
                 "Category": "Single Family Homesites",
                 "plot_id": 177,
                 "Shape_Leng": 0.00178662403,
-                "Shape_Area": 1.9651e-07,
-                "price": "N/A",
-                "status": "Unknown",
-                "Description": "No description available"
+                "Shape_Area": 1.9651e-7,
+                "price": "",
+                "status": "Not for Sale",
+                "Description": "",
+                "buy_link": ""
             },
             "geometry": {
                 "type": "MultiPolygon",
@@ -13515,10 +13622,11 @@
                 "Category": "Single Family Homesites",
                 "plot_id": 170,
                 "Shape_Leng": 0.00155350178,
-                "Shape_Area": 1.3803e-07,
-                "price": "N/A",
-                "status": "Unknown",
-                "Description": "No description available"
+                "Shape_Area": 1.3803e-7,
+                "price": "",
+                "status": "Not for Sale",
+                "Description": "",
+                "buy_link": ""
             },
             "geometry": {
                 "type": "MultiPolygon",
@@ -13558,10 +13666,11 @@
                 "Category": "Single Family Homesites",
                 "plot_id": 181,
                 "Shape_Leng": 0.00185723222,
-                "Shape_Area": 2.1387e-07,
-                "price": "N/A",
-                "status": "Unknown",
-                "Description": "No description available"
+                "Shape_Area": 2.1387e-7,
+                "price": "",
+                "status": "Not for Sale",
+                "Description": "",
+                "buy_link": ""
             },
             "geometry": {
                 "type": "MultiPolygon",
@@ -13629,10 +13738,11 @@
                 "Category": "Single Family Homesites",
                 "plot_id": 176,
                 "Shape_Leng": 0.00170457696,
-                "Shape_Area": 1.7573e-07,
-                "price": "N/A",
-                "status": "Unknown",
-                "Description": "No description available"
+                "Shape_Area": 1.7573e-7,
+                "price": "",
+                "status": "Not for Sale",
+                "Description": "",
+                "buy_link": ""
             },
             "geometry": {
                 "type": "MultiPolygon",
@@ -13692,10 +13802,11 @@
                 "Category": "Single Family Homesites",
                 "plot_id": 169,
                 "Shape_Leng": 0.00170569647,
-                "Shape_Area": 1.7855e-07,
-                "price": "N/A",
-                "status": "Unknown",
-                "Description": "No description available"
+                "Shape_Area": 1.7855e-7,
+                "price": "",
+                "status": "Not for Sale",
+                "Description": "",
+                "buy_link": ""
             },
             "geometry": {
                 "type": "MultiPolygon",
@@ -13739,10 +13850,11 @@
                 "Category": "Single Family Homesites",
                 "plot_id": 182,
                 "Shape_Leng": 0.00160621462,
-                "Shape_Area": 1.5059e-07,
-                "price": "N/A",
-                "status": "Unknown",
-                "Description": "No description available"
+                "Shape_Area": 1.5059e-7,
+                "price": "",
+                "status": "Not for Sale",
+                "Description": "",
+                "buy_link": ""
             },
             "geometry": {
                 "type": "MultiPolygon",
@@ -13790,10 +13902,11 @@
                 "Category": "Single Family Homesites",
                 "plot_id": 175,
                 "Shape_Leng": 0.00162144626,
-                "Shape_Area": 1.5322e-07,
-                "price": "N/A",
-                "status": "Unknown",
-                "Description": "No description available"
+                "Shape_Area": 1.5322e-7,
+                "price": "",
+                "status": "Not for Sale",
+                "Description": "",
+                "buy_link": ""
             },
             "geometry": {
                 "type": "MultiPolygon",
@@ -13833,10 +13946,11 @@
                 "Category": "Single Family Homesites",
                 "plot_id": 183,
                 "Shape_Leng": 0.00171378308,
-                "Shape_Area": 1.7781e-07,
-                "price": "N/A",
-                "status": "Unknown",
-                "Description": "No description available"
+                "Shape_Area": 1.7781e-7,
+                "price": "",
+                "status": "Not for Sale",
+                "Description": "",
+                "buy_link": ""
             },
             "geometry": {
                 "type": "MultiPolygon",
@@ -13876,10 +13990,11 @@
                 "Category": "Single Family Homesites",
                 "plot_id": 168,
                 "Shape_Leng": 0.00177610413,
-                "Shape_Area": 1.8965e-07,
-                "price": "N/A",
-                "status": "Unknown",
-                "Description": "No description available"
+                "Shape_Area": 1.8965e-7,
+                "price": "",
+                "status": "Not for Sale",
+                "Description": "",
+                "buy_link": ""
             },
             "geometry": {
                 "type": "MultiPolygon",
@@ -13928,13 +14043,14 @@
             "properties": {
                 "OBJECTID": 251,
                 "area_m": "4,615 m²",
-                "Category": "Condos",
+                "Category": "",
                 "plot_id": 187,
                 "Shape_Leng": 0.00254027254,
-                "Shape_Area": 3.9862e-07,
-                "price": "N/A",
-                "status": "Unknown",
-                "Description": "No description available"
+                "Shape_Area": 3.9862e-7,
+                "price": "",
+                "status": "Not for Sale",
+                "Description": "",
+                "buy_link": ""
             },
             "geometry": {
                 "type": "MultiPolygon",
@@ -13982,10 +14098,11 @@
                 "Category": "Single Family Homesites",
                 "plot_id": 174,
                 "Shape_Leng": 0.00164905571,
-                "Shape_Area": 1.597e-07,
-                "price": "N/A",
-                "status": "Unknown",
-                "Description": "No description available"
+                "Shape_Area": 1.597e-7,
+                "price": "",
+                "status": "Not for Sale",
+                "Description": "",
+                "buy_link": ""
             },
             "geometry": {
                 "type": "MultiPolygon",
@@ -14045,10 +14162,11 @@
                 "Category": "Single Family Homesites",
                 "plot_id": 184,
                 "Shape_Leng": 0.00172968429,
-                "Shape_Area": 1.8081e-07,
-                "price": "N/A",
-                "status": "Unknown",
-                "Description": "No description available"
+                "Shape_Area": 1.8081e-7,
+                "price": "",
+                "status": "Not for Sale",
+                "Description": "",
+                "buy_link": ""
             },
             "geometry": {
                 "type": "MultiPolygon",
@@ -14088,10 +14206,11 @@
                 "Category": "Single Family Homesites",
                 "plot_id": 167,
                 "Shape_Leng": 0.0017990508,
-                "Shape_Area": 2.0072e-07,
-                "price": "N/A",
-                "status": "Unknown",
-                "Description": "No description available"
+                "Shape_Area": 2.0072e-7,
+                "price": "",
+                "status": "Not for Sale",
+                "Description": "",
+                "buy_link": ""
             },
             "geometry": {
                 "type": "MultiPolygon",
@@ -14144,13 +14263,14 @@
             "properties": {
                 "OBJECTID": 255,
                 "area_m": "3,971 m²",
-                "Category": "Condos",
+                "Category": "",
                 "plot_id": 186,
                 "Shape_Leng": 0.00247633361,
-                "Shape_Area": 3.3737e-07,
-                "price": "N/A",
-                "status": "Unknown",
-                "Description": "No description available"
+                "Shape_Area": 3.3737e-7,
+                "price": "",
+                "status": "Not for Sale",
+                "Description": "",
+                "buy_link": ""
             },
             "geometry": {
                 "type": "MultiPolygon",
@@ -14215,13 +14335,14 @@
             "properties": {
                 "OBJECTID": 256,
                 "area_m": "3,120 m²",
-                "Category": "Condos",
+                "Category": "",
                 "plot_id": 188,
                 "Shape_Leng": 0.00207356451,
-                "Shape_Area": 2.4967e-07,
-                "price": "N/A",
-                "status": "Unknown",
-                "Description": "No description available"
+                "Shape_Area": 2.4967e-7,
+                "price": "",
+                "status": "Not for Sale",
+                "Description": "",
+                "buy_link": ""
             },
             "geometry": {
                 "type": "MultiPolygon",
@@ -14269,10 +14390,11 @@
                 "Category": "Single Family Homesites",
                 "plot_id": 166,
                 "Shape_Leng": 0.00187804537,
-                "Shape_Area": 2.086e-07,
-                "price": "N/A",
-                "status": "Unknown",
-                "Description": "No description available"
+                "Shape_Area": 2.086e-7,
+                "price": "",
+                "status": "Not for Sale",
+                "Description": "",
+                "buy_link": ""
             },
             "geometry": {
                 "type": "MultiPolygon",
@@ -14317,13 +14439,14 @@
             "properties": {
                 "OBJECTID": 258,
                 "area_m": "4,275 m²",
-                "Category": "Condos",
+                "Category": "",
                 "plot_id": 185,
                 "Shape_Leng": 0.0022869613,
-                "Shape_Area": 3.5141e-07,
-                "price": "N/A",
-                "status": "Unknown",
-                "Description": "No description available"
+                "Shape_Area": 3.5141e-7,
+                "price": "",
+                "status": "Not for Sale",
+                "Description": "",
+                "buy_link": ""
             },
             "geometry": {
                 "type": "MultiPolygon",
@@ -14387,10 +14510,11 @@
                 "Category": "Single Family Homesites",
                 "plot_id": 255,
                 "Shape_Leng": 0.00152626421,
-                "Shape_Area": 1.1568e-07,
-                "price": "N/A",
-                "status": "Unknown",
-                "Description": "No description available"
+                "Shape_Area": 1.1568e-7,
+                "price": "",
+                "status": "Not for Sale",
+                "Description": "",
+                "buy_link": ""
             },
             "geometry": {
                 "type": "MultiPolygon",
@@ -14442,10 +14566,11 @@
                 "Category": "Single Family Homesites",
                 "plot_id": 252,
                 "Shape_Leng": 0.00196401004,
-                "Shape_Area": 2.3526e-07,
-                "price": "N/A",
-                "status": "Unknown",
-                "Description": "No description available"
+                "Shape_Area": 2.3526e-7,
+                "price": "",
+                "status": "Not for Sale",
+                "Description": "",
+                "buy_link": ""
             },
             "geometry": {
                 "type": "MultiPolygon",
@@ -14493,14 +14618,15 @@
             "type": "Feature",
             "properties": {
                 "OBJECTID": 261,
-                "area_m": "3,200 m²",
-                "Category": "Village/Distribution",
+                "area_m": "",
+                "Category": "",
                 "plot_id": 260,
                 "Shape_Leng": 0.00444158001,
-                "Shape_Area": 1.24041e-06,
-                "price": "N/A",
-                "status": "Unknown",
-                "Description": "No description available"
+                "Shape_Area": 0.00000124041,
+                "price": "",
+                "status": "Not for Sale",
+                "Description": "",
+                "buy_link": ""
             },
             "geometry": {
                 "type": "MultiPolygon",
@@ -14593,13 +14719,14 @@
             "properties": {
                 "OBJECTID": 262,
                 "area_m": "1,180 m²",
-                "Category": "Village/Distribution",
+                "Category": "",
                 "plot_id": 261,
                 "Shape_Leng": 0.00279140491,
-                "Shape_Area": 2.5878e-07,
-                "price": "N/A",
-                "status": "Unknown",
-                "Description": "No description available"
+                "Shape_Area": 2.5878e-7,
+                "price": "",
+                "status": "Not for Sale",
+                "Description": "",
+                "buy_link": ""
             },
             "geometry": {
                 "type": "MultiPolygon",
@@ -14663,14 +14790,15 @@
             "type": "Feature",
             "properties": {
                 "OBJECTID": 263,
-                "area_m": "1,430 m²",
-                "Category": "Village/Distribution",
+                "area_m": "",
+                "Category": "",
                 "plot_id": 262,
                 "Shape_Leng": 0.00318065817,
-                "Shape_Area": 5.642e-07,
-                "price": "N/A",
-                "status": "Unknown",
-                "Description": "No description available"
+                "Shape_Area": 5.642e-7,
+                "price": "",
+                "status": "Not for Sale",
+                "Description": "",
+                "buy_link": ""
             },
             "geometry": {
                 "type": "MultiPolygon",
@@ -14734,14 +14862,15 @@
             "type": "Feature",
             "properties": {
                 "OBJECTID": 264,
-                "area_m": null,
-                "Category": "Condos",
+                "area_m": "",
+                "Category": "",
                 "plot_id": 263,
                 "Shape_Leng": 0.00252459977,
-                "Shape_Area": 1.6357e-07,
-                "price": "N/A",
-                "status": "Unknown",
-                "Description": "No description available"
+                "Shape_Area": 1.6357e-7,
+                "price": "",
+                "status": "Not for Sale",
+                "Description": "",
+                "buy_link": ""
             },
             "geometry": {
                 "type": "MultiPolygon",
@@ -14853,14 +14982,15 @@
             "type": "Feature",
             "properties": {
                 "OBJECTID": 265,
-                "area_m": null,
-                "Category": "Condos",
+                "area_m": "",
+                "Category": "",
                 "plot_id": 264,
                 "Shape_Leng": 0.00266728482,
-                "Shape_Area": 1.692e-07,
-                "price": "N/A",
-                "status": "Unknown",
-                "Description": "No description available"
+                "Shape_Area": 1.692e-7,
+                "price": "",
+                "status": "Not for Sale",
+                "Description": "",
+                "buy_link": ""
             },
             "geometry": {
                 "type": "MultiPolygon",
@@ -14952,7 +15082,7 @@
                 "Category": "Paired Homes",
                 "plot_id": 265,
                 "Shape_Leng": 0.00104733694,
-                "Shape_Area": 3.579e-08,
+                "Shape_Area": 3.579e-8,
                 "price": "N/A",
                 "status": "Unknown",
                 "Description": "No description available"
@@ -15123,7 +15253,7 @@
                 "Category": "Paired Homes",
                 "plot_id": 266,
                 "Shape_Leng": 0.00104734003,
-                "Shape_Area": 3.579e-08,
+                "Shape_Area": 3.579e-8,
                 "price": "N/A",
                 "status": "Unknown",
                 "Description": "No description available"
@@ -15294,7 +15424,7 @@
                 "Category": "Paired Homes",
                 "plot_id": 267,
                 "Shape_Leng": 0.00104733427,
-                "Shape_Area": 3.579e-08,
+                "Shape_Area": 3.579e-8,
                 "price": "N/A",
                 "status": "Unknown",
                 "Description": "No description available"
@@ -15465,7 +15595,7 @@
                 "Category": "Paired Homes",
                 "plot_id": 268,
                 "Shape_Leng": 0.0010473324,
-                "Shape_Area": 3.579e-08,
+                "Shape_Area": 3.579e-8,
                 "price": "N/A",
                 "status": "Unknown",
                 "Description": "No description available"
@@ -15636,7 +15766,7 @@
                 "Category": "Paired Homes",
                 "plot_id": 269,
                 "Shape_Leng": 0.00072269073,
-                "Shape_Area": 3.253e-08,
+                "Shape_Area": 3.253e-8,
                 "price": "N/A",
                 "status": "Unknown",
                 "Description": "No description available"
@@ -15711,7 +15841,7 @@
                 "Category": "Paired Homes",
                 "plot_id": 270,
                 "Shape_Leng": 0.00083396129,
-                "Shape_Area": 3.922e-08,
+                "Shape_Area": 3.922e-8,
                 "price": "N/A",
                 "status": "Unknown",
                 "Description": "No description available"
@@ -15786,7 +15916,7 @@
                 "Category": "Paired Homes",
                 "plot_id": 271,
                 "Shape_Leng": 0.00074932979,
-                "Shape_Area": 3.049e-08,
+                "Shape_Area": 3.049e-8,
                 "price": "N/A",
                 "status": "Unknown",
                 "Description": "No description available"
@@ -15893,7 +16023,7 @@
                 "Category": "Paired Homes",
                 "plot_id": 272,
                 "Shape_Leng": 0.00078206066,
-                "Shape_Area": 3.682e-08,
+                "Shape_Area": 3.682e-8,
                 "price": "N/A",
                 "status": "Unknown",
                 "Description": "No description available"
@@ -15976,14 +16106,15 @@
             "type": "Feature",
             "properties": {
                 "OBJECTID": 274,
-                "area_m": null,
-                "Category": "Hotel Site",
+                "area_m": "",
+                "Category": "",
                 "plot_id": 273,
                 "Shape_Leng": 0.00091833886,
-                "Shape_Area": 5.234e-08,
-                "price": "N/A",
-                "status": "Unknown",
-                "Description": "No description available"
+                "Shape_Area": 5.234e-8,
+                "price": "",
+                "status": "Not for Sale",
+                "Description": "HOTEL DEVELOPMENT",
+                "buy_link": ""
             },
             "geometry": {
                 "type": "MultiPolygon",
@@ -16019,14 +16150,15 @@
             "type": "Feature",
             "properties": {
                 "OBJECTID": 275,
-                "area_m": null,
-                "Category": "Hotel Site",
+                "area_m": "",
+                "Category": "",
                 "plot_id": 274,
                 "Shape_Leng": 0.00091833854,
-                "Shape_Area": 5.234e-08,
-                "price": "N/A",
-                "status": "Unknown",
-                "Description": "No description available"
+                "Shape_Area": 5.234e-8,
+                "price": "",
+                "status": "Not for Sale",
+                "Description": "HOTEL DEVELOPMENT",
+                "buy_link": ""
             },
             "geometry": {
                 "type": "MultiPolygon",
@@ -16062,14 +16194,15 @@
             "type": "Feature",
             "properties": {
                 "OBJECTID": 276,
-                "area_m": null,
-                "Category": "Hotel Site",
+                "area_m": "",
+                "Category": "",
                 "plot_id": 275,
                 "Shape_Leng": 0.0010463746,
-                "Shape_Area": 6.884e-08,
-                "price": "N/A",
-                "status": "Unknown",
-                "Description": "No description available"
+                "Shape_Area": 6.884e-8,
+                "price": "",
+                "status": "Not for Sale",
+                "Description": "HOTEL DEVELOPMENT",
+                "buy_link": ""
             },
             "geometry": {
                 "type": "MultiPolygon",
@@ -16121,14 +16254,15 @@
             "type": "Feature",
             "properties": {
                 "OBJECTID": 277,
-                "area_m": null,
-                "Category": "Hotel Site",
+                "area_m": "",
+                "Category": "",
                 "plot_id": 276,
                 "Shape_Leng": 0.00104637541,
-                "Shape_Area": 6.884e-08,
-                "price": "N/A",
-                "status": "Unknown",
-                "Description": "No description available"
+                "Shape_Area": 6.884e-8,
+                "price": "",
+                "status": "Not for Sale",
+                "Description": "HOTEL DEVELOPMENT",
+                "buy_link": ""
             },
             "geometry": {
                 "type": "MultiPolygon",
@@ -16184,7 +16318,7 @@
                 "Category": "Hotel Site",
                 "plot_id": 277,
                 "Shape_Leng": 0.00104637402,
-                "Shape_Area": 6.884e-08,
+                "Shape_Area": 6.884e-8,
                 "price": "N/A",
                 "status": "Unknown",
                 "Description": "No description available"
@@ -16239,14 +16373,15 @@
             "type": "Feature",
             "properties": {
                 "OBJECTID": 279,
-                "area_m": null,
-                "Category": "Hotel Site",
+                "area_m": "",
+                "Category": "",
                 "plot_id": 278,
                 "Shape_Leng": 0.00104637402,
-                "Shape_Area": 6.884e-08,
-                "price": "N/A",
-                "status": "Unknown",
-                "Description": "No description available"
+                "Shape_Area": 6.884e-8,
+                "price": "",
+                "status": "Not for Sale",
+                "Description": "HOTEL DEVELOPMENT",
+                "buy_link": ""
             },
             "geometry": {
                 "type": "MultiPolygon",
@@ -16298,14 +16433,15 @@
             "type": "Feature",
             "properties": {
                 "OBJECTID": 280,
-                "area_m": null,
-                "Category": "Hotel Site",
+                "area_m": "",
+                "Category": "",
                 "plot_id": 279,
                 "Shape_Leng": 0.00091833854,
-                "Shape_Area": 5.234e-08,
-                "price": "N/A",
-                "status": "Unknown",
-                "Description": "No description available"
+                "Shape_Area": 5.234e-8,
+                "price": "",
+                "status": "Not for Sale",
+                "Description": "HOTEL DEVELOPMENT",
+                "buy_link": ""
             },
             "geometry": {
                 "type": "MultiPolygon",
@@ -16341,14 +16477,15 @@
             "type": "Feature",
             "properties": {
                 "OBJECTID": 281,
-                "area_m": null,
-                "Category": "Hotel Site",
+                "area_m": "",
+                "Category": "",
                 "plot_id": 280,
                 "Shape_Leng": 0.00091833854,
-                "Shape_Area": 5.234e-08,
-                "price": "N/A",
-                "status": "Unknown",
-                "Description": "No description available"
+                "Shape_Area": 5.234e-8,
+                "price": "",
+                "status": "Not for Sale",
+                "Description": "HOTEL DEVELOPMENT",
+                "buy_link": ""
             },
             "geometry": {
                 "type": "MultiPolygon",
@@ -16384,14 +16521,15 @@
             "type": "Feature",
             "properties": {
                 "OBJECTID": 282,
-                "area_m": null,
-                "Category": "Hotel Site",
+                "area_m": "",
+                "Category": "",
                 "plot_id": 281,
                 "Shape_Leng": 0.00091833843,
-                "Shape_Area": 5.234e-08,
-                "price": "N/A",
-                "status": "Unknown",
-                "Description": "No description available"
+                "Shape_Area": 5.234e-8,
+                "price": "",
+                "status": "Not for Sale",
+                "Description": "HOTEL DEVELOPMENT",
+                "buy_link": ""
             },
             "geometry": {
                 "type": "MultiPolygon",
@@ -16427,14 +16565,15 @@
             "type": "Feature",
             "properties": {
                 "OBJECTID": 283,
-                "area_m": null,
-                "Category": "Hotel Site",
+                "area_m": "",
+                "Category": "",
                 "plot_id": 282,
                 "Shape_Leng": 0.00091833882,
-                "Shape_Area": 5.234e-08,
-                "price": "N/A",
-                "status": "Unknown",
-                "Description": "No description available"
+                "Shape_Area": 5.234e-8,
+                "price": "",
+                "status": "Not for Sale",
+                "Description": "HOTEL DEVELOPMENT",
+                "buy_link": ""
             },
             "geometry": {
                 "type": "MultiPolygon",
@@ -16470,14 +16609,15 @@
             "type": "Feature",
             "properties": {
                 "OBJECTID": 284,
-                "area_m": null,
-                "Category": "Hotel Site",
+                "area_m": "",
+                "Category": "",
                 "plot_id": 283,
                 "Shape_Leng": 0.0009183397,
-                "Shape_Area": 5.234e-08,
-                "price": "N/A",
-                "status": "Unknown",
-                "Description": "No description available"
+                "Shape_Area": 5.234e-8,
+                "price": "",
+                "status": "Not for Sale",
+                "Description": "HOTEL DEVELOPMENT",
+                "buy_link": ""
             },
             "geometry": {
                 "type": "MultiPolygon",
@@ -16513,14 +16653,15 @@
             "type": "Feature",
             "properties": {
                 "OBJECTID": 285,
-                "area_m": null,
-                "Category": "Hotel Site",
+                "area_m": "",
+                "Category": "",
                 "plot_id": 284,
                 "Shape_Leng": 0.00091833882,
-                "Shape_Area": 5.234e-08,
-                "price": "N/A",
-                "status": "Unknown",
-                "Description": "No description available"
+                "Shape_Area": 5.234e-8,
+                "price": "",
+                "status": "Not for Sale",
+                "Description": "HOTEL DEVELOPMENT",
+                "buy_link": ""
             },
             "geometry": {
                 "type": "MultiPolygon",
@@ -16556,14 +16697,15 @@
             "type": "Feature",
             "properties": {
                 "OBJECTID": 286,
-                "area_m": null,
-                "Category": "Hotel Site",
+                "area_m": "",
+                "Category": "",
                 "plot_id": 285,
                 "Shape_Leng": 0.00091833886,
-                "Shape_Area": 5.234e-08,
-                "price": "N/A",
-                "status": "Unknown",
-                "Description": "No description available"
+                "Shape_Area": 5.234e-8,
+                "price": "",
+                "status": "Not for Sale",
+                "Description": "HOTEL DEVELOPMENT",
+                "buy_link": ""
             },
             "geometry": {
                 "type": "MultiPolygon",
@@ -16599,14 +16741,15 @@
             "type": "Feature",
             "properties": {
                 "OBJECTID": 287,
-                "area_m": null,
-                "Category": "Hotel Site",
+                "area_m": "",
+                "Category": "",
                 "plot_id": 286,
                 "Shape_Leng": 0.0009183385,
-                "Shape_Area": 5.234e-08,
-                "price": "N/A",
-                "status": "Unknown",
-                "Description": "No description available"
+                "Shape_Area": 5.234e-8,
+                "price": "",
+                "status": "Not for Sale",
+                "Description": "HOTEL DEVELOPMENT",
+                "buy_link": ""
             },
             "geometry": {
                 "type": "MultiPolygon",
@@ -16642,14 +16785,15 @@
             "type": "Feature",
             "properties": {
                 "OBJECTID": 288,
-                "area_m": null,
-                "Category": "Hotel Site",
+                "area_m": "",
+                "Category": "",
                 "plot_id": 287,
                 "Shape_Leng": 0.00104637402,
-                "Shape_Area": 6.884e-08,
-                "price": "N/A",
-                "status": "Unknown",
-                "Description": "No description available"
+                "Shape_Area": 6.884e-8,
+                "price": "",
+                "status": "Not for Sale",
+                "Description": "HOTEL DEVELOPMENT",
+                "buy_link": ""
             },
             "geometry": {
                 "type": "MultiPolygon",
@@ -16701,14 +16845,15 @@
             "type": "Feature",
             "properties": {
                 "OBJECTID": 289,
-                "area_m": null,
-                "Category": "Hotel Site",
+                "area_m": "",
+                "Category": "",
                 "plot_id": 288,
                 "Shape_Leng": 0.00104637391,
-                "Shape_Area": 6.884e-08,
-                "price": "N/A",
-                "status": "Unknown",
-                "Description": "No description available"
+                "Shape_Area": 6.884e-8,
+                "price": "",
+                "status": "Not for Sale",
+                "Description": "HOTEL DEVELOPMENT",
+                "buy_link": ""
             },
             "geometry": {
                 "type": "MultiPolygon",
@@ -16760,14 +16905,15 @@
             "type": "Feature",
             "properties": {
                 "OBJECTID": 290,
-                "area_m": null,
-                "Category": "Hotel Site",
+                "area_m": "",
+                "Category": "",
                 "plot_id": 289,
                 "Shape_Leng": 0.00104637529,
-                "Shape_Area": 6.884e-08,
-                "price": "N/A",
-                "status": "Unknown",
-                "Description": "No description available"
+                "Shape_Area": 6.884e-8,
+                "price": "",
+                "status": "Not for Sale",
+                "Description": "HOTEL DEVELOPMENT",
+                "buy_link": ""
             },
             "geometry": {
                 "type": "MultiPolygon",
@@ -16819,14 +16965,15 @@
             "type": "Feature",
             "properties": {
                 "OBJECTID": 291,
-                "area_m": null,
-                "Category": "Hotel Site",
+                "area_m": "",
+                "Category": "",
                 "plot_id": 290,
                 "Shape_Leng": 0.00091833882,
-                "Shape_Area": 5.234e-08,
-                "price": "N/A",
-                "status": "Unknown",
-                "Description": "No description available"
+                "Shape_Area": 5.234e-8,
+                "price": "",
+                "status": "Not for Sale",
+                "Description": "HOTEL DEVELOPMENT",
+                "buy_link": ""
             },
             "geometry": {
                 "type": "MultiPolygon",
@@ -16862,14 +17009,15 @@
             "type": "Feature",
             "properties": {
                 "OBJECTID": 292,
-                "area_m": null,
-                "Category": "Hotel Site",
+                "area_m": "",
+                "Category": "",
                 "plot_id": 291,
                 "Shape_Leng": 0.0009183385,
-                "Shape_Area": 5.234e-08,
-                "price": "N/A",
-                "status": "Unknown",
-                "Description": "No description available"
+                "Shape_Area": 5.234e-8,
+                "price": "",
+                "status": "Not for Sale",
+                "Description": "HOTEL DEVELOPMENT",
+                "buy_link": ""
             },
             "geometry": {
                 "type": "MultiPolygon",
@@ -16905,14 +17053,15 @@
             "type": "Feature",
             "properties": {
                 "OBJECTID": 293,
-                "area_m": null,
-                "Category": "Hotel Site",
+                "area_m": "",
+                "Category": "",
                 "plot_id": 292,
                 "Shape_Leng": 0.00091833882,
-                "Shape_Area": 5.234e-08,
-                "price": "N/A",
-                "status": "Unknown",
-                "Description": "No description available"
+                "Shape_Area": 5.234e-8,
+                "price": "",
+                "status": "Not for Sale",
+                "Description": "HOTEL DEVELOPMENT",
+                "buy_link": ""
             },
             "geometry": {
                 "type": "MultiPolygon",
@@ -16948,14 +17097,15 @@
             "type": "Feature",
             "properties": {
                 "OBJECTID": 294,
-                "area_m": null,
-                "Category": "Hotel Site",
+                "area_m": "",
+                "Category": "Single Family Homesites",
                 "plot_id": 293,
                 "Shape_Leng": 0.00091833886,
-                "Shape_Area": 5.234e-08,
-                "price": "N/A",
-                "status": "Unknown",
-                "Description": "No description available"
+                "Shape_Area": 5.234e-8,
+                "price": "",
+                "status": "Not for Sale",
+                "Description": "HOTEL DEVELOPMENT",
+                "buy_link": ""
             },
             "geometry": {
                 "type": "MultiPolygon",
@@ -16991,14 +17141,15 @@
             "type": "Feature",
             "properties": {
                 "OBJECTID": 295,
-                "area_m": null,
-                "Category": "Hotel Site",
+                "area_m": "",
+                "Category": "",
                 "plot_id": 294,
                 "Shape_Leng": 0.00091833882,
-                "Shape_Area": 5.234e-08,
-                "price": "N/A",
-                "status": "Unknown",
-                "Description": "No description available"
+                "Shape_Area": 5.234e-8,
+                "price": "",
+                "status": "Not for Sale",
+                "Description": "HOTEL DEVELOPMENT",
+                "buy_link": ""
             },
             "geometry": {
                 "type": "MultiPolygon",
@@ -17034,14 +17185,15 @@
             "type": "Feature",
             "properties": {
                 "OBJECTID": 296,
-                "area_m": null,
-                "Category": "Hotel Site",
+                "area_m": "",
+                "Category": "",
                 "plot_id": 295,
                 "Shape_Leng": 0.00091833886,
-                "Shape_Area": 5.234e-08,
-                "price": "N/A",
-                "status": "Unknown",
-                "Description": "No description available"
+                "Shape_Area": 5.234e-8,
+                "price": "",
+                "status": "Not for Sale",
+                "Description": "HOTEL DEVELOPMENT",
+                "buy_link": ""
             },
             "geometry": {
                 "type": "MultiPolygon",
@@ -17077,14 +17229,15 @@
             "type": "Feature",
             "properties": {
                 "OBJECTID": 297,
-                "area_m": null,
-                "Category": "Hotel Site",
+                "area_m": "",
+                "Category": "",
                 "plot_id": 296,
                 "Shape_Leng": 0.00091833854,
-                "Shape_Area": 5.234e-08,
-                "price": "N/A",
-                "status": "Unknown",
-                "Description": "No description available"
+                "Shape_Area": 5.234e-8,
+                "price": "",
+                "status": "Not for Sale",
+                "Description": "HOTEL DEVELOPMENT",
+                "buy_link": ""
             },
             "geometry": {
                 "type": "MultiPolygon",
@@ -17120,14 +17273,15 @@
             "type": "Feature",
             "properties": {
                 "OBJECTID": 298,
-                "area_m": null,
-                "Category": "Hotel Site",
+                "area_m": "",
+                "Category": "",
                 "plot_id": 297,
                 "Shape_Leng": 0.00091833886,
-                "Shape_Area": 5.234e-08,
-                "price": "N/A",
-                "status": "Unknown",
-                "Description": "No description available"
+                "Shape_Area": 5.234e-8,
+                "price": "",
+                "status": "Not for Sale",
+                "Description": "HOTEL DEVELOPMENT",
+                "buy_link": ""
             },
             "geometry": {
                 "type": "MultiPolygon",
@@ -17163,14 +17317,15 @@
             "type": "Feature",
             "properties": {
                 "OBJECTID": 299,
-                "area_m": null,
-                "Category": "Hotel Site",
+                "area_m": "",
+                "Category": "",
                 "plot_id": 298,
                 "Shape_Leng": 0.00107510869,
-                "Shape_Area": 7.432e-08,
-                "price": "N/A",
-                "status": "Unknown",
-                "Description": "No description available"
+                "Shape_Area": 7.432e-8,
+                "price": "",
+                "status": "Not for Sale",
+                "Description": "HOTEL DEVELOPMENT",
+                "buy_link": ""
             },
             "geometry": {
                 "type": "MultiPolygon",
@@ -17238,14 +17393,15 @@
             "type": "Feature",
             "properties": {
                 "OBJECTID": 300,
-                "area_m": null,
-                "Category": "Hotel Site",
+                "area_m": "",
+                "Category": "",
                 "plot_id": 299,
                 "Shape_Leng": 0.00091833886,
-                "Shape_Area": 5.234e-08,
-                "price": "N/A",
-                "status": "Unknown",
-                "Description": "No description available"
+                "Shape_Area": 5.234e-8,
+                "price": "",
+                "status": "Not for Sale",
+                "Description": "HOTEL DEVELOPMENT",
+                "buy_link": ""
             },
             "geometry": {
                 "type": "MultiPolygon",
@@ -17285,7 +17441,7 @@
                 "Category": "Paired Homes",
                 "plot_id": 300,
                 "Shape_Leng": 0.00079245356,
-                "Shape_Area": 3.363e-08,
+                "Shape_Area": 3.363e-8,
                 "price": "N/A",
                 "status": "Unknown",
                 "Description": "No description available"
@@ -17336,7 +17492,7 @@
                 "Category": "Paired Homes",
                 "plot_id": 301,
                 "Shape_Leng": 0.00090189315,
-                "Shape_Area": 3.987e-08,
+                "Shape_Area": 3.987e-8,
                 "price": "N/A",
                 "status": "Unknown",
                 "Description": "No description available"
@@ -17427,7 +17583,7 @@
                 "Category": "Paired Homes",
                 "plot_id": 302,
                 "Shape_Leng": 0.00078566833,
-                "Shape_Area": 3.139e-08,
+                "Shape_Area": 3.139e-8,
                 "price": "N/A",
                 "status": "Unknown",
                 "Description": "No description available"
@@ -17522,7 +17678,7 @@
                 "Category": "Paired Homes",
                 "plot_id": 303,
                 "Shape_Leng": 0.0007222241,
-                "Shape_Area": 2.967e-08,
+                "Shape_Area": 2.967e-8,
                 "price": "N/A",
                 "status": "Unknown",
                 "Description": "No description available"
@@ -17605,7 +17761,7 @@
                 "Category": "Paired Homes",
                 "plot_id": 304,
                 "Shape_Leng": 0.00077828974,
-                "Shape_Area": 3.546e-08,
+                "Shape_Area": 3.546e-8,
                 "price": "N/A",
                 "status": "Unknown",
                 "Description": "No description available"
@@ -17668,7 +17824,7 @@
                 "Category": "Paired Homes",
                 "plot_id": 305,
                 "Shape_Leng": 0.00077829214,
-                "Shape_Area": 3.546e-08,
+                "Shape_Area": 3.546e-8,
                 "price": "N/A",
                 "status": "Unknown",
                 "Description": "No description available"
@@ -17731,7 +17887,7 @@
                 "Category": "Paired Homes",
                 "plot_id": 306,
                 "Shape_Leng": 0.0010473407,
-                "Shape_Area": 3.579e-08,
+                "Shape_Area": 3.579e-8,
                 "price": "N/A",
                 "status": "Unknown",
                 "Description": "No description available"
@@ -17898,14 +18054,15 @@
             "type": "Feature",
             "properties": {
                 "OBJECTID": 308,
-                "area_m": null,
-                "Category": "Condos",
+                "area_m": "",
+                "Category": "Single Family Homesites",
                 "plot_id": 307,
                 "Shape_Leng": 0.00264450823,
-                "Shape_Area": 1.6383e-07,
-                "price": "N/A",
-                "status": "Unknown",
-                "Description": "No description available"
+                "Shape_Area": 1.6383e-7,
+                "price": "",
+                "status": "Not for Sale",
+                "Description": "",
+                "buy_link": ""
             },
             "geometry": {
                 "type": "MultiPolygon",
@@ -18001,14 +18158,15 @@
             "type": "Feature",
             "properties": {
                 "OBJECTID": 309,
-                "area_m": null,
-                "Category": "Condos",
+                "area_m": "",
+                "Category": "",
                 "plot_id": 308,
                 "Shape_Leng": 0.0014078883,
-                "Shape_Area": 7.729e-08,
-                "price": "N/A",
-                "status": "Unknown",
-                "Description": "No description available"
+                "Shape_Area": 7.729e-8,
+                "price": "",
+                "status": "Not for Sale",
+                "Description": "",
+                "buy_link": ""
             },
             "geometry": {
                 "type": "MultiPolygon",
@@ -18068,14 +18226,15 @@
             "type": "Feature",
             "properties": {
                 "OBJECTID": 310,
-                "area_m": null,
-                "Category": "Condos",
+                "area_m": "",
+                "Category": "",
                 "plot_id": 309,
                 "Shape_Leng": 0.0014000441,
-                "Shape_Area": 7.675e-08,
-                "price": "N/A",
-                "status": "Unknown",
-                "Description": "No description available"
+                "Shape_Area": 7.675e-8,
+                "price": "",
+                "status": "Not for Sale",
+                "Description": "",
+                "buy_link": ""
             },
             "geometry": {
                 "type": "MultiPolygon",
@@ -18143,14 +18302,15 @@
             "type": "Feature",
             "properties": {
                 "OBJECTID": 311,
-                "area_m": null,
-                "Category": "Condos",
+                "area_m": "",
+                "Category": "",
                 "plot_id": 310,
                 "Shape_Leng": 0.00148369189,
-                "Shape_Area": 8.409e-08,
-                "price": "N/A",
-                "status": "Unknown",
-                "Description": "No description available"
+                "Shape_Area": 8.409e-8,
+                "price": "",
+                "status": "Not for Sale",
+                "Description": "",
+                "buy_link": ""
             },
             "geometry": {
                 "type": "MultiPolygon",
@@ -18214,14 +18374,15 @@
             "type": "Feature",
             "properties": {
                 "OBJECTID": 312,
-                "area_m": null,
-                "Category": "Condos",
+                "area_m": "",
+                "Category": "",
                 "plot_id": 311,
                 "Shape_Leng": 0.00258551192,
-                "Shape_Area": 1.5811e-07,
-                "price": "N/A",
-                "status": "Unknown",
-                "Description": "No description available"
+                "Shape_Area": 1.5811e-7,
+                "price": "",
+                "status": "Not for Sale",
+                "Description": "",
+                "buy_link": ""
             },
             "geometry": {
                 "type": "MultiPolygon",
@@ -18322,13 +18483,14 @@
             "properties": {
                 "OBJECTID": 313,
                 "area_m": "1600 m²",
-                "Category": "Hotel Site",
+                "Category": "",
                 "plot_id": 312,
                 "Shape_Leng": 0.00241814086,
-                "Shape_Area": 3.6446e-07,
-                "price": "N/A",
-                "status": "Unknown",
-                "Description": "No description available"
+                "Shape_Area": 3.6446e-7,
+                "price": "",
+                "status": "Not for Sale",
+                "Description": "HOTEL DEVELOPMENT",
+                "buy_link": ""
             },
             "geometry": {
                 "type": "MultiPolygon",
@@ -18405,13 +18567,14 @@
             "properties": {
                 "OBJECTID": 314,
                 "area_m": "1275 m²",
-                "Category": "Hotel Site",
+                "Category": "",
                 "plot_id": 313,
                 "Shape_Leng": 0.0019256294,
-                "Shape_Area": 1.2584e-07,
-                "price": "N/A",
-                "status": "Unknown",
-                "Description": "No description available"
+                "Shape_Area": 1.2584e-7,
+                "price": "",
+                "status": "Not for Sale",
+                "Description": "HOTEL DEVELOPMENT",
+                "buy_link": ""
             },
             "geometry": {
                 "type": "MultiPolygon",
@@ -18508,13 +18671,14 @@
             "properties": {
                 "OBJECTID": 315,
                 "area_m": "2,700 m²",
-                "Category": "Village/Distribution",
+                "Category": "",
                 "plot_id": 314,
                 "Shape_Leng": 0.00405775558,
-                "Shape_Area": 6.3976e-07,
-                "price": "N/A",
-                "status": "Unknown",
-                "Description": "No description available"
+                "Shape_Area": 6.3976e-7,
+                "price": "",
+                "status": "Not for Sale",
+                "Description": "",
+                "buy_link": ""
             },
             "geometry": {
                 "type": "MultiPolygon",
@@ -18679,13 +18843,14 @@
             "properties": {
                 "OBJECTID": 316,
                 "area_m": "2,349 m²",
-                "Category": "Hotel Site",
+                "Category": "",
                 "plot_id": 315,
                 "Shape_Leng": 0.00216000731,
-                "Shape_Area": 2.0329e-07,
-                "price": "N/A",
-                "status": "Unknown",
-                "Description": "No description available"
+                "Shape_Area": 2.0329e-7,
+                "price": "",
+                "status": "Not for Sale",
+                "Description": "HOTEL DEVELOPMENT",
+                "buy_link": ""
             },
             "geometry": {
                 "type": "MultiPolygon",
