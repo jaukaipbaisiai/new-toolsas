@@ -79,6 +79,16 @@
                 .catch(error => console.error("❌ Error loading GeoJSON from Supabase:", error));
         }
 
+        function getLotColor(status) {
+            switch (status) {
+                case "For Sale": return "green";
+                case "Sold": return "red";
+                case "Reserved": return "yellow";
+                case "Not for Sale": return "grey";
+                default: return "blue"; 
+            }
+        }
+
         function loadFile(event) {
             const file = event.target.files[0];
             const reader = new FileReader();
@@ -124,21 +134,11 @@
             }).addTo(map);
         }
 
-        function autoSave() {
-            if (!selectedFeature) return;
-            selectedFeature.properties.price = document.getElementById('lot-price').value;
-            selectedFeature.properties.status = document.getElementById('lot-status').value;
-            selectedFeature.properties.area_m = document.getElementById('lot-size').value;
-            selectedFeature.properties.Category = document.getElementById('lot-category').value;
-            selectedFeature.properties.Description = document.getElementById('lot-description').value;
-            selectedFeature.properties.buy_link = document.getElementById('lot-link').value; 
-        }
-
         async function saveGeoJSONToSupabase() {
             const fileContent = new Blob([JSON.stringify(geojsonData, null, 4)], { type: "application/json" });
 
             try {
-                const response = await fetch(`${SUPABASE_URL}/storage/v1/object/${STORAGE_BUCKET}/${FILE_NAME}`, {
+                const response = await fetch(`${SUPABASE_URL}/storage/v1/object/public/${STORAGE_BUCKET}/${FILE_NAME}`, {
                     method: "PUT",
                     headers: {
                         "Authorization": `Bearer ${SUPABASE_SERVICE_ROLE_KEY}`,
