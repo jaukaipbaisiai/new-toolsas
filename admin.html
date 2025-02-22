@@ -41,7 +41,7 @@
     <div id="editor" style="display:none;">
         <h3>Edit Lot</h3>
         <p><strong>Lot ID:</strong> <span id="lot-id"></span></p>
-        <label>Price: $<input type="text" id="lot-price" oninput="autoSaveAndUpload()"></label><br>
+        <label>Price: $<input type="text" id="lot-price" onblur="autoSaveAndUpload()"></label><br>
         <label>Status:
             <select id="lot-status" onchange="autoSaveAndUpload()">
                 <option value="For Sale">For Sale</option>
@@ -50,7 +50,7 @@
                 <option value="Not for Sale">Not for Sale</option>
             </select>
         </label><br>
-        <label>Lot Size: <input type="text" id="lot-size" oninput="autoSaveAndUpload()"></label><br>
+        <label>Lot Size: <input type="text" id="lot-size" onblur="autoSaveAndUpload()"></label><br>
         <label>Category:
             <select id="lot-category" onchange="autoSaveAndUpload()">
                 <option value="Single Family Homesites">Single Family Homesites</option>
@@ -59,8 +59,8 @@
                 <option value="Mixed Use">Mixed Use</option>
             </select>
         </label><br>
-        <label>Description: <textarea id="lot-description" oninput="autoSaveAndUpload()"></textarea></label><br>
-        <label>Buy Link: <input type="text" id="lot-link" oninput="autoSaveAndUpload()"></label><br> 
+        <label>Description: <textarea id="lot-description" onblur="autoSaveAndUpload()"></textarea></label><br>
+        <label>Buy Link: <input type="text" id="lot-link" onblur="autoSaveAndUpload()"></label><br> 
     </div>
 
     <script>
