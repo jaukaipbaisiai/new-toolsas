@@ -9,10 +9,19 @@
     <style>
         #map { height: 60vh; width: 100%; }
         #editor { padding: 10px; }
+
+        /* 🔥 New: Style for lot ID labels */
+        .lot-label {
+            font-size: 10px;
+            font-weight: bold;
+            background: rgba(255, 255, 255, 0.7);
+            padding: 2px;
+            border-radius: 3px;
+        }
     </style>
 </head>
 <body onload="initializeMap()">
-    <h2>irankis keisti zemelapi v2r</h2>
+    <h2>GeoJSON Lot Editor</h2>
     <input type="file" id="fileInput" accept=".geojson" onchange="loadFile(event)">
     <button onclick="downloadGeoJSON()">Download Updated JSON</button>
     <div id="map"></div>
@@ -39,7 +48,7 @@
             </select>
         </label><br>
         <label>Description: <textarea id="lot-description"></textarea></label><br>
-        <label>Buy Link: <input type="text" id="lot-link"></label><br> <!-- Added Buy Link Field -->
+        <label>Buy Link: <input type="text" id="lot-link"></label><br> 
         <button onclick="saveChanges()">Save Changes</button>
     </div>
 
@@ -59,7 +68,6 @@
             };
             L.control.layers(baseLayers).addTo(map);
             
-            // 🔥 NEW: Load lots.geojson by default
             fetch("lots.geojson")
                 .then(response => response.json())
                 .then(data => {
@@ -82,14 +90,12 @@
         function loadGeoJSON() {
             if (!geojsonData) return;
 
-            // Remove existing layers before adding new ones
             map.eachLayer(layer => {
                 if (layer instanceof L.GeoJSON) {
                     map.removeLayer(layer);
                 }
             });
 
-            // Draw the new lots
             L.geoJSON(geojsonData, {
                 style: function (feature) {
                     return { color: getLotColor(feature.properties.status), weight: 2 };
@@ -110,8 +116,16 @@
                         document.getElementById('lot-size').value = feature.properties.area_m || '';
                         document.getElementById('lot-category').value = feature.properties.Category || 'Single Family Homesites';
                         document.getElementById('lot-description').value = feature.properties.Description || '';
-                        document.getElementById('lot-link').value = feature.properties.buy_link || ''; // NEW: Load Buy Link
+                        document.getElementById('lot-link').value = feature.properties.buy_link || ''; 
                     });
+
+                    // 🔥 New: Add Lot ID as a label on the map
+                    let label = L.divIcon({
+                        className: 'lot-label',
+                        html: feature.properties.plot_id,
+                        iconSize: [20, 20] 
+                    });
+                    L.marker(layer.getBounds().getCenter(), { icon: label }).addTo(map);
                 }
             }).addTo(map);
         }
@@ -122,6 +136,7 @@
                 case "Sold": return "red";
                 case "Reserved": return "yellow";
                 case "Not for Sale": return "grey";
+                case "Unassigned": return "black"; // 🔥 Changed from grey to black
                 default: return "grey";
             }
         }
@@ -133,7 +148,7 @@
             selectedFeature.properties.area_m = document.getElementById('lot-size').value;
             selectedFeature.properties.Category = document.getElementById('lot-category').value;
             selectedFeature.properties.Description = document.getElementById('lot-description').value;
-            selectedFeature.properties.buy_link = document.getElementById('lot-link').value; // NEW: Save Buy Link
+            selectedFeature.properties.buy_link = document.getElementById('lot-link').value; 
         }
 
         function downloadGeoJSON() {
