@@ -12,7 +12,6 @@
         .lot-label {
             font-size: 12px;
             font-weight: 300;
-            color: black;
             background: none;
             padding: 0;
             border: none;
@@ -171,25 +170,6 @@
             document.body.appendChild(a);
             a.click();
             document.body.removeChild(a);
-        }
-
-        async function saveGeoJSONToSupabase() {
-            const fileContent = new Blob([JSON.stringify(geojsonData, null, 4)], { type: "application/json" });
-
-            try {
-                await fetch(`${SUPABASE_URL}/storage/v1/object/${STORAGE_BUCKET}/${FILE_NAME}`, {
-                    method: "PUT",
-                    headers: {
-                        "Authorization": `Bearer ${SUPABASE_SERVICE_ROLE_KEY}`,
-                        "Content-Type": "application/json"
-                    },
-                    body: fileContent
-                });
-
-                console.log("✅ GeoJSON Successfully Updated in Supabase!");
-            } catch (error) {
-                console.error("❌ Error updating GeoJSON in Supabase:", error);
-            }
         }
     </script>
 </body>
