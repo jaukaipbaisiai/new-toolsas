@@ -10,20 +10,18 @@
         #map { height: 60vh; width: 100%; }
         #editor { padding: 10px; }
 
-        /* 🔥 Updated: Lot ID labels now have NO background, smaller font */
         .lot-label {
-            font-size: 8px; /* Smaller font */
-            font-weight: normal; /* No bold */
-            color: black; /* Ensure visibility on light backgrounds */
-            background: none; /* Remove background */
+            font-size: 8px;
+            font-weight: normal;
+            color: black;
+            background: none;
             padding: 0;
         }
     </style>
 </head>
 <body onload="initializeMap()">
     <h2>GeoJSON Lot Editor</h2>
-    <input type="file" id="fileInput" accept=".geojson" onchange="loadFile(event)">
-    <button onclick="downloadGeoJSON()">Download Updated JSON</button>
+    <button onclick="saveGeoJSONToSupabase()">💾 Save & Update Map</button>
     <div id="map"></div>
 
     <div id="editor" style="display:none;">
@@ -57,6 +55,12 @@
         let selectedLayer;
         let map;
 
+        // 🔹 Supabase API Details
+        const SUPABASE_URL = "https://poxxulxqzxwotequkwbw.supabase.co";
+        const SUPABASE_BUCKET = "geojson-files";
+        const SUPABASE_API_KEY = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InBveHh1bHhxenh3b3RlcXVrd2J3Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3NDAyNTYzNjcsImV4cCI6MjA1NTgzMjM2N30.Cf6EQFNFbnHjUdFzoC84L32F0yNyyxKku8CIELwVt0E";
+        const SUPABASE_FILE_NAME = "lots.geojson";  
+
         function initializeMap() {
             map = L.map('map').setView([11.575, -86.244], 16);
             let baseLayers = {
@@ -67,23 +71,13 @@
             };
             L.control.layers(baseLayers).addTo(map);
             
-            fetch("lots.geojson")
+            fetch(`${SUPABASE_URL}/storage/v1/object/public/${SUPABASE_BUCKET}/${SUPABASE_FILE_NAME}`)
                 .then(response => response.json())
                 .then(data => {
                     geojsonData = data;
                     loadGeoJSON();
                 })
-                .catch(error => console.error("Error loading default GeoJSON:", error));
-        }
-
-        function loadFile(event) {
-            const file = event.target.files[0];
-            const reader = new FileReader();
-            reader.onload = function(e) {
-                geojsonData = JSON.parse(e.target.result);
-                loadGeoJSON();
-            };
-            reader.readAsText(file);
+                .catch(error => console.error("❌ Error loading GeoJSON:", error));
         }
 
         function loadGeoJSON() {
@@ -118,7 +112,6 @@
                         document.getElementById('lot-link').value = feature.properties.buy_link || ''; 
                     });
 
-                    // 🔥 New: Add Lot ID as a label on the map (No background)
                     let label = L.divIcon({
                         className: 'lot-label',
                         html: feature.properties.plot_id,
@@ -135,12 +128,10 @@
                 case "Sold": return "red";
                 case "Reserved": return "yellow";
                 case "Not for Sale": return "grey";
-                case undefined: return "blue"; // 🔥 Changed: Unassigned lots are now blue
-                default: return "blue"; // 🔥 Changed: Default color is now blue for unassigned lots
+                default: return "blue";
             }
         }
 
-        // 🔥 New: Auto-save changes when any field is modified
         function autoSave() {
             if (!selectedFeature) return;
             selectedFeature.properties.price = document.getElementById('lot-price').value;
@@ -151,16 +142,29 @@
             selectedFeature.properties.buy_link = document.getElementById('lot-link').value; 
         }
 
-        function downloadGeoJSON() {
-            const updatedGeoJSON = JSON.stringify(geojsonData, null, 4);
-            const blob = new Blob([updatedGeoJSON], { type: 'application/json' });
-            const url = URL.createObjectURL(blob);
-            const a = document.createElement('a');
-            a.href = url;
-            a.download = 'lots_updated.geojson';
-            document.body.appendChild(a);
-            a.click();
-            document.body.removeChild(a);
+        // 🔹 Upload updated `lots.geojson` to Supabase
+        async function saveGeoJSONToSupabase() {
+            if (!geojsonData) {
+                alert("❌ No GeoJSON data available!");
+                return;
+            }
+
+            const fileContent = new Blob([JSON.stringify(geojsonData, null, 4)], { type: "application/json" });
+
+            const response = await fetch(`${SUPABASE_URL}/storage/v1/object/public/${SUPABASE_BUCKET}/${SUPABASE_FILE_NAME}`, {
+                method: "PUT",
+                headers: {
+                    "Authorization": `Bearer ${SUPABASE_API_KEY}`,
+                    "Content-Type": "application/json"
+                },
+                body: fileContent
+            });
+
+            if (response.ok) {
+                alert("✅ GeoJSON Updated in Supabase!");
+            } else {
+                alert("❌ Failed to update GeoJSON in Supabase!");
+            }
         }
     </script>
 </body>
