@@ -56,7 +56,7 @@
         let map;
 
         const SUPABASE_URL = "https://poxxulxqzxwotequkwbw.supabase.co";
-        const SUPABASE_API_KEY = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InBveHh1bHhxenh3b3RlcXVrd2J3Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3NDAyNTYzNjcsImV4cCI6MjA1NTgzMjM2N30.Cf6EQFNFbnHjUdFzoC84L32F0yNyyxKku8CIELwVt0E";
+        const SUPABASE_SERVICE_ROLE_KEY = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InBveHh1bHhxenh3b3RlcXVrd2J3Iiwicm9sZSI6InNlcnZpY2Vfcm9sZSIsImlhdCI6MTc0MDI1NjM2NywiZXhwIjoyMDU1ODMyMzY3fQ.qCvdI1kkLn72ucM9aBuXttK-95vux-YRC_J2PUSI8WA"; 
         const STORAGE_BUCKET = "geojson-files";
         const FILE_NAME = "lots.geojson";
 
@@ -124,16 +124,6 @@
             }).addTo(map);
         }
 
-        function getLotColor(status) {
-            switch (status) {
-                case "For Sale": return "green";
-                case "Sold": return "red";
-                case "Reserved": return "yellow";
-                case "Not for Sale": return "grey";
-                default: return "blue"; 
-            }
-        }
-
         function autoSave() {
             if (!selectedFeature) return;
             selectedFeature.properties.price = document.getElementById('lot-price').value;
@@ -144,47 +134,30 @@
             selectedFeature.properties.buy_link = document.getElementById('lot-link').value; 
         }
 
-       async function saveGeoJSONToSupabase() {
-    const SUPABASE_URL = "https://poxxulxqzxwotequkwbw.supabase.co";
-    const SUPABASE_API_KEY = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InBveHh1bHhxenh3b3RlcXVrd2J3Iiwicm9sZSI6InNlcnZpY2Vfcm9sZSIsImlhdCI6MTc0MDI1NjM2NywiZXhwIjoyMDU1ODMyMzY3fQ.qCvdI1kkLn72ucM9aBuXttK-95vux-YRC_J2PUSI8WA"; // Service Role Key (allows overwrite)
-    const BUCKET_NAME = "geojson-files";
-    const FILE_NAME = "lots.geojson";
+        async function saveGeoJSONToSupabase() {
+            const fileContent = new Blob([JSON.stringify(geojsonData, null, 4)], { type: "application/json" });
 
-    const fileContent = new Blob([JSON.stringify(geojsonData, null, 4)], { type: "application/json" });
+            try {
+                const response = await fetch(`${SUPABASE_URL}/storage/v1/object/${STORAGE_BUCKET}/${FILE_NAME}`, {
+                    method: "PUT",
+                    headers: {
+                        "Authorization": `Bearer ${SUPABASE_SERVICE_ROLE_KEY}`,
+                        "Content-Type": "application/json"
+                    },
+                    body: fileContent
+                });
 
-    // **Step 1: Delete existing file (if exists)**
-    await fetch(`${SUPABASE_URL}/storage/v1/object/${BUCKET_NAME}/${FILE_NAME}`, {
-        method: "DELETE",
-        headers: {
-            "Authorization": `Bearer ${SUPABASE_API_KEY}`
+                if (response.ok) {
+                    alert("✅ GeoJSON Successfully Updated in Supabase!");
+                } else {
+                    alert("❌ Upload Failed: Check Supabase permissions.");
+                    console.error("Upload Error:", await response.text());
+                }
+            } catch (error) {
+                console.error("❌ Error saving to Supabase:", error);
+                alert("❌ Failed to update GeoJSON in Supabase.");
+            }
         }
-    });
-
-    // **Step 2: Upload new file**
-    const formData = new FormData();
-    formData.append("file", fileContent, FILE_NAME);
-
-    try {
-        const response = await fetch(`${SUPABASE_URL}/storage/v1/object/${BUCKET_NAME}`, {
-            method: "POST",
-            headers: {
-                "Authorization": `Bearer ${SUPABASE_API_KEY}"
-            },
-            body: formData
-        });
-
-        if (response.ok) {
-            alert("✅ GeoJSON Successfully Updated in Supabase!");
-        } else {
-            alert("❌ Upload Failed: Check Supabase permissions.");
-            console.error("Upload Error:", await response.text());
-        }
-    } catch (error) {
-        console.error("❌ Error saving to Supabase:", error);
-        alert("❌ Failed to update GeoJSON in Supabase.");
-    }
-}
-
     </script>
 </body>
 </html>
