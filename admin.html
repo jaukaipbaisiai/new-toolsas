@@ -9,35 +9,32 @@
     <style>
         #map { height: 60vh; width: 100%; }
         #editor { padding: 10px; }
-        
-        /* 🔥 Lot labels are slightly bigger with NO background */
         .lot-label {
-            font-size: 10px; /* 🔹 Slightly increased font size */
-            font-weight: bold;
+            font-size: 10px; /* Slightly larger font */
+            font-weight: 300; /* Thin font */
             color: black;
-            background: none; /* 🔹 Removed background */
+            background: none;
             padding: 0;
             border: none;
         }
-
-        /* 🔹 Upload status indicator */
-        #upload-status {
-            margin-top: 10px;
-            font-size: 14px;
+        .status-indicator {
+            display: inline-block;
+            padding: 5px 10px;
+            font-size: 12px;
             font-weight: bold;
+            margin-left: 10px;
+            border-radius: 5px;
         }
-
-        /* 🔹 Success & Error styles */
-        .success { color: green; }
-        .error { color: red; }
+        .success { background-color: lightgreen; color: darkgreen; }
+        .error { background-color: lightcoral; color: darkred; }
     </style>
 </head>
 <body onload="initializeMap()">
     <h2>GeoJSON Lot Editor</h2>
     <input type="file" id="fileInput" accept=".geojson" onchange="loadFile(event)">
-    <button onclick="downloadGeoJSON()">⬇️ Download File</button>
-    <button onclick="saveGeoJSONToSupabase()">🔄 Master Update</button>
-    <div id="upload-status"></div>
+    <button onclick="downloadGeoJSON()">📥 Download JSON</button>
+    <button onclick="saveGeoJSONToSupabase()">🚀 Master Update</button>
+    <span id="statusIndicator" class="status-indicator"></span>
     <div id="map"></div>
 
     <div id="editor" style="display:none;">
@@ -135,6 +132,24 @@
                         iconSize: [1, 1]
                     });
                     L.marker(layer.getBounds().getCenter(), { icon: label }).addTo(map);
+
+                    layer.on('click', function () {
+                        if (selectedLayer) {
+                            selectedLayer.setStyle({ color: getLotColor(selectedLayer.feature.properties.status) });
+                        }
+                        selectedLayer = layer;
+                        layer.setStyle({ color: "#00FFFF" });
+
+                        selectedFeature = feature;
+                        document.getElementById('editor').style.display = 'block';
+                        document.getElementById('lot-id').innerText = feature.properties.plot_id;
+                        document.getElementById('lot-price').value = feature.properties.price || '';
+                        document.getElementById('lot-status').value = feature.properties.status || 'For Sale';
+                        document.getElementById('lot-size').value = feature.properties.area_m || '';
+                        document.getElementById('lot-category').value = feature.properties.Category || 'Single Family Homesites';
+                        document.getElementById('lot-description').value = feature.properties.Description || '';
+                        document.getElementById('lot-link').value = feature.properties.buy_link || ''; 
+                    });
                 }
             }).addTo(map);
         }
@@ -152,6 +167,10 @@
         }
 
         async function saveGeoJSONToSupabase() {
+            const statusIndicator = document.getElementById("statusIndicator");
+            statusIndicator.textContent = "Uploading...";
+            statusIndicator.className = "status-indicator";
+
             const fileContent = new Blob([JSON.stringify(geojsonData, null, 4)], { type: "application/json" });
 
             try {
@@ -164,16 +183,11 @@
                     body: fileContent
                 });
 
-                if (response.ok) {
-                    document.getElementById('upload-status').innerHTML = "✅ Successfully updated!";
-                    document.getElementById('upload-status').className = "success";
-                } else {
-                    document.getElementById('upload-status').innerHTML = "❌ Upload failed!";
-                    document.getElementById('upload-status').className = "error";
-                }
-            } catch (error) {
-                document.getElementById('upload-status').innerHTML = "❌ Error updating!";
-                document.getElementById('upload-status').className = "error";
+                statusIndicator.textContent = response.ok ? "✅ Upload Success" : "❌ Upload Failed";
+                statusIndicator.className = response.ok ? "status-indicator success" : "status-indicator error";
+            } catch {
+                statusIndicator.textContent = "❌ Error uploading.";
+                statusIndicator.className = "status-indicator error";
             }
         }
     </script>
