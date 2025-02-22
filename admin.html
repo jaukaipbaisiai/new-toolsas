@@ -144,29 +144,47 @@
             selectedFeature.properties.buy_link = document.getElementById('lot-link').value; 
         }
 
-        async function saveGeoJSONToSupabase() {
-            const fileContent = new Blob([JSON.stringify(geojsonData, null, 4)], { type: "application/json" });
+       async function saveGeoJSONToSupabase() {
+    const SUPABASE_URL = "https://poxxulxqzxwotequkwbw.supabase.co";
+    const SUPABASE_API_KEY = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InBveHh1bHhxenh3b3RlcXVrd2J3Iiwicm9sZSI6InNlcnZpY2Vfcm9sZSIsImlhdCI6MTc0MDI1NjM2NywiZXhwIjoyMDU1ODMyMzY3fQ.qCvdI1kkLn72ucM9aBuXttK-95vux-YRC_J2PUSI8WA"; // Service Role Key (allows overwrite)
+    const BUCKET_NAME = "geojson-files";
+    const FILE_NAME = "lots.geojson";
 
-            try {
-                const response = await fetch(`${SUPABASE_URL}/storage/v1/object/public/${STORAGE_BUCKET}/${FILE_NAME}`, {
-                    method: "PUT",
-                    headers: {
-                        "Authorization": `Bearer ${SUPABASE_API_KEY}`,
-                        "Content-Type": "application/json"
-                    },
-                    body: fileContent
-                });
+    const fileContent = new Blob([JSON.stringify(geojsonData, null, 4)], { type: "application/json" });
 
-                if (response.ok) {
-                    alert("✅ GeoJSON Updated Successfully in Supabase!");
-                } else {
-                    alert("❌ Failed to Update GeoJSON in Supabase.");
-                }
-            } catch (error) {
-                console.error("❌ Error saving to Supabase:", error);
-                alert("❌ Error updating GeoJSON in Supabase.");
-            }
+    // **Step 1: Delete existing file (if exists)**
+    await fetch(`${SUPABASE_URL}/storage/v1/object/${BUCKET_NAME}/${FILE_NAME}`, {
+        method: "DELETE",
+        headers: {
+            "Authorization": `Bearer ${SUPABASE_API_KEY}`
         }
+    });
+
+    // **Step 2: Upload new file**
+    const formData = new FormData();
+    formData.append("file", fileContent, FILE_NAME);
+
+    try {
+        const response = await fetch(`${SUPABASE_URL}/storage/v1/object/${BUCKET_NAME}`, {
+            method: "POST",
+            headers: {
+                "Authorization": `Bearer ${SUPABASE_API_KEY}"
+            },
+            body: formData
+        });
+
+        if (response.ok) {
+            alert("✅ GeoJSON Successfully Updated in Supabase!");
+        } else {
+            alert("❌ Upload Failed: Check Supabase permissions.");
+            console.error("Upload Error:", await response.text());
+        }
+    } catch (error) {
+        console.error("❌ Error saving to Supabase:", error);
+        alert("❌ Failed to update GeoJSON in Supabase.");
+    }
+}
+
     </script>
 </body>
 </html>
