@@ -12,9 +12,13 @@
         .lot-label {
             font-size: 12px;
             font-weight: 300;
+            color: black;
             background: none;
             padding: 0;
             border: none;
+        }
+        .lot-label.no-link {
+            color: red;
         }
         .status-indicator {
             display: inline-block;
@@ -53,7 +57,6 @@
         <label>Lot Size: <input type="text" id="lot-size" onblur="autoSaveAndUpload()"></label><br>
         <label>Category:
             <select id="lot-category" onchange="autoSaveAndUpload()">
-                <option value="">Unset</option>
                 <option value="Duplex">Duplex</option>
                 <option value="Condo">Condo</option>
                 <option value="Apartments">Apartments</option>
@@ -74,7 +77,7 @@
         let map;
 
         const SUPABASE_URL = "https://poxxulxqzxwotequkwbw.supabase.co";
-        const SUPABASE_SERVICE_ROLE_KEY = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InBveHh1bHhxenh3b3RlcXVrd2J3Iiwicm9sZSI6InNlcnZpY2Vfcm9sZSIsImlhdCI6MTc0MDI1NjM2NywiZXhwIjoyMDU1ODMyMzY3fQ.qCvdI1kkLn72ucM9aBuXttK-95vux-YRC_J2PUSI8WA"; 
+        const SUPABASE_SERVICE_ROLE_KEY = "YOUR_SUPABASE_SERVICE_ROLE_KEY"; 
         const STORAGE_BUCKET = "geojson-files";
         const FILE_NAME = "lots.geojson";
 
@@ -107,6 +110,16 @@
             }
         }
 
+        function loadFile(event) {
+            const file = event.target.files[0];
+            const reader = new FileReader();
+            reader.onload = function(e) {
+                geojsonData = JSON.parse(e.target.result);
+                loadGeoJSON();
+            };
+            reader.readAsText(file);
+        }
+
         function loadGeoJSON() {
             if (!geojsonData) return;
 
@@ -121,14 +134,12 @@
                     return { color: getLotColor(feature.properties.status), weight: 2 };
                 },
                 onEachFeature: function (feature, layer) {
-                    let lotColor = (feature.properties.status === "For Sale" && !feature.properties.buy_link) ? "red" : "black";
-                    
+                    let labelColor = (feature.properties.status === "For Sale" && !feature.properties.buy_link) ? "red" : "black";
                     let label = L.divIcon({
                         className: 'lot-label',
-                        html: `<span style="color:${lotColor};">${feature.properties.plot_id}</span>`,
+                        html: `<span style="color:${labelColor};">${feature.properties.plot_id}</span>`,
                         iconSize: [1, 1]
                     });
-
                     L.marker(layer.getBounds().getCenter(), { icon: label }).addTo(map);
 
                     layer.on('click', function () {
@@ -144,12 +155,22 @@
                         document.getElementById('lot-price').value = feature.properties.price || '';
                         document.getElementById('lot-status').value = feature.properties.status || '';
                         document.getElementById('lot-size').value = feature.properties.area_m || '';
-                        document.getElementById('lot-category').value = feature.properties.Category || '';
+                        document.getElementById('lot-category').value = feature.properties.Category || 'Single Family Homesite';
                         document.getElementById('lot-description').value = feature.properties.Description || '';
                         document.getElementById('lot-link').value = feature.properties.buy_link || ''; 
                     });
                 }
             }).addTo(map);
+        }
+
+        function downloadGeoJSON() {
+            const blob = new Blob([JSON.stringify(geojsonData, null, 4)], { type: "application/json" });
+            const a = document.createElement("a");
+            a.href = URL.createObjectURL(blob);
+            a.download = "lots.geojson";
+            document.body.appendChild(a);
+            a.click();
+            document.body.removeChild(a);
         }
     </script>
 </body>
