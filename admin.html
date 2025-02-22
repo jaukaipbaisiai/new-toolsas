@@ -12,7 +12,6 @@
         .lot-label {
             font-size: 12px;
             font-weight: 300;
-            color: black; /* default color, overridden below based on condition */
             background: none;
             padding: 0;
             border: none;
@@ -74,7 +73,7 @@
         let map;
 
         const SUPABASE_URL = "https://poxxulxqzxwotequkwbw.supabase.co";
-        const SUPABASE_SERVICE_ROLE_KEY = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InBveHh1bHhxenh3b3RlcXVrd2J3Iiwicm9sZSI6InNlcnZpY2Vfcm9sZSIsImlhdCI6MTc0MDI1NjM2NywiZXhwIjoyMDU1ODMyMzY3fQ.qCvdI1kkLn72ucM9aBuXttK-95vux-YRC_J2PUSI8WA"; 
+        const SUPABASE_SERVICE_ROLE_KEY = "YOUR_SUPABASE_KEY_HERE"; 
         const STORAGE_BUCKET = "geojson-files";
         const FILE_NAME = "lots.geojson";
 
@@ -97,26 +96,6 @@
                 .catch(error => console.error("❌ Error loading GeoJSON from Supabase:", error));
         }
 
-        function getLotColor(status) {
-            switch (status) {
-                case "For Sale": return "green";
-                case "Sold": return "red";
-                case "Reserved": return "yellow";
-                case "Not for Sale": return "grey";
-                default: return "blue"; 
-            }
-        }
-
-        function loadFile(event) {
-            const file = event.target.files[0];
-            const reader = new FileReader();
-            reader.onload = function(e) {
-                geojsonData = JSON.parse(e.target.result);
-                loadGeoJSON();
-            };
-            reader.readAsText(file);
-        }
-
         function loadGeoJSON() {
             if (!geojsonData) return;
 
@@ -131,13 +110,18 @@
                     return { color: getLotColor(feature.properties.status), weight: 2 };
                 },
                 onEachFeature: function (feature, layer) {
+                    let lotId = feature.properties.plot_id || "Unknown";
+                    let buyLink = feature.properties.buy_link || "";
+                    let status = feature.properties.status || "";
+
+                    let labelColor = (status === "For Sale" && !buyLink.trim()) ? "red" : "black";
+
                     let label = L.divIcon({
                         className: 'lot-label',
-                        html: feature.properties.plot_id,
+                        html: `<span style="color: ${labelColor};">${lotId}</span>`,
                         iconSize: [1, 1]
                     });
-                    let labelColor = feature.properties.status === "For Sale" && !feature.properties.buy_link ? "red" : "black";
-                    label.options.className = labelColor + ' lot-label';
+
                     L.marker(layer.getBounds().getCenter(), { icon: label }).addTo(map);
 
                     layer.on('click', function () {
@@ -149,28 +133,26 @@
 
                         selectedFeature = feature;
                         document.getElementById('editor').style.display = 'block';
-                        document.getElementById('lot-id').innerText = feature.properties.plot_id;
+                        document.getElementById('lot-id').innerText = lotId;
                         document.getElementById('lot-price').value = feature.properties.price || '';
-                        document.getElementById('lot-status').value = feature.properties.status || '';
+                        document.getElementById('lot-status').value = status || '';
                         document.getElementById('lot-size').value = feature.properties.area_m || '';
                         document.getElementById('lot-category').value = feature.properties.Category || '';
                         document.getElementById('lot-description').value = feature.properties.Description || '';
-                        document.getElementById('lot-link').value = feature.properties.buy_link || ''; 
+                        document.getElementById('lot-link').value = buyLink || ''; 
                     });
                 }
             }).addTo(map);
         }
 
-        function autoSaveAndUpload() {
-            if (!selectedFeature) return;
-            selectedFeature.properties.price = document.getElementById('lot-price').value;
-            selectedFeature.properties.status = document.getElementById('lot-status').value;
-            selectedFeature.properties.area_m = document.getElementById('lot-size').value;
-            selectedFeature.properties.Category = document.getElementById('lot-category').value;
-            selectedFeature.properties.Description = document.getElementById('lot-description').value;
-            selectedFeature.properties.buy_link = document.getElementById('lot-link').value;
-
-            saveGeoJSONToSupabase();
+        function getLotColor(status) {
+            switch (status) {
+                case "For Sale": return "green";
+                case "Sold": return "red";
+                case "Reserved": return "yellow";
+                case "Not for Sale": return "grey";
+                default: return "blue"; 
+            }
         }
 
         function downloadGeoJSON() {
@@ -183,30 +165,16 @@
             document.body.removeChild(element);
         }
 
-        async function saveGeoJSONToSupabase() {
-            const statusIndicator = document.getElementById("statusIndicator");
-            statusIndicator.textContent = "Uploading...";
-            statusIndicator.className = "status-indicator";
+        function autoSaveAndUpload() {
+            if (!selectedFeature) return;
+            selectedFeature.properties.price = document.getElementById('lot-price').value;
+            selectedFeature.properties.status = document.getElementById('lot-status').value;
+            selectedFeature.properties.area_m = document.getElementById('lot-size').value;
+            selectedFeature.properties.Category = document.getElementById('lot-category').value;
+            selectedFeature.properties.Description = document.getElementById('lot-description').value;
+            selectedFeature.properties.buy_link = document.getElementById('lot-link').value;
 
-            const fileContent = new Blob([JSON.stringify(geojsonData, null, 4)], { type: "application/json" });
-
-            try {
-                const response = await fetch(`${SUPABASE_URL}/storage/v1/object/${STORAGE_BUCKET}/${FILE_NAME}`, {
-                    method: "PUT",
-                    headers: {
-                        "Authorization": `Bearer ${SUPABASE_SERVICE_ROLE_KEY}`,
-                        "Content-Type": "application/json"
-                    },
-                    body: fileContent
-                });
-
-                statusIndicator.textContent = "✅ Upload Success";
-                statusIndicator.className = "status-indicator success";
-                setTimeout(() => statusIndicator.textContent = "", 3000); // Disappears after 3 seconds
-            } catch {
-                statusIndicator.textContent = "❌ Error uploading.";
-                statusIndicator.className = "status-indicator error";
-            }
+            saveGeoJSONToSupabase();
         }
     </script>
 </body>
