@@ -9,7 +9,6 @@
     <style>
         #map { height: 60vh; width: 100%; }
         #editor { padding: 10px; }
-
         .lot-label {
             font-size: 8px;
             font-weight: normal;
@@ -21,7 +20,8 @@
 </head>
 <body onload="initializeMap()">
     <h2>GeoJSON Lot Editor</h2>
-    <button onclick="saveGeoJSONToSupabase()">💾 Save & Update Map</button>
+    <input type="file" id="fileInput" accept=".geojson" onchange="loadFile(event)">
+    <button onclick="saveGeoJSONToSupabase()">💾 Save & Update Supabase</button>
     <div id="map"></div>
 
     <div id="editor" style="display:none;">
@@ -55,11 +55,10 @@
         let selectedLayer;
         let map;
 
-        // 🔹 Supabase API Details
         const SUPABASE_URL = "https://poxxulxqzxwotequkwbw.supabase.co";
-        const SUPABASE_BUCKET = "geojson-files";
         const SUPABASE_API_KEY = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InBveHh1bHhxenh3b3RlcXVrd2J3Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3NDAyNTYzNjcsImV4cCI6MjA1NTgzMjM2N30.Cf6EQFNFbnHjUdFzoC84L32F0yNyyxKku8CIELwVt0E";
-        const SUPABASE_FILE_NAME = "lots.geojson";  
+        const STORAGE_BUCKET = "geojson-files";
+        const FILE_NAME = "lots.geojson";
 
         function initializeMap() {
             map = L.map('map').setView([11.575, -86.244], 16);
@@ -70,14 +69,24 @@
                 })
             };
             L.control.layers(baseLayers).addTo(map);
-            
-            fetch(`${SUPABASE_URL}/storage/v1/object/public/${SUPABASE_BUCKET}/${SUPABASE_FILE_NAME}`)
+
+            fetch(`${SUPABASE_URL}/storage/v1/object/public/${STORAGE_BUCKET}/${FILE_NAME}`)
                 .then(response => response.json())
                 .then(data => {
                     geojsonData = data;
                     loadGeoJSON();
                 })
-                .catch(error => console.error("❌ Error loading GeoJSON:", error));
+                .catch(error => console.error("❌ Error loading GeoJSON from Supabase:", error));
+        }
+
+        function loadFile(event) {
+            const file = event.target.files[0];
+            const reader = new FileReader();
+            reader.onload = function(e) {
+                geojsonData = JSON.parse(e.target.result);
+                loadGeoJSON();
+            };
+            reader.readAsText(file);
         }
 
         function loadGeoJSON() {
@@ -111,13 +120,6 @@
                         document.getElementById('lot-description').value = feature.properties.Description || '';
                         document.getElementById('lot-link').value = feature.properties.buy_link || ''; 
                     });
-
-                    let label = L.divIcon({
-                        className: 'lot-label',
-                        html: feature.properties.plot_id,
-                        iconSize: [1, 1] 
-                    });
-                    L.marker(layer.getBounds().getCenter(), { icon: label }).addTo(map);
                 }
             }).addTo(map);
         }
@@ -128,7 +130,7 @@
                 case "Sold": return "red";
                 case "Reserved": return "yellow";
                 case "Not for Sale": return "grey";
-                default: return "blue";
+                default: return "blue"; 
             }
         }
 
@@ -142,28 +144,27 @@
             selectedFeature.properties.buy_link = document.getElementById('lot-link').value; 
         }
 
-        // 🔹 Upload updated `lots.geojson` to Supabase
         async function saveGeoJSONToSupabase() {
-            if (!geojsonData) {
-                alert("❌ No GeoJSON data available!");
-                return;
-            }
-
             const fileContent = new Blob([JSON.stringify(geojsonData, null, 4)], { type: "application/json" });
 
-            const response = await fetch(`${SUPABASE_URL}/storage/v1/object/public/${SUPABASE_BUCKET}/${SUPABASE_FILE_NAME}`, {
-                method: "PUT",
-                headers: {
-                    "Authorization": `Bearer ${SUPABASE_API_KEY}`,
-                    "Content-Type": "application/json"
-                },
-                body: fileContent
-            });
+            try {
+                const response = await fetch(`${SUPABASE_URL}/storage/v1/object/public/${STORAGE_BUCKET}/${FILE_NAME}`, {
+                    method: "PUT",
+                    headers: {
+                        "Authorization": `Bearer ${SUPABASE_API_KEY}`,
+                        "Content-Type": "application/json"
+                    },
+                    body: fileContent
+                });
 
-            if (response.ok) {
-                alert("✅ GeoJSON Updated in Supabase!");
-            } else {
-                alert("❌ Failed to update GeoJSON in Supabase!");
+                if (response.ok) {
+                    alert("✅ GeoJSON Updated Successfully in Supabase!");
+                } else {
+                    alert("❌ Failed to Update GeoJSON in Supabase.");
+                }
+            } catch (error) {
+                console.error("❌ Error saving to Supabase:", error);
+                alert("❌ Error updating GeoJSON in Supabase.");
             }
         }
     </script>
