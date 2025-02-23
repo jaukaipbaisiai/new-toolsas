@@ -1,110 +1,220 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>GeoJSON Editor for Lots</title>
-    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
-    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
-    <style>
-        #map { height: 60vh; width: 100%; }
-        #editor { padding: 10px; }
-        .lot-label {
-            font-size: 12px;
-            font-weight: 300;
-            color: black;
-            background: none;
-            padding: 0;
-            border: none;
-        }
-        .status-indicator {
-            display: inline-block;
-            padding: 5px 10px;
-            font-size: 12px;
-            font-weight: bold;
-            margin-left: 10px;
-            border-radius: 5px;
-            transition: opacity 0.5s;
-        }
-        .success { background-color: lightgreen; color: darkgreen; }
-        .error { background-color: lightcoral; color: darkred; }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>GeoJSON Editor for Lots</title>
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
+  <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+  <style>
+    #map { height: 60vh; width: 100%; }
+    #editor { padding: 10px; }
+    .lot-label {
+      font-size: 12px; /* Slightly larger font */
+      font-weight: 300; /* Thin font */
+      color: black;
+      background: none;
+      padding: 0;
+      border: none;
+    }
+    .status-indicator {
+      display: inline-block;
+      padding: 5px 10px;
+      font-size: 12px;
+      font-weight: bold;
+      margin-left: 10px;
+      border-radius: 5px;
+      transition: opacity 0.5s;
+    }
+    .success { background-color: lightgreen; color: darkgreen; }
+    .error { background-color: lightcoral; color: darkred; }
+  </style>
 </head>
 <body onload="initializeMap()">
-    <h2>GeoJSON Lot Editor</h2>
-    <button onclick="downloadGeoJSON()">📥 Download JSON</button>
-    <button onclick="saveGeoJSONToSupabase()">🚀 Master Update</button>
-    <span id="statusIndicator" class="status-indicator"></span>
-    <div id="map"></div>
+  <h2>GeoJSON Lot Editor</h2>
+  <input type="file" id="fileInput" accept=".geojson" onchange="loadFile(event)">
+  <button onclick="downloadGeoJSON()">📥 Download JSON</button>
+  <button onclick="saveGeoJSONToSupabase()">🚀 Master Update</button>
+  <span id="statusIndicator" class="status-indicator"></span>
+  <div id="map"></div>
 
-    <div id="editor" style="display:none;">
-        <h3>Edit Lot</h3>
-        <p><strong>Lot ID:</strong> <span id="lot-id"></span></p>
-        <label>Price: $<input type="text" id="lot-price" onblur="autoSaveAndUpload()"></label><br>
-        <label>Status:
-            <select id="lot-status" onchange="autoSaveAndUpload()">
-                <option value="">Select Status</option>
-                <option value="For Sale">For Sale</option>
-                <option value="Sold">Sold</option>
-                <option value="Reserved">Reserved</option>
-                <option value="Not for Sale">Not for Sale</option>
-            </select>
-        </label><br>
-        <label>Lot Size: <input type="text" id="lot-size" onblur="autoSaveAndUpload()"></label><br>
-        <label>Category:
-            <select id="lot-category" onchange="autoSaveAndUpload()">
-                <option value="Duplex">Duplex</option>
-                <option value="Condo">Condo</option>
-                <option value="Apartments">Apartments</option>
-                <option value="Single Family Homesite">Single Family Homesite</option>
-                <option value="Multi Family Homesite">Multi Family Homesite</option>
-                <option value="Hotel Development">Hotel Development</option>
-                <option value="Mixed Use">Mixed Use</option>
-            </select>
-        </label><br>
-        <label>Description: <textarea id="lot-description" onblur="autoSaveAndUpload()"></textarea></label><br>
-        <label>Buy Link: <input type="text" id="lot-link" onblur="autoSaveAndUpload()"></label><br> 
-    </div>
+  <div id="editor" style="display:none;">
+    <h3>Edit Lot</h3>
+    <p><strong>Lot ID:</strong> <span id="lot-id"></span></p>
+    <label>Price: $<input type="text" id="lot-price" onblur="autoSaveAndUpload()"></label><br>
+    <label>Status:
+      <select id="lot-status" onchange="autoSaveAndUpload()">
+        <option value="">-- Select Status --</option>
+        <option value="For Sale">For Sale</option>
+        <option value="Sold">Sold</option>
+        <option value="Reserved">Reserved</option>
+        <option value="Not for Sale">Not for Sale</option>
+      </select>
+    </label><br>
+    <label>Lot Size: <input type="text" id="lot-size" onblur="autoSaveAndUpload()"></label><br>
+    <label>Category:
+      <select id="lot-category" onchange="autoSaveAndUpload()">
+        <option value="Duplex">Duplex</option>
+        <option value="Condo">Condo</option>
+        <option value="Apartments">Apartments</option>
+        <option value="Single Family Homesite">Single Family Homesite</option>
+        <option value="Multi Family Homesite">Multi Family Homesite</option>
+        <option value="Hotel Development">Hotel Development</option>
+        <option value="Mixed Use">Mixed Use</option>
+      </select>
+    </label><br>
+    <label>Description: <textarea id="lot-description" onblur="autoSaveAndUpload()"></textarea></label><br>
+    <label>Buy Link: <input type="text" id="lot-link" onblur="autoSaveAndUpload()"></label><br> 
+  </div>
 
-    <script>
-        let geojsonData;
-        let selectedFeature;
-        let selectedLayer;
-        let map;
+  <script>
+    let geojsonData;
+    let selectedFeature;
+    let selectedLayer;
+    let map;
 
-        const SUPABASE_URL = "https://poxxulxqzxwotequkwbw.supabase.co";
-        const SUPABASE_SERVICE_ROLE_KEY = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InBveHh1bHhxenh3b3RlcXVrd2J3Iiwicm9sZSI6InNlcnZpY2Vfcm9sZSIsImlhdCI6MTc0MDI1NjM2NywiZXhwIjoyMDU1ODMyMzY3fQ.qCvdI1kkLn72ucM9aBuXttK-95vux-YRC_J2PUSI8WA"; 
-        const STORAGE_BUCKET = "geojson-files";
-        const FILE_NAME = "lots.geojson";
+    const SUPABASE_URL = "https://poxxulxqzxwotequkwbw.supabase.co";
+    const SUPABASE_SERVICE_ROLE_KEY = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InBveHh1bHhxenh3b3RlcXVrd2J3Iiwicm9sZSI6InNlcnZpY2Vfcm9sZSIsImlhdCI6MTc0MDI1NjM2NywiZXhwIjoyMDU1ODMyMzY3fQ.qCvdI1kkLn72ucM9aBuXttK-95vux-YRC_J2PUSI8WA"; 
+    const STORAGE_BUCKET = "geojson-files";
+    const FILE_NAME = "lots.geojson";
 
-        function initializeMap() {
-            map = L.map('map').setView([11.575, -86.244], 16);
-            let baseLayers = {
-                'Street View': L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png').addTo(map),
-                'Satellite View': L.tileLayer('https://{s}.google.com/vt/lyrs=s&x={x}&y={y}&z={z}', {
-                    subdomains: ['mt0', 'mt1', 'mt2', 'mt3']
-                })
-            };
-            L.control.layers(baseLayers).addTo(map);
+    function initializeMap() {
+      map = L.map('map').setView([11.575, -86.244], 16);
+      let baseLayers = {
+        'Street View': L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png').addTo(map),
+        'Satellite View': L.tileLayer('https://{s}.google.com/vt/lyrs=s&x={x}&y={y}&z={z}', {
+          subdomains: ['mt0', 'mt1', 'mt2', 'mt3']
+        })
+      };
+      L.control.layers(baseLayers).addTo(map);
 
-            fetch(`${SUPABASE_URL}/storage/v1/object/public/${STORAGE_BUCKET}/${FILE_NAME}`)
-                .then(response => response.json())
-                .then(data => {
-                    geojsonData = data;
-                    loadGeoJSON();
-                })
-                .catch(error => console.error("❌ Error loading GeoJSON from Supabase:", error));
+      fetch(`${SUPABASE_URL}/storage/v1/object/public/${STORAGE_BUCKET}/${FILE_NAME}`)
+        .then(response => response.json())
+        .then(data => {
+          geojsonData = data;
+          loadGeoJSON();
+        })
+        .catch(error => console.error("❌ Error loading GeoJSON from Supabase:", error));
+    }
+
+    function getLotColor(status) {
+      switch (status) {
+        case "For Sale": return "green";
+        case "Sold": return "red";
+        case "Reserved": return "yellow";
+        case "Not for Sale": return "grey";
+        default: return "blue"; 
+      }
+    }
+
+    function loadFile(event) {
+      const file = event.target.files[0];
+      const reader = new FileReader();
+      reader.onload = function(e) {
+        geojsonData = JSON.parse(e.target.result);
+        loadGeoJSON();
+      };
+      reader.readAsText(file);
+    }
+
+    function loadGeoJSON() {
+      if (!geojsonData) return;
+
+      map.eachLayer(layer => {
+        if (layer instanceof L.GeoJSON) {
+          map.removeLayer(layer);
         }
+      });
 
-        function getLotColor(status) {
-            switch (status) {
-                case "For Sale": return "green";
-                case "Sold": return "red";
-                case "Reserved": return "yellow";
-                case "Not for Sale": return "grey";
-                default: return "blue"; 
+      L.geoJSON(geojsonData, {
+        style: function (feature) {
+          return { color: getLotColor(feature.properties.status), weight: 2 };
+        },
+        onEachFeature: function (feature, layer) {
+          // Check if lot is "For Sale" with empty buy link and adjust label color accordingly
+          let fontColor = "black";
+          if (feature.properties.status === "For Sale" && (!feature.properties.buy_link || feature.properties.buy_link.trim() === "")) {
+            fontColor = "red";
+          }
+          let label = L.divIcon({
+            className: 'lot-label',
+            html: `<span style="color: ${fontColor};">${feature.properties.plot_id}</span>`,
+            iconSize: [1, 1]
+          });
+          L.marker(layer.getBounds().getCenter(), { icon: label }).addTo(map);
+
+          layer.on('click', function () {
+            if (selectedLayer) {
+              selectedLayer.setStyle({ color: getLotColor(selectedLayer.feature.properties.status) });
             }
+            selectedLayer = layer;
+            layer.setStyle({ color: "#00FFFF" });
+
+            selectedFeature = feature;
+            document.getElementById('editor').style.display = 'block';
+            document.getElementById('lot-id').innerText = feature.properties.plot_id;
+            document.getElementById('lot-price').value = feature.properties.price || '';
+            document.getElementById('lot-status').value = feature.properties.status || '';
+            document.getElementById('lot-size').value = feature.properties.area_m || '';
+            document.getElementById('lot-category').value = feature.properties.Category || 'Single Family Homesite';
+            document.getElementById('lot-description').value = feature.properties.Description || '';
+            document.getElementById('lot-link').value = feature.properties.buy_link || ''; 
+          });
         }
-    </script>
+      }).addTo(map);
+    }
+
+    function autoSaveAndUpload() {
+      if (!selectedFeature) return;
+      selectedFeature.properties.price = document.getElementById('lot-price').value;
+      selectedFeature.properties.status = document.getElementById('lot-status').value;
+      selectedFeature.properties.area_m = document.getElementById('lot-size').value;
+      selectedFeature.properties.Category = document.getElementById('lot-category').value;
+      selectedFeature.properties.Description = document.getElementById('lot-description').value;
+      selectedFeature.properties.buy_link = document.getElementById('lot-link').value;
+
+      saveGeoJSONToSupabase();
+    }
+
+    async function saveGeoJSONToSupabase() {
+      const statusIndicator = document.getElementById("statusIndicator");
+      statusIndicator.textContent = "Uploading...";
+      statusIndicator.className = "status-indicator";
+
+      const fileContent = new Blob([JSON.stringify(geojsonData, null, 4)], { type: "application/json" });
+
+      try {
+        const response = await fetch(`${SUPABASE_URL}/storage/v1/object/${STORAGE_BUCKET}/${FILE_NAME}`, {
+          method: "PUT",
+          headers: {
+            "Authorization": `Bearer ${SUPABASE_SERVICE_ROLE_KEY}`,
+            "Content-Type": "application/json"
+          },
+          body: fileContent
+        });
+
+        statusIndicator.textContent = "✅ Upload Success";
+        statusIndicator.className = "status-indicator success";
+        setTimeout(() => statusIndicator.textContent = "", 3000); // Disappears after 3 seconds
+      } catch {
+        statusIndicator.textContent = "❌ Error uploading.";
+        statusIndicator.className = "status-indicator error";
+      }
+    }
+
+    function downloadGeoJSON() {
+      if (!geojsonData) return;
+      const dataStr = JSON.stringify(geojsonData, null, 4);
+      const blob = new Blob([dataStr], { type: "application/json" });
+      const url = URL.createObjectURL(blob);
+      const a = document.createElement("a");
+      a.href = url;
+      a.download = FILE_NAME;
+      document.body.appendChild(a);
+      a.click();
+      document.body.removeChild(a);
+      URL.revokeObjectURL(url);
+    }
+  </script>
 </body>
 </html>
