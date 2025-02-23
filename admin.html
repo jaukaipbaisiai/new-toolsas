@@ -64,7 +64,8 @@
       </select>
     </label><br>
     <label>Description: <textarea id="lot-description" onblur="autoSaveAndUpload()"></textarea></label><br>
-    <label>Buy Link: <input type="text" id="lot-link" onblur="autoSaveAndUpload()"></label><br> 
+    <label>Buy Link: <input type="text" id="lot-link" onblur="autoSaveAndUpload()"></label>
+    <button onclick="openBuyLink()">Buy</button><br>
   </div>
 
   <script>
@@ -74,7 +75,7 @@
     let map;
 
     const SUPABASE_URL = "https://poxxulxqzxwotequkwbw.supabase.co";
-    const SUPABASE_SERVICE_ROLE_KEY = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InBveHh1bHhxenh3b3RlcXVrd2J3Iiwicm9sZSI6InNlcnZpY2Vfcm9sZSIsImlhdCI6MTc0MDI1NjM2NywiZXhwIjoyMDU1ODMyMzY3fQ.qCvdI1kkLn72ucM9aBuXttK-95vux-YRC_J2PUSI8WA"; 
+    const SUPABASE_SERVICE_ROLE_KEY = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InBveHh1bHhxenh3b3RlcXVrd2J3Iiwicm9sZSI6InNlcnZpY2Vfcm9sZSIsImlhdCI6MTc0MDI1NjM2NywiZXhwIjoyMDU1ODMyMzY3fQ.qCvdI1kkLn72ucM9aBuXttK-95vux-YRC_J2PUSI8WA";
     const STORAGE_BUCKET = "geojson-files";
     const FILE_NAME = "lots.geojson";
 
@@ -103,7 +104,7 @@
         case "Sold": return "red";
         case "Reserved": return "yellow";
         case "Not for Sale": return "grey";
-        default: return "blue"; 
+        default: return "blue";
       }
     }
 
@@ -158,7 +159,7 @@
             document.getElementById('lot-size').value = feature.properties.area_m || '';
             document.getElementById('lot-category').value = feature.properties.Category || 'Single Family Homesite';
             document.getElementById('lot-description').value = feature.properties.Description || '';
-            document.getElementById('lot-link').value = feature.properties.buy_link || ''; 
+            document.getElementById('lot-link').value = feature.properties.buy_link || '';
           });
         }
       }).addTo(map);
@@ -214,6 +215,17 @@
       a.click();
       document.body.removeChild(a);
       URL.revokeObjectURL(url);
+    }
+
+    function openBuyLink() {
+      const link = document.getElementById("lot-link").value.trim();
+      if (!link) return;
+      let url = link;
+      // If link doesn't start with http:// or https://, prepend "http://"
+      if (!/^https?:\/\//i.test(url)) {
+        url = "http://" + url;
+      }
+      window.open(url, "_blank");
     }
   </script>
 </body>
