@@ -96,39 +96,6 @@
                 .catch(error => console.error("❌ Error loading GeoJSON from Supabase:", error));
         }
 
-        function loadGeoJSON() {
-            if (!geojsonData) return;
-
-            map.eachLayer(layer => {
-                if (layer instanceof L.GeoJSON) {
-                    map.removeLayer(layer);
-                }
-            });
-
-            L.geoJSON(geojsonData, {
-                style: feature => ({ color: getLotColor(feature.properties.status), weight: 2 }),
-                onEachFeature: function (feature, layer) {
-                    layer.on('click', function () {
-                        if (selectedLayer) {
-                            selectedLayer.setStyle({ color: getLotColor(selectedLayer.feature.properties.status) });
-                        }
-                        selectedLayer = layer;
-                        layer.setStyle({ color: "#00FFFF" });
-
-                        selectedFeature = feature;
-                        document.getElementById('editor').style.display = 'block';
-                        document.getElementById('lot-id').innerText = feature.properties.plot_id;
-                        document.getElementById('lot-price').value = feature.properties.price || '';
-                        document.getElementById('lot-status').value = feature.properties.status || '';
-                        document.getElementById('lot-size').value = feature.properties.area_m || '';
-                        document.getElementById('lot-category').value = feature.properties.Category || '';
-                        document.getElementById('lot-description').value = feature.properties.Description || '';
-                        document.getElementById('lot-link').value = feature.properties.buy_link || ''; 
-                    });
-                }
-            }).addTo(map);
-        }
-
         function getLotColor(status) {
             switch (status) {
                 case "For Sale": return "green";
